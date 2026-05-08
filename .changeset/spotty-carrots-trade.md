@@ -1,5 +1,5 @@
 ---
-"@kilo-code/jetbrains-plugin": patch
+"kilo-code": patch
 ---
 
 fix(jetbrains): use application-scoped commit message service
