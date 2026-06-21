@@ -1,10 +1,15 @@
 packages:
   - src
   - webview-ui
-  - apps/*
-  - packages/*
-  - jetbrains/host
-  - jetbrains/plugin
+  - packages/build
+  - packages/cloud
+  - packages/config-eslint
+  - packages/config-typescript
+  - packages/core
+  - packages/core-schemas
+  - packages/ipc
+  - packages/telemetry
+  - packages/types
 
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'

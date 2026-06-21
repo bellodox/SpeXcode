@@ -2,6 +2,7 @@
 
 This file is local-only and noncanonical.
 
-- Priority: validate the newly initialized maintainer wiki in [`docs/maintainer-wiki/`](docs/maintainer-wiki/)
 - Priority: keep volatile memory aligned with [`docs/maintainer-wiki/index.md`](docs/maintainer-wiki/index.md)
-- Next action: use the wiki as the durable source before adding new memory-bank details
+- Current local note: extension-only pruning retained [`src/`](src), [`webview-ui/`](webview-ui), and required internal [`packages/`](packages)
+- Current local note: removed [`apps/`](apps), [`jetbrains/`](jetbrains), [`packages/evals/`](packages/evals), and [`packages/agent-runtime/`](packages/agent-runtime)
+- Next action: refresh durable wiki pages if repository architecture docs need to reflect the pruned product graph
