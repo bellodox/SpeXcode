@@ -1,0 +1,5 @@
+#[Memory Bank: Active] Project Brief
+
+This repository is the Kilo Code monorepo: an open source AI coding agent platform centered on a VS Code extension, with related web applications, shared packages, end-to-end test apps, and a JetBrains plugin/host implementation. Repository evidence shows a large [`pnpm-workspace.yaml`](pnpm-workspace.yaml) monorepo orchestrated with [`turbo.json`](turbo.json), with major product surfaces under [`src/`](src), [`webview-ui/`](webview-ui), [`apps/`](apps), [`packages/`](packages), and [`jetbrains/`](jetbrains).
+
+Carbon Memory in this repository combines this local-only volatile memory bank, the durable maintainer wiki under [`docs/maintainer-wiki/`](docs/maintainer-wiki/), and indexed repository context from entrypoint documents such as [`AGENTS.md`](AGENTS.md) and [`README.md`](README.md). This memory-bank content is noncanonical operational context only; durable project facts, maintainership guidance, and architecture summaries belong in the maintainer wiki index at [`docs/maintainer-wiki/index.md`](docs/maintainer-wiki/index.md).
