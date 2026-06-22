@@ -10,7 +10,7 @@
 
 - **Node.js target:** `20.20.0` from [`package.json`](package.json:5)
 - **Primary language:** TypeScript, evidenced by workspace structure and [`package.json`](package.json:58)
-- **Frontend stack:** React-based UI in [`webview-ui/`](webview-ui) and [`apps/web-roo-code/`](apps/web-roo-code)
+- **Frontend stack:** React-based UI in [`webview-ui/`](webview-ui)
 
 ## Quality and Tooling
 
@@ -24,12 +24,11 @@
 
 - **VS Code extension packaging:** [`@vscode/vsce`](package.json:44) and root build script [`package.json`](package.json:16)
 - **Open VSX publishing support:** [`ovsx`](package.json:53)
-- **JetBrains plugin packaging:** dedicated scripts in [`package.json`](package.json:31)
+- **Repository shape after pruning:** VS Code-extension-only monorepo; removed parallel surfaces are tracked in [`docs/maintainer-wiki/open-work.md`](docs/maintainer-wiki/open-work.md:3)
 
 ## Product Surfaces
 
 - **VS Code extension core:** [`src/`](src)
 - **Webview frontend:** [`webview-ui/`](webview-ui)
-- **Shared packages:** [`packages/`](packages)
-- **Apps and support surfaces:** [`apps/`](apps)
-- **JetBrains support:** [`jetbrains/`](jetbrains)
+- **Shared packages:** retained extension-facing workspaces under [`packages/`](packages)
+- **Removed surfaces:** [`apps/`](apps), [`jetbrains/`](jetbrains), [`packages/evals/`](packages/evals), and [`packages/agent-runtime/`](packages/agent-runtime)

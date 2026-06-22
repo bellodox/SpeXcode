@@ -2,15 +2,13 @@
 
 ## Project Type
 
-Kilo Code is a monorepo for an AI coding agent platform centered on a VS Code extension, with additional frontend, shared packages, support apps, and JetBrains integration. This is stated in [`README.md`](README.md:11) and reflected by the workspace layout in [`pnpm-workspace.yaml`](pnpm-workspace.yaml:1).
+Kilo Code is now an extension-only monorepo centered on the VS Code extension, its bundled webview frontend, and the internal packages required to build and package that extension. Current workspace membership is reflected by [`pnpm-workspace.yaml`](pnpm-workspace.yaml:1).
 
 ## Main Directories
 
 - [`src/`](src) — core extension logic and tool/runtime behavior
 - [`webview-ui/`](webview-ui) — extension webview frontend
-- [`packages/`](packages) — shared packages used across surfaces
-- [`apps/`](apps) — supporting apps such as docs, site, tests, and Storybook-style surfaces
-- [`jetbrains/`](jetbrains) — JetBrains plugin and host packages
+- [`packages/`](packages) — retained shared packages required by the extension product graph
 - [`scripts/`](scripts) — repository automation and packaging utilities
 
 ## Entry Points and Control Surfaces
@@ -25,7 +23,7 @@ Kilo Code is a monorepo for an AI coding agent platform centered on a VS Code ex
 2. The extension core in [`src/`](src) provides runtime logic.
 3. The frontend in [`webview-ui/`](webview-ui) provides interactive UI for the extension.
 4. Shared packages in [`packages/`](packages) provide reusable contracts and utilities.
-5. Additional apps and JetBrains packages integrate with the shared platform model.
+5. Removed product surfaces such as [`apps/`](apps) and [`jetbrains/`](jetbrains) no longer participate in the build graph, but some code and documentation references still require audit cleanup.
 
 ## External Dependencies and Services
 
