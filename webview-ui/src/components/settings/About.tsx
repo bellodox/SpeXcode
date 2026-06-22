@@ -64,7 +64,9 @@ export const About = ({
 						<Trans
 							i18nKey="settings:footer.telemetry.description"
 							components={{
-								privacyLink: <VSCodeLink href="https://github.com/bellodox/SpeXcode/blob/main/PRIVACY.md" />,
+								privacyLink: (
+									<VSCodeLink href="https://github.com/bellodox/SpeXcode/blob/main/PRIVACY.md" />
+								),
 							}}
 						/>
 					</p>

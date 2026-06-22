@@ -9,9 +9,9 @@ import { fileURLToPath } from "url"
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const README_FILE = path.join(__dirname, "../README.md")
-const CONTRIBUTORS_JSON_URL = "https://api.github.com/repos/bellodox/kilocode-legacy/contributors?per_page=100"
+const CONTRIBUTORS_JSON_URL = "https://api.github.com/repos/bellodox/SpeXcode/contributors?per_page=100"
 const MAX_CONTRIBUTORS_DISPLAY = 9
-const CONTRIBUTORS_PAGE_URL = "https://github.com/bellodox/kilocode-legacy/graphs/contributors"
+const CONTRIBUTORS_PAGE_URL = "https://github.com/bellodox/SpeXcode/graphs/contributors"
 
 // Function to make HTTP requests
 function makeRequest(url) {

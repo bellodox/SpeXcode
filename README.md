@@ -9,7 +9,6 @@
 # 🚀 SpeXcode
 
 > SpeXcode is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
-> #1 on OpenRouter. 1.5M+ SpeXcoders. 25T+ tokens processed
 
 - ✨ Generate code from natural language
 - ✅ Checks its own work
