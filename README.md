@@ -7,7 +7,7 @@
 </p>
 
 # 🚀 Kilo
- 
+
 > Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
 > #1 on OpenRouter. 1.5M+ Kilo Coders. 25T+ tokens processed
 
@@ -44,7 +44,7 @@
 
 ## Developer Setup
 
-If you want to contribute or modify the extension locally, see the [DEVELOPMENT.md](/DEVELOPMENT.md) file for build and setup instructions.
+If you want to contribute or modify the extension locally, see [DEVELOPMENT.md](DEVELOPMENT.md) for the native VS Code extension build and setup workflow.
 
 ## Contributing
 

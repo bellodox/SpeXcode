@@ -22,7 +22,6 @@ jest.*
 .git-blame-ignore-revs
 .gitconfig
 .gitattributes
-.tool-versions
 .vite-port
 .nvmrc
 .clinerules*

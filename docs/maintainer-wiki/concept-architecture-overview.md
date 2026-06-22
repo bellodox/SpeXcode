@@ -27,7 +27,7 @@ Kilo Code is now an extension-only monorepo centered on the VS Code extension, i
 
 ## External Dependencies and Services
 
-- Node.js and pnpm are required for local development according to [`DEVELOPMENT.md`](DEVELOPMENT.md:13).
+- Native local development requires Git, Git LFS, Node.js, pnpm, and VS Code according to [`DEVELOPMENT.md`](DEVELOPMENT.md:11).
 - VS Code extension packaging relies on VSCE from [`package.json`](package.json:44).
 - Repository hooks are managed by Husky per [`DEVELOPMENT.md`](DEVELOPMENT.md:230).
-- Post-cleanup validation confirmed the extension remains buildable and installable via [`pnpm check-types`](package.json:13), [`pnpm vsix`](package.json:16), and installation of [`bin/kilo-code-5.12.0.vsix`](bin/kilo-code-5.12.0.vsix).
+- Post-cleanup validation should confirm the extension remains buildable through [`pnpm check-types`](package.json:13) and [`pnpm vsix`](package.json:16).

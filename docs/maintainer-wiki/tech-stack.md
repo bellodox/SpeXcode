@@ -25,7 +25,7 @@
 - **VS Code extension packaging:** [`@vscode/vsce`](package.json:44) and root build script [`package.json`](package.json:16)
 - **Open VSX publishing support:** [`ovsx`](package.json:53)
 - **Repository shape after pruning:** VS Code-extension-only monorepo with JetBrains, apps, and standalone agent-runtime surfaces removed from the active build graph; follow-up notes live in [`docs/maintainer-wiki/log.md`](docs/maintainer-wiki/log.md:8)
-- **Validated build/install state after cleanup:** [`pnpm check-types`](package.json:13) completed successfully with Turbo reporting 12/12 tasks, [`pnpm vsix`](package.json:16) produced [`bin/kilo-code-5.12.0.vsix`](bin/kilo-code-5.12.0.vsix), and [`code --install-extension`](bin/kilo-code-5.12.0.vsix) succeeded for that artifact
+- **Native contributor prerequisites:** Git, Git LFS, Node.js, pnpm, and VS Code from [`DEVELOPMENT.md`](DEVELOPMENT.md:11)
 
 ## Product Surfaces
 
