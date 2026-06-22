@@ -112,9 +112,6 @@ export class KilocodeOpenrouterHandler extends OpenRouterHandler {
 
 		// 2. Detect context from wrapper properties
 		const wrapperProps = getKiloCodeWrapperProperties()
-		if (wrapperProps.kiloCodeWrapperJetbrains) {
-			return "jetbrains-extension"
-		}
 		if (wrapperProps.kiloCodeWrapper === "agent-manager") {
 			return "agent-manager"
 		}

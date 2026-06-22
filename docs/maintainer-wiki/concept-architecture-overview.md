@@ -23,10 +23,11 @@ Kilo Code is now an extension-only monorepo centered on the VS Code extension, i
 2. The extension core in [`src/`](src) provides runtime logic.
 3. The frontend in [`webview-ui/`](webview-ui) provides interactive UI for the extension.
 4. Shared packages in [`packages/`](packages) provide reusable contracts and utilities.
-5. Removed product surfaces such as [`apps/`](apps) and [`jetbrains/`](jetbrains) no longer participate in the build graph, but some code and documentation references still require audit cleanup.
+5. Removed product surfaces such as [`apps/`](apps), [`jetbrains/`](jetbrains), and [`packages/agent-runtime/`](packages/agent-runtime) no longer participate in the build graph; remaining retained code/config leftovers were removed in the 2026-06-22 cleanup recorded in [`docs/maintainer-wiki/log.md`](docs/maintainer-wiki/log.md:8).
 
 ## External Dependencies and Services
 
 - Node.js and pnpm are required for local development according to [`DEVELOPMENT.md`](DEVELOPMENT.md:13).
 - VS Code extension packaging relies on VSCE from [`package.json`](package.json:44).
 - Repository hooks are managed by Husky per [`DEVELOPMENT.md`](DEVELOPMENT.md:230).
+- Post-cleanup validation confirmed the extension remains buildable and installable via [`pnpm check-types`](package.json:13), [`pnpm vsix`](package.json:16), and installation of [`bin/kilo-code-5.12.0.vsix`](bin/kilo-code-5.12.0.vsix).

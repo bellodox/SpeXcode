@@ -9,94 +9,19 @@ This is a pnpm monorepo using Turbo for task orchestration:
 - **`src/`** - VSCode extension (core logic, API providers, tools)
 - **`webview-ui/`** - React frontend (chat UI, settings)
 - **`packages/`** - Shared packages (`types`, `ipc`, `telemetry`, `cloud`)
-- **`jetbrains/`** - JetBrains plugin (Kotlin + Node.js host)
-- **`apps/`** - E2E tests, Storybook, docs
+- **Historical removed surfaces** - [`apps/`](apps), [`jetbrains/`](jetbrains), [`packages/evals/`](packages/evals), and [`packages/agent-runtime/`](packages/agent-runtime) were pruned from the active extension-only product graph
 
 Key source directories:
 
 - `src/api/providers/` - AI provider implementations (50+ providers)
 - `src/core/tools/` - Tool implementations (ReadFile, ApplyDiff, ExecuteCommand, etc.)
 - `src/services/` - Services (MCP, browser, checkpoints, code-index)
-- `packages/agent-runtime/` - Standalone agent runtime (runs extension without VS Code)
 
-## Agent Runtime Architecture
+Current durable project state is the extension-only graph documented in [`docs/maintainer-wiki/concept-architecture-overview.md`](docs/maintainer-wiki/concept-architecture-overview.md:5).
 
-The `@kilocode/agent-runtime` package enables running Kilo Code agents as isolated Node.js processes without VS Code.
+## Repository Scope Note
 
-### How It Works
-
-```
-┌─────────────────────┐     fork()      ┌─────────────────────┐
-│  Agent Manager      │ ───────────────▶│  Agent Process      │
-│                     │◀───── IPC ─────▶│  (extension host)   │
-└─────────────────────┘                 └─────────────────────┘
-```
-
-1. **ExtensionHost**: Hosts the Kilo Code extension with a complete VS Code API mock
-2. **MessageBridge**: Bidirectional IPC communication (request/response with timeout)
-3. **ExtensionService**: Orchestrates host and bridge lifecycle
-
-### Spawning Agents
-
-Agents are forked processes configured via the `AGENT_CONFIG` environment variable:
-
-```typescript
-import { fork } from "child_process"
-
-const agent = fork(require.resolve("@kilocode/agent-runtime/process"), [], {
-	env: {
-		AGENT_CONFIG: JSON.stringify({
-			workspace: "/path/to/project",
-			providerSettings: { apiProvider: "anthropic", apiKey: "..." },
-			mode: "code",
-			autoApprove: false,
-		}),
-	},
-	stdio: ["pipe", "pipe", "pipe", "ipc"],
-})
-
-agent.on("message", (msg) => {
-	if (msg.type === "ready") {
-		agent.send({ type: "sendMessage", payload: { type: "newTask", text: "Fix the bug" } })
-	}
-})
-```
-
-### Message Protocol
-
-| Direction      | Type           | Description                    |
-| -------------- | -------------- | ------------------------------ |
-| Parent → Agent | `sendMessage`  | Send user message to extension |
-| Parent → Agent | `injectConfig` | Update extension configuration |
-| Parent → Agent | `shutdown`     | Gracefully terminate agent     |
-| Agent → Parent | `ready`        | Agent initialized              |
-| Agent → Parent | `message`      | Extension message              |
-| Agent → Parent | `stateChange`  | State updated                  |
-
-### Detecting Agent Context
-
-Code running in agent processes can check for the `AGENT_CONFIG` environment variable. This is set by the agent manager when spawning processes:
-
-```typescript
-if (process.env.AGENT_CONFIG) {
-	// Running as spawned agent - disable worker pools, etc.
-}
-```
-
-### State Management Pattern
-
-The Agent Manager follows a **read-shared, write-isolated** pattern:
-
-- **Read**: Get config (models, API settings) from extension via `provider.getState()`
-- **Write**: Inject state via `AGENT_CONFIG` env var when spawning - each agent gets isolated config
-
-```typescript
-fork(agentRuntimePath, [], {
-	env: { AGENT_CONFIG: JSON.stringify({ workspace, providerSettings, mode, sessionId }) },
-})
-```
-
-This ensures parallel agents have independent state with no race conditions or file I/O conflicts.
+This repository now documents and maintains the VS Code extension product graph only. Historical references to JetBrains, apps, or standalone `agent-runtime` surfaces should be treated as removed unless a page explicitly marks them archival.
 
 ## Build Commands
 
@@ -106,6 +31,8 @@ pnpm build            # Build extension (.vsix)
 pnpm lint             # Run ESLint
 pnpm check-types      # TypeScript type checking
 ```
+
+Packaging validation after the 2026-06-22 cleanup is recorded in [`docs/maintainer-wiki/log.md`](docs/maintainer-wiki/log.md:8).
 
 ## Skills
 
@@ -174,7 +101,6 @@ const bar = 2
 
 Code in these directories is Kilo Code-specific and doesn't need markers:
 
-- `jetbrains/` - JetBrains plugin
 - `agent-manager/` directories
 - Any path containing `kilocode` in filename or directory name
 - `src/services/autocomplete/ - Autocomplete service

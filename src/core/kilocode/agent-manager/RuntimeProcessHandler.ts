@@ -1,5 +1,5 @@
 /**
- * RuntimeProcessHandler - Spawns agent processes using @kilocode/agent-runtime
+ * RuntimeProcessHandler - Spawns bundled agent-runtime processes for the VS Code extension
  *
  * This handler uses Node.js fork() to spawn agent-runtime processes instead of
  * the CLI. Communication is via Node.js IPC (process.send/process.on('message'))
@@ -163,9 +163,8 @@ export class RuntimeProcessHandler {
 	/**
 	 * Resolve the path to the agent-runtime process entry point.
 	 *
-	 * In production (VSIX), the agent-runtime process is bundled by esbuild into
-	 * dist/agent-runtime-process.js as a self-contained CJS bundle.
-	 * In development, we use either require.resolve or the monorepo path.
+	 * The retained extension ships the agent-runtime process as
+	 * dist/agent-runtime-process.js. Development can override that path explicitly.
 	 */
 	private getProcessEntryPath(): string {
 		const fs = require("fs")
@@ -188,25 +187,7 @@ export class RuntimeProcessHandler {
 			}
 		}
 
-		// Development: Try require.resolve for workspace dependency
-		try {
-			const entryPath = require.resolve("@kilocode/agent-runtime/process")
-			return entryPath
-		} catch {
-			// Fallback: use relative path from monorepo root (development only)
-			if (this.extensionPath) {
-				// Extension path points to 'src' directory, go up one level to monorepo root
-				const monorepoRoot = path.dirname(this.extensionPath)
-				const devPath = path.join(monorepoRoot, "packages/agent-runtime/dist/process.js")
-				if (fs.existsSync(devPath)) {
-					return devPath
-				}
-			}
-
-			// Last resort: compute from __dirname (may not work in all environments)
-			const extensionRoot = path.resolve(__dirname, "../../../..")
-			return path.join(extensionRoot, "packages/agent-runtime/dist/process.js")
-		}
+		throw new Error("Bundled agent runtime process not found. Build the extension bundle before starting agents.")
 	}
 
 	/**

@@ -32,7 +32,9 @@ You can override the storage base path via the `kilo-code.customStoragePath` VS 
 
 ## CLI / Agent Runtime
 
-When running via the Kilo CLI (`@kilocode/agent-runtime`), files are stored under `~/.kilocode/cli/` (on Windows: `%USERPROFILE%\.kilocode\cli\`):
+This repository currently ships and maintains the VS Code extension product graph. The CLI / `agent-runtime` paths below are kept as historical/reference documentation rather than an active surface in this monorepo.
+
+When running via the former Kilo CLI (`@kilocode/agent-runtime`), files were stored under `~/.kilocode/cli/` (on Windows: `%USERPROFILE%\.kilocode\cli\`):
 
 | Path                                            | Description                          |
 | ----------------------------------------------- | ------------------------------------ |

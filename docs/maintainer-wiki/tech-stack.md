@@ -24,11 +24,12 @@
 
 - **VS Code extension packaging:** [`@vscode/vsce`](package.json:44) and root build script [`package.json`](package.json:16)
 - **Open VSX publishing support:** [`ovsx`](package.json:53)
-- **Repository shape after pruning:** VS Code-extension-only monorepo; removed parallel surfaces are tracked in [`docs/maintainer-wiki/open-work.md`](docs/maintainer-wiki/open-work.md:3)
+- **Repository shape after pruning:** VS Code-extension-only monorepo with JetBrains, apps, and standalone agent-runtime surfaces removed from the active build graph; follow-up notes live in [`docs/maintainer-wiki/log.md`](docs/maintainer-wiki/log.md:8)
+- **Validated build/install state after cleanup:** [`pnpm check-types`](package.json:13) completed successfully with Turbo reporting 12/12 tasks, [`pnpm vsix`](package.json:16) produced [`bin/kilo-code-5.12.0.vsix`](bin/kilo-code-5.12.0.vsix), and [`code --install-extension`](bin/kilo-code-5.12.0.vsix) succeeded for that artifact
 
 ## Product Surfaces
 
 - **VS Code extension core:** [`src/`](src)
 - **Webview frontend:** [`webview-ui/`](webview-ui)
 - **Shared packages:** retained extension-facing workspaces under [`packages/`](packages)
-- **Removed surfaces:** [`apps/`](apps), [`jetbrains/`](jetbrains), [`packages/evals/`](packages/evals), and [`packages/agent-runtime/`](packages/agent-runtime)
+- **Removed surfaces:** [`apps/`](apps), [`jetbrains/`](jetbrains), [`packages/evals/`](packages/evals), and [`packages/agent-runtime/`](packages/agent-runtime) are historical/removed surfaces, not active product targets

@@ -67,7 +67,7 @@ Before you begin, choose one of the following development environment options:
     pnpm install
     ```
 
-    This command will install dependencies for the main extension, webview UI, and e2e tests.
+    This command will install dependencies for the extension-only workspace, including the main extension, webview UI, and retained internal packages.
 
 4. **Install VSCode Extensions**:
     - **Required**: [ESBuild Problem Matchers](https://marketplace.visualstudio.com/items?itemName=connor4312.esbuild-problem-matchers) - Helps display build errors correctly.
@@ -145,9 +145,10 @@ The project is organized into several key directories:
     - **`core/`** - Core functionality and tools
     - **`services/`** - Service implementations
 - **`webview-ui/`** - Frontend UI code
-- **`e2e/`** - End-to-end tests
+- **`packages/`** - Retained internal packages required by the extension build graph
 - **`scripts/`** - Utility scripts
-- **`assets/`** - Static assets like images and icons
+
+Historical surfaces such as [`apps/`](apps), [`jetbrains/`](jetbrains), and [`packages/agent-runtime/`](packages/agent-runtime) were removed from the active monorepo shape during the extension-only cleanup.
 
 For details on where Kilo Code stores configuration, data, and cache files at runtime, see [File Locations](docs/file-locations.md).
 
@@ -195,10 +196,12 @@ This will:
 To install your built extension:
 
 ```bash
-code --install-extension "$(ls -1v bin/kilo-code-*.vsix | tail -n1)"
+code --install-extension bin\kilo-code-5.12.0.vsix --force
 ```
 
-Replace `[version]` with the current version number.
+Validated proof from the cleanup task: [`pnpm vsix`](package.json:16) produced [`bin/kilo-code-5.12.0.vsix`](bin/kilo-code-5.12.0.vsix), and installation succeeded with the VS Code CLI.
+
+If installation fails with a corrupted VSIX error immediately after packaging, first stop concurrent watch/packaging processes and rerun packaging. A previous failure during cleanup was traced to a truncated VSIX produced while conflicting processes were still running.
 
 ## Testing
 
@@ -213,10 +216,6 @@ pnpm test
 ```
 
 This runs both extension and webview tests.
-
-### End-to-End Tests
-
-For more details on E2E tests, see [apps/vscode-e2e](apps/vscode-e2e/).
 
 ## Linting and Type Checking
 

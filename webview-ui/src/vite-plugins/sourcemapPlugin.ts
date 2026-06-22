@@ -17,19 +17,11 @@ export function sourcemapPlugin(): Plugin {
 			handler: async () => {
 				console.log("Ensuring source maps are included in build...")
 
-				// Determine the correct output directory based on the build mode
-				const mode = process.env.NODE_ENV
-				let outDir
-
-				if (mode === "nightly") {
-					outDir = path.resolve("../apps/vscode-nightly/build/webview-ui/build")
-				} else {
-					outDir = path.resolve("../src/webview-ui/build")
-				}
+				const outDir = path.resolve("../src/webview-ui/build")
 
 				const assetsDir = path.join(outDir, "assets")
 
-				console.log(`Source map processing for ${mode} build in ${outDir}`)
+				console.log(`Source map processing in ${outDir}`)
 
 				// Check if build directory exists
 				if (!fs.existsSync(outDir)) {

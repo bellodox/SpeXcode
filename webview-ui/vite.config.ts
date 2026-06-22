@@ -54,7 +54,7 @@ const persistPortPlugin = (): Plugin => ({
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-	let outDir = "../src/webview-ui/build"
+	const outDir = "../src/webview-ui/build"
 
 	// kilocode_change start - read package.json fresh every time to avoid caching issues
 	const getPkg = () => {
@@ -76,20 +76,6 @@ export default defineConfig(({ mode }) => {
 		"process.env.PKG_VERSION": JSON.stringify(pkg.version),
 		"process.env.PKG_OUTPUT_CHANNEL": JSON.stringify("Kilo-Code"),
 		...(gitSha ? { "process.env.PKG_SHA": JSON.stringify(gitSha) } : {}),
-	}
-
-	// TODO: We can use `@roo-code/build` to generate `define` once the
-	// monorepo is deployed.
-	if (mode === "nightly") {
-		outDir = "../apps/vscode-nightly/build/webview-ui/build"
-
-		const nightlyPkg = JSON.parse(
-			fs.readFileSync(path.join(__dirname, "..", "apps", "vscode-nightly", "package.nightly.json"), "utf8"),
-		)
-
-		define["process.env.PKG_NAME"] = JSON.stringify(nightlyPkg.name)
-		define["process.env.PKG_VERSION"] = JSON.stringify(nightlyPkg.version)
-		define["process.env.PKG_OUTPUT_CHANNEL"] = JSON.stringify("Kilo-Code-Nightly")
 	}
 
 	const plugins: PluginOption[] = [
