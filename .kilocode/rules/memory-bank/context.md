@@ -8,6 +8,8 @@ Durable docs already updated in the code subtask include [`README.md`](README.md
 
 Validation proof from the completed code subtask: [`pnpm check-types`](package.json:13) succeeded with Turbo reporting 12 successful tasks out of 12 total, and focused [`webview-ui`](webview-ui) vitest for [`webview-ui/src/__tests__/ErrorBoundary.spec.tsx`](webview-ui/src/__tests__/ErrorBoundary.spec.tsx:1) passed with 2 tests passed. Temporary helper [`scripts/tmp_rebrand.py`](scripts/tmp_rebrand.py) was deleted after the rebrand pass.
 
+Additional confirmation after the follow-up user request: a fresh post-rebrand packaging run of [`pnpm vsix`](src/package.json:660) succeeded from [`src/`](src) and produced [`bin/kilo-code-5.12.0.vsix`](bin/kilo-code-5.12.0.vsix), confirming the cosmetic SpeXcode rebrand did not break extension packaging.
+
 Proof search from the completed code subtask found no remaining targeted old live URL matches in checked user-facing targets; remaining older naming is expected only for compatibility identifiers, implementation-path names, and historical or upstream references.
 
 CHANGELOG status: [`CHANGELOG.md`](CHANGELOG.md) remains release-version structured without an Unreleased section, so no direct changelog edit was made in this docs subtask. The user-facing rebrand should instead be captured through the normal next release entry or release tooling.
