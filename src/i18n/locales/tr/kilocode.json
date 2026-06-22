@@ -47,19 +47,19 @@
 		}
 	},
 	"commitMessage": {
-		"activated": "Kilo Code commit mesajı oluşturucu etkinleştirildi",
+		"activated": "SpeXcode commit mesajı oluşturucu etkinleştirildi",
 		"gitNotFound": "⚠️ Git deposu bulunamadı veya git kullanılamıyor",
 		"gitInitError": "⚠️ Git başlatma hatası: {{error}}",
-		"generating": "Kilo: Commit mesajı oluşturuluyor...",
-		"noChanges": "Kilo: Analiz edilecek değişiklik bulunamadı",
-		"generated": "Kilo: Commit mesajı oluşturuldu!",
-		"generationFailed": "Kilo: Commit mesajı oluşturulamadı: {{errorMessage}}",
-		"generatingFromUnstaged": "Kilo: Hazırlanmamış değişikliklerle mesaj oluşturuluyor",
-		"activationFailed": "Kilo: Mesaj oluşturucu etkinleştirilemedi: {{error}}",
-		"providerRegistered": "Kilo: Commit mesajı sağlayıcısı kaydedildi",
+		"generating": "SpeXcode: Commit mesajı oluşturuluyor...",
+		"noChanges": "SpeXcode: Analiz edilecek değişiklik bulunamadı",
+		"generated": "SpeXcode: Commit mesajı oluşturuldu!",
+		"generationFailed": "SpeXcode: Commit mesajı oluşturulamadı: {{errorMessage}}",
+		"generatingFromUnstaged": "SpeXcode: Hazırlanmamış değişikliklerle mesaj oluşturuluyor",
+		"activationFailed": "SpeXcode: Mesaj oluşturucu etkinleştirilemedi: {{error}}",
+		"providerRegistered": "SpeXcode: Commit mesajı sağlayıcısı kaydedildi",
 		"errors": {
 			"noProject": "Proje mevcut değil",
-			"connectionFailed": "Kilo Code uzantısına bağlanılamadı",
+			"connectionFailed": "SpeXcode uzantısına bağlanılamadı",
 			"timeout": "İstek 30 saniye sonra zaman aşımına uğradı",
 			"noChanges": "Kaydedilecek değişiklik bulunamadı",
 			"missingMessage": "Uzantıdan taahhüt mesajı alınmadı",
@@ -85,7 +85,7 @@
 			"title": "Commit Mesajı Oluşturuluyor",
 			"analyzing": "Değişiklikler inceleniyor...",
 			"generating": "Taahhüt mesajı oluşturuluyor...",
-			"connecting": "Kilo Code'a bağlanıyor..."
+			"connecting": "SpeXcode'a bağlanıyor..."
 		},
 		"ui": {
 			"generateButton": "Commit Mesajı Oluştur",
@@ -103,9 +103,9 @@
 			"snoozed": "duraklatıldı",
 			"warning": "$(warning) Autocomplete",
 			"tooltip": {
-				"basic": "Kilo Code Autocomplete",
-				"disabled": "Kilo Code Autocomplete (devre dışı)",
-				"noCredits": "**Hesabınızda kredi yok**\n\nKilo Code hesabınızda kredi bulunmuyor. Otomatik tamamlamayı kullanmak için lütfen hesabınıza kredi ekleyin.\n\n[Ayarları Aç](command:kilo-code.settingsButtonClicked)",
+				"basic": "SpeXcode Autocomplete",
+				"disabled": "SpeXcode Autocomplete (devre dışı)",
+				"noCredits": "**Hesabınızda kredi yok**\n\nSpeXcode hesabınızda kredi bulunmuyor. Otomatik tamamlamayı kullanmak için lütfen hesabınıza kredi ekleyin.\n\n[Ayarları Aç](command:kilo-code.settingsButtonClicked)",
 				"noUsableProvider": "**Otomatik tamamlama modeli yapılandırılmadı**\n\nOtomatik tamamlamayı etkinleştirmek için desteklenen sağlayıcılardan biriyle bir profil ekleyin: {{providers}}.\n\n[Ayarları Aç](command:kilo-code.settingsButtonClicked)",
 				"sessionTotal": "Oturum toplam maliyeti:",
 				"provider": "Sağlayıcı:",
@@ -120,54 +120,54 @@
 				"lessThanCent": "<$0.01"
 			}
 		},
-		"toggleMessage": "Kilo Code Autocomplete {{status}}",
+		"toggleMessage": "SpeXcode Autocomplete {{status}}",
 		"progress": {
-			"title": "Kilo Code",
+			"title": "SpeXcode",
 			"analyzing": "Kodun analiz ediliyor...",
 			"generating": "Önerilen düzenlemeler oluşturuluyor...",
 			"processing": "Önerilen düzenlemeler işleniyor...",
 			"showing": "Önerilen düzenlemeler gösteriliyor..."
 		},
 		"input": {
-			"title": "Kilo Code: Hızlı Görev",
+			"title": "SpeXcode: Hızlı Görev",
 			"placeholder": "örn., 'bu fonksiyonu daha verimli olacak şekilde yeniden düzenle'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code: Önerilen Düzenlemeler Oluştur",
+			"generateSuggestions": "SpeXcode: Önerilen Düzenlemeler Oluştur",
 			"displaySuggestions": "Önerilen Düzenlemeleri Göster",
 			"cancelSuggestions": "Önerilen Düzenlemeleri İptal Et",
 			"applyCurrentSuggestion": "Mevcut Önerilen Düzenlemeyi Uygula",
 			"applyAllSuggestions": "Tüm Önerilen Düzenlemeleri Uygula",
-			"category": "Kilo Code"
+			"category": "SpeXcode"
 		},
 		"codeAction": {
-			"title": "Kilo Code: Önerilen Düzenlemeler"
+			"title": "SpeXcode: Önerilen Düzenlemeler"
 		},
 		"chatParticipant": {
-			"fullName": "Kilo Code Agent",
+			"fullName": "SpeXcode Agent",
 			"name": "Agent",
 			"description": "Hızlı görevler ve önerilen düzenlemeler konusunda sana yardımcı olabilirim."
 		},
 		"incompatibilityExtensionPopup": {
-			"message": "Kilo Code Autocomplete, GitHub Copilot ile bir çakışma nedeniyle engelleniyor. Bunu düzeltmek için Copilot'un satır içi önerilerini devre dışı bırakmalısın.",
+			"message": "SpeXcode Autocomplete, GitHub Copilot ile bir çakışma nedeniyle engelleniyor. Bunu düzeltmek için Copilot'un satır içi önerilerini devre dışı bırakmalısın.",
 			"disableCopilot": "Copilot'u Devre Dışı Bırak",
 			"disableInlineAssist": "Autocomplete'i Devre Dışı Bırak"
 		}
 	},
 	"terminalCommandGenerator": {
-		"noActiveTerminal": "Kilo: Aktif terminal bulunamadı. Lütfen önce bir terminal açın.",
-		"inputPrompt": "Kilo: Oluşturmak istediğiniz komutu açıklayın",
+		"noActiveTerminal": "SpeXcode: Aktif terminal bulunamadı. Lütfen önce bir terminal açın.",
+		"inputPrompt": "SpeXcode: Oluşturmak istediğiniz komutu açıklayın",
 		"inputPlaceholder": "örn., 3001 portunda çalışan işlemi sonlandır, büyük dosyaları bul, vb.",
-		"generatingProgress": "Kilo: Uçbirim komutu oluşturuluyor...",
-		"commandGenerated": "Kilo: Oluşturulan komut: {{command}}",
-		"generationFailed": "Kilo: Komut oluşturulamadı: {{error}}",
+		"generatingProgress": "SpeXcode: Uçbirim komutu oluşturuluyor...",
+		"commandGenerated": "SpeXcode: Oluşturulan komut: {{command}}",
+		"generationFailed": "SpeXcode: Komut oluşturulamadı: {{error}}",
 		"warningDialog": {
 			"title": "Uçbirim Güvenlik Uyarısı",
 			"okButton": "Anlıyorum",
 			"message": "Oluşturulan tüm komutları çalıştırmadan önce iki kez kontrol edin. Terminal eylemleri her zaman geri alınamaz— doğrulanmamış komutları çalıştırmak geri döndürülemez veri kaybına veya sistem hasarına neden olabilir. İlerlemeden önce komutu tamamen inceleyin ve anlayın!",
 			"cancelButton": "İptal"
 		},
-		"tipMessage": "Kilo: Terminal komutları oluşturmak için {{shortcut}} tuşuna basın"
+		"tipMessage": "SpeXcode: Terminal komutları oluşturmak için {{shortcut}} tuşuna basın"
 	},
 	"seeNewChanges": {
 		"title": "Yeni değişiklikler gösteriliyor",
@@ -206,7 +206,7 @@
 		}
 	},
 	"configDiscovery": {
-		"added": "Kilo Kodu: {{source}} {{configType}}: {{name}}{{modeStr}} eklendi.",
-		"removed": "Kilo Kodu: Kaldırıldı {{source}} {{configType}}: {{name}}{{modeStr}}"
+		"added": "SpeXcode Kodu: {{source}} {{configType}}: {{name}}{{modeStr}} eklendi.",
+		"removed": "SpeXcode Kodu: Kaldırıldı {{source}} {{configType}}: {{name}}{{modeStr}}"
 	}
 }

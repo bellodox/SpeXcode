@@ -52,19 +52,19 @@
 		}
 	},
 	"commitMessage": {
-		"activated": "Generador de missatges de commit de Kilo Code activat",
+		"activated": "Generador de missatges de commit de SpeXcode activat",
 		"gitNotFound": "⚠️ No s'ha trobat el repositori Git o git no està disponible",
 		"gitInitError": "⚠️ Error d'inicialització de Git: {{error}}",
-		"generating": "Kilo: Generant missatge de commit...",
-		"noChanges": "Kilo: No s'han trobat canvis per analitzar",
-		"generated": "Kilo: Missatge de commit generat!",
-		"generationFailed": "Kilo: No s'ha pogut generar el missatge de confirmació: {{errorMessage}}",
-		"generatingFromUnstaged": "Kilo: Generant missatge utilitzant canvis no preparats",
-		"providerRegistered": "Kilo: Proveïdor de missatges de «commit» registrat",
-		"activationFailed": "Kilo: No s'ha pogut activar el generador de missatges: {{error}}",
+		"generating": "SpeXcode: Generant missatge de commit...",
+		"noChanges": "SpeXcode: No s'han trobat canvis per analitzar",
+		"generated": "SpeXcode: Missatge de commit generat!",
+		"generationFailed": "SpeXcode: No s'ha pogut generar el missatge de confirmació: {{errorMessage}}",
+		"generatingFromUnstaged": "SpeXcode: Generant missatge utilitzant canvis no preparats",
+		"providerRegistered": "SpeXcode: Proveïdor de missatges de «commit» registrat",
+		"activationFailed": "SpeXcode: No s'ha pogut activar el generador de missatges: {{error}}",
 		"errors": {
 			"noProject": "Cap projecte disponible",
-			"connectionFailed": "No s'ha pogut connectar a l'extensió de Kilo Code",
+			"connectionFailed": "No s'ha pogut connectar a l'extensió de SpeXcode",
 			"invalidResponse": "Format de resposta invàlid rebut de l'extensió",
 			"timeout": "La sol·licitud ha esgotat el temps d'espera després de 30 segons",
 			"missingMessage": "No s'ha rebut cap missatge de comissió des de l'extensió",
@@ -88,7 +88,7 @@
 		},
 		"progress": {
 			"title": "Generant Missatge de Commit",
-			"connecting": "Connectant amb Kilo Code...",
+			"connecting": "Connectant amb SpeXcode...",
 			"analyzing": "Analitzant canvis...",
 			"generating": "Generant missatge de commit..."
 		},
@@ -103,9 +103,9 @@
 			"snoozed": "pausat",
 			"warning": "$(warning) Autocomplete",
 			"tooltip": {
-				"basic": "Kilo Code Autocomplete",
-				"disabled": "Kilo Code Autocomplete (desactivat)",
-				"noCredits": "**No tens crèdits al teu compte**\n\nEl teu compte de Kilo Code no té crèdits. Per utilitzar l'autocompletat, si us plau afegeix crèdits al teu compte.\n\n[Obrir Configuració](command:kilo-code.settingsButtonClicked)",
+				"basic": "SpeXcode Autocomplete",
+				"disabled": "SpeXcode Autocomplete (desactivat)",
+				"noCredits": "**No tens crèdits al teu compte**\n\nEl teu compte de SpeXcode no té crèdits. Per utilitzar l'autocompletat, si us plau afegeix crèdits al teu compte.\n\n[Obrir Configuració](command:kilo-code.settingsButtonClicked)",
 				"noUsableProvider": "**No s'ha configurat cap model d'autocompletat**\n\nPer habilitar l'autocompletat, afegeix un perfil amb un d'aquests proveïdors compatibles: {{providers}}.\n\n[Obrir Configuració](command:kilo-code.settingsButtonClicked)",
 				"sessionTotal": "Cost total de la sessió:",
 				"provider": "Proveïdor:",
@@ -120,54 +120,54 @@
 				"lessThanCent": "<$0.01"
 			}
 		},
-		"toggleMessage": "Kilo Code Autocomplete {{status}}",
+		"toggleMessage": "SpeXcode Autocomplete {{status}}",
 		"progress": {
-			"title": "Kilo Code",
+			"title": "SpeXcode",
 			"analyzing": "Analitzant el teu codi...",
 			"generating": "Generant edicions suggerides...",
 			"processing": "Processant edicions suggerides...",
 			"showing": "Mostrant edicions suggerides..."
 		},
 		"input": {
-			"title": "Kilo Code: Tasca Ràpida",
+			"title": "SpeXcode: Tasca Ràpida",
 			"placeholder": "p. ex., 'refactoritza aquesta funció per ser més eficient'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code: Generar Edicions Suggerides",
+			"generateSuggestions": "SpeXcode: Generar Edicions Suggerides",
 			"displaySuggestions": "Mostrar Edicions Suggerides",
 			"cancelSuggestions": "Cancel·lar Edicions Suggerides",
 			"applyCurrentSuggestion": "Aplicar Edició Suggerida Actual",
 			"applyAllSuggestions": "Aplicar Totes les Edicions Suggerides",
-			"category": "Kilo Code"
+			"category": "SpeXcode"
 		},
 		"codeAction": {
-			"title": "Kilo Code: Edicions Suggerides"
+			"title": "SpeXcode: Edicions Suggerides"
 		},
 		"chatParticipant": {
-			"fullName": "Kilo Code Agent",
+			"fullName": "SpeXcode Agent",
 			"name": "Agent",
 			"description": "Puc ajudar-te amb tasques ràpides i edicions suggerides."
 		},
 		"incompatibilityExtensionPopup": {
-			"message": "El Kilo Code Autocomplete està sent bloquejat per un conflicte amb GitHub Copilot. Per solucionar això, has de desactivar els suggeriments en línia de Copilot.",
+			"message": "El SpeXcode Autocomplete està sent bloquejat per un conflicte amb GitHub Copilot. Per solucionar això, has de desactivar els suggeriments en línia de Copilot.",
 			"disableCopilot": "Desactivar Copilot",
 			"disableInlineAssist": "Desactivar Autocomplete"
 		}
 	},
 	"terminalCommandGenerator": {
-		"inputPrompt": "Kilo: Descriu l'ordre que vols generar",
-		"generatingProgress": "Kilo: Generant ordre de terminal...",
-		"noActiveTerminal": "Kilo: No s'ha trobat cap terminal actiu. Si us plau, obriu primer un terminal.",
+		"inputPrompt": "SpeXcode: Descriu l'ordre que vols generar",
+		"generatingProgress": "SpeXcode: Generant ordre de terminal...",
+		"noActiveTerminal": "SpeXcode: No s'ha trobat cap terminal actiu. Si us plau, obriu primer un terminal.",
 		"inputPlaceholder": "p. ex., matar el procés que s'executa al port 3001, trobar fitxers grans, etc.",
-		"commandGenerated": "Kilo: Ordre generada: {{command}}",
-		"generationFailed": "Kilo: Error en generar l'ordre: {{error}}",
+		"commandGenerated": "SpeXcode: Ordre generada: {{command}}",
+		"generationFailed": "SpeXcode: Error en generar l'ordre: {{error}}",
 		"warningDialog": {
 			"title": "Advertència de Seguretat del Terminal",
 			"message": "Comproveu detingudament totes les comandes generades abans d'executar-les. Les accions al terminal no sempre es poden desfer — executar comandes sense verificar pot provocar la pèrdua irreversible de dades o danys al sistema. Reviseu i entengueu completament la comanda abans de continuar!",
 			"okButton": "Ho entenc",
 			"cancelButton": "Cancel·lar"
 		},
-		"tipMessage": "Kilo: Premeu {{shortcut}} per a generar ordres del terminal"
+		"tipMessage": "SpeXcode: Premeu {{shortcut}} per a generar ordres del terminal"
 	},
 	"seeNewChanges": {
 		"title": "Mostrant canvis nous",
@@ -206,7 +206,7 @@
 		}
 	},
 	"configDiscovery": {
-		"removed": "Kilo Codi: Eliminat {{source}} {{configType}}: {{name}}{{modeStr}}",
-		"added": "Codi Kilo: Afegit {{source}} {{configType}}: {{name}}{{modeStr}}"
+		"removed": "SpeXcode Codi: Eliminat {{source}} {{configType}}: {{name}}{{modeStr}}",
+		"added": "Codi SpeXcode: Afegit {{source}} {{configType}}: {{name}}{{modeStr}}"
 	}
 }

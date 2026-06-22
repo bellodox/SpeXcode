@@ -99,12 +99,12 @@ describe("URL functions", () => {
 
 	describe("getAppUrl", () => {
 		it("should handle production URLs correctly", () => {
-			expect(getAppUrl()).toBe("https://kilo.ai/")
-			expect(getAppUrl("/profile")).toBe("https://kilo.ai/profile")
-			expect(getAppUrl("/support")).toBe("https://kilo.ai/support")
-			expect(getAppUrl("/sign-in-to-editor")).toBe("https://kilo.ai/sign-in-to-editor")
+			expect(getAppUrl()).toBe("https://github.com/bellodox/kilocode-legacy/")
+			expect(getAppUrl("/profile")).toBe("https://github.com/bellodox/kilocode-legacy/profile")
+			expect(getAppUrl("/support")).toBe("https://github.com/bellodox/kilocode-legacy/issues")
+			expect(getAppUrl("/sign-in-to-editor")).toBe("https://github.com/bellodox/kilocode-legacy/sign-in-to-editor")
 			expect(getAppUrl("/sign-in-to-editor?source=vscode")).toBe(
-				"https://kilo.ai/sign-in-to-editor?source=vscode",
+				"https://github.com/bellodox/kilocode-legacy/sign-in-to-editor?source=vscode",
 			)
 		})
 
@@ -122,8 +122,8 @@ describe("URL functions", () => {
 		})
 
 		it("should handle empty and root paths", () => {
-			expect(getAppUrl("")).toBe("https://kilo.ai/")
-			expect(getAppUrl("/")).toBe("https://kilo.ai/")
+			expect(getAppUrl("")).toBe("https://github.com/bellodox/kilocode-legacy/")
+			expect(getAppUrl("/")).toBe("https://github.com/bellodox/kilocode-legacy/")
 		})
 	})
 
@@ -175,7 +175,7 @@ describe("URL functions", () => {
 			// Use a token that looks like JWT but has invalid JSON payload
 			const result = getKiloUrlFromToken("https://api.kilo.ai/api/test", "header.invalid-json.signature")
 			expect(result).toBe("https://api.kilo.ai/api/test")
-			expect(consoleSpy).toHaveBeenCalledWith("Failed to get base URL from Kilo Code token")
+			expect(consoleSpy).toHaveBeenCalledWith("Failed to get base URL from SpeXcode token")
 			consoleSpy.mockRestore()
 		})
 	})
@@ -183,14 +183,14 @@ describe("URL functions", () => {
 	describe("Real-world URL patterns from application", () => {
 		it("should correctly handle marketplace endpoints", () => {
 			// These are the actual endpoints used in RemoteConfigLoader
-			expect(getAppUrl("/api/marketplace/modes")).toBe("https://kilo.ai/api/marketplace/modes")
-			expect(getAppUrl("/api/marketplace/mcps")).toBe("https://kilo.ai/api/marketplace/mcps")
+			expect(getAppUrl("/api/marketplace/modes")).toBe("https://github.com/bellodox/kilocode-legacy/api/marketplace/modes")
+			expect(getAppUrl("/api/marketplace/mcps")).toBe("https://github.com/bellodox/kilocode-legacy/api/marketplace/mcps")
 		})
 
 		it("should correctly handle app navigation URLs", () => {
 			// These are the actual URLs used in Task.ts and webviewMessageHandler.ts
-			expect(getAppUrl("/profile")).toBe("https://kilo.ai/profile")
-			expect(getAppUrl("/support")).toBe("https://kilo.ai/support")
+			expect(getAppUrl("/profile")).toBe("https://github.com/bellodox/kilocode-legacy/profile")
+			expect(getAppUrl("/support")).toBe("https://github.com/bellodox/kilocode-legacy/issues")
 		})
 
 		it("should correctly handle token-based API calls", () => {
@@ -209,7 +209,7 @@ describe("URL functions", () => {
 
 		it("should maintain backwards compatibility for legacy endpoints", () => {
 			expect(getExtensionConfigUrl()).toBe("https://api.kilo.ai/extension-config.json")
-			expect(getAppUrl("/api/extension-config.json")).toBe("https://kilo.ai/api/extension-config.json")
+			expect(getAppUrl("/api/extension-config.json")).toBe("https://github.com/bellodox/kilocode-legacy/api/extension-config.json")
 			expect(getAppUrl("/api/extension-config.json")).not.toBe(getExtensionConfigUrl())
 		})
 	})

@@ -1,6 +1,6 @@
 # Concept: Carbon Memory
 
-Carbon Memory is the repository memory model used by Kilo Code. It combines three layers:
+Carbon Memory is the repository memory model used by SpeXcode. It combines three layers:
 
 1. The durable maintainer wiki in [`docs/maintainer-wiki/`](docs/maintainer-wiki/)
 2. The local-only volatile memory bank in [`.kilocode/rules/memory-bank/`](.kilocode/rules/memory-bank/)

@@ -52,19 +52,19 @@
 		}
 	},
 	"commitMessage": {
-		"activated": "Kilo Code Commit-Nachrichten-Generator aktiviert",
+		"activated": "SpeXcode Commit-Nachrichten-Generator aktiviert",
 		"gitNotFound": "⚠️ Git-Repository nicht gefunden oder Git nicht verfügbar",
 		"gitInitError": "⚠️ Git-Initialisierungsfehler: {{error}}",
-		"generating": "Kilo: Generiere Commit-Nachricht...",
-		"noChanges": "Kilo: Keine Änderungen zum Analysieren gefunden",
-		"generated": "Kilo: Commit-Nachricht generiert!",
-		"generationFailed": "Kilo: Fehler beim Generieren der Commit-Nachricht: {{errorMessage}}",
-		"generatingFromUnstaged": "Kilo: Nachricht mit nicht bereitgestellten Änderungen generieren",
-		"activationFailed": "Kilo: Der Nachrichtengenerator konnte nicht aktiviert werden: {{error}}",
-		"providerRegistered": "Kilo: Commit-Nachrichtenanbieter registriert",
+		"generating": "SpeXcode: Generiere Commit-Nachricht...",
+		"noChanges": "SpeXcode: Keine Änderungen zum Analysieren gefunden",
+		"generated": "SpeXcode: Commit-Nachricht generiert!",
+		"generationFailed": "SpeXcode: Fehler beim Generieren der Commit-Nachricht: {{errorMessage}}",
+		"generatingFromUnstaged": "SpeXcode: Nachricht mit nicht bereitgestellten Änderungen generieren",
+		"activationFailed": "SpeXcode: Der Nachrichtengenerator konnte nicht aktiviert werden: {{error}}",
+		"providerRegistered": "SpeXcode: Commit-Nachrichtenanbieter registriert",
 		"errors": {
 			"noProject": "Kein Projekt verfügbar",
-			"connectionFailed": "Verbindung zur Kilo Code-Erweiterung fehlgeschlagen",
+			"connectionFailed": "Verbindung zur SpeXcode-Erweiterung fehlgeschlagen",
 			"missingMessage": "Keine Commit-Nachricht von der Erweiterung erhalten",
 			"timeout": "Anfrage nach 30 Sekunden abgelaufen",
 			"invalidResponse": "Ungültiges Antwortformat vom Erweiterung erhalten",
@@ -89,7 +89,7 @@
 		"progress": {
 			"title": "Commit-Nachricht generieren",
 			"analyzing": "Änderungen werden analysiert...",
-			"connecting": "Verbindung mit Kilo Code wird hergestellt...",
+			"connecting": "Verbindung mit SpeXcode wird hergestellt...",
 			"generating": "Commit-Nachricht wird generiert..."
 		},
 		"ui": {
@@ -103,9 +103,9 @@
 			"snoozed": "pausiert",
 			"warning": "$(warning) Autocomplete",
 			"tooltip": {
-				"basic": "Kilo Code Autocomplete",
-				"disabled": "Kilo Code Autocomplete (deaktiviert)",
-				"noCredits": "**Kein Guthaben auf deinem Konto**\n\nDein Kilo Code Konto hat kein Guthaben. Um Autocomplete zu nutzen, füge bitte Guthaben zu deinem Konto hinzu.\n\n[Einstellungen öffnen](command:kilo-code.settingsButtonClicked)",
+				"basic": "SpeXcode Autocomplete",
+				"disabled": "SpeXcode Autocomplete (deaktiviert)",
+				"noCredits": "**Kein Guthaben auf deinem Konto**\n\nDein SpeXcode Konto hat kein Guthaben. Um Autocomplete zu nutzen, füge bitte Guthaben zu deinem Konto hinzu.\n\n[Einstellungen öffnen](command:kilo-code.settingsButtonClicked)",
 				"noUsableProvider": "**Kein Autocomplete-Modell konfiguriert**\n\nUm Autocomplete zu aktivieren, füge ein Profil mit einem dieser unterstützten Anbieter hinzu: {{providers}}.\n\n[Einstellungen öffnen](command:kilo-code.settingsButtonClicked)",
 				"sessionTotal": "Sitzungsgesamtkosten:",
 				"provider": "Anbieter:",
@@ -120,54 +120,54 @@
 				"lessThanCent": "<$0.01"
 			}
 		},
-		"toggleMessage": "Kilo Code Autocomplete {{status}}",
+		"toggleMessage": "SpeXcode Autocomplete {{status}}",
 		"progress": {
-			"title": "Kilo Code",
+			"title": "SpeXcode",
 			"analyzing": "Analysiere deinen Code...",
 			"generating": "Generiere Bearbeitungsvorschläge...",
 			"processing": "Verarbeite Bearbeitungsvorschläge...",
 			"showing": "Zeige Bearbeitungsvorschläge..."
 		},
 		"input": {
-			"title": "Kilo Code: Schnellaufgabe",
+			"title": "SpeXcode: Schnellaufgabe",
 			"placeholder": "z.B. 'refaktoriere diese Funktion für mehr Effizienz'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code: Bearbeitungsvorschläge generieren",
+			"generateSuggestions": "SpeXcode: Bearbeitungsvorschläge generieren",
 			"displaySuggestions": "Bearbeitungsvorschläge anzeigen",
 			"cancelSuggestions": "Bearbeitungsvorschläge abbrechen",
 			"applyCurrentSuggestion": "Aktuellen Bearbeitungsvorschlag anwenden",
 			"applyAllSuggestions": "Alle Bearbeitungsvorschläge anwenden",
-			"category": "Kilo Code"
+			"category": "SpeXcode"
 		},
 		"codeAction": {
-			"title": "Kilo Code: Bearbeitungsvorschläge"
+			"title": "SpeXcode: Bearbeitungsvorschläge"
 		},
 		"chatParticipant": {
-			"fullName": "Kilo Code Agent",
+			"fullName": "SpeXcode Agent",
 			"name": "Agent",
 			"description": "Ich kann dir bei Schnellaufgaben und Bearbeitungsvorschlägen helfen."
 		},
 		"incompatibilityExtensionPopup": {
-			"message": "Das Kilo Code Autocomplete wird durch einen Konflikt mit GitHub Copilot blockiert. Um dies zu beheben, musst du Copilots Inline-Vorschläge deaktivieren.",
+			"message": "Das SpeXcode Autocomplete wird durch einen Konflikt mit GitHub Copilot blockiert. Um dies zu beheben, musst du Copilots Inline-Vorschläge deaktivieren.",
 			"disableCopilot": "Copilot deaktivieren",
 			"disableInlineAssist": "Autocomplete deaktivieren"
 		}
 	},
 	"terminalCommandGenerator": {
-		"inputPrompt": "Kilo: Beschreibe den Befehl, den du generieren möchtest",
-		"generatingProgress": "Kilo: Terminal-Befehl wird generiert...",
-		"noActiveTerminal": "Kilo: Kein aktives Terminal gefunden. Bitte öffne zuerst ein Terminal.",
+		"inputPrompt": "SpeXcode: Beschreibe den Befehl, den du generieren möchtest",
+		"generatingProgress": "SpeXcode: Terminal-Befehl wird generiert...",
+		"noActiveTerminal": "SpeXcode: Kein aktives Terminal gefunden. Bitte öffne zuerst ein Terminal.",
 		"inputPlaceholder": "z.B. den Prozess beenden, der auf Port 3001 läuft, große Dateien finden, usw.",
-		"generationFailed": "Kilo: Fehler beim Generieren des Befehls: {{error}}",
-		"commandGenerated": "Kilo: Generierter Befehl: {{command}}",
+		"generationFailed": "SpeXcode: Fehler beim Generieren des Befehls: {{error}}",
+		"commandGenerated": "SpeXcode: Generierter Befehl: {{command}}",
 		"warningDialog": {
 			"okButton": "Ich verstehe",
 			"title": "Sicherheitswarnung für das Terminal",
 			"message": "Überprüfe alle generierten Befehle doppelt, bevor du sie ausführst. Terminal-Aktionen können nicht immer rückgängig gemacht werden - das Ausführen ungeprüfter Befehle kann zu irreversiblem Datenverlust oder Systemschäden führen. Überprüfe und verstehe den Befehl vollständig, bevor du fortfährst!",
 			"cancelButton": "Abbrechen"
 		},
-		"tipMessage": "Kilo: Drücke {{shortcut}}, um Terminal-Befehle zu generieren"
+		"tipMessage": "SpeXcode: Drücke {{shortcut}}, um Terminal-Befehle zu generieren"
 	},
 	"seeNewChanges": {
 		"title": "Zeige neue Änderungen",
@@ -206,7 +206,7 @@
 		}
 	},
 	"configDiscovery": {
-		"added": "Kilo-Code: Hinzugefügt {{source}} {{configType}}: {{name}}{{modeStr}}",
-		"removed": "Kilo-Code: Entfernt {{source}} {{configType}}: {{name}}{{modeStr}}"
+		"added": "SpeXcode-Code: Hinzugefügt {{source}} {{configType}}: {{name}}{{modeStr}}",
+		"removed": "SpeXcode-Code: Entfernt {{source}} {{configType}}: {{name}}{{modeStr}}"
 	}
 }

@@ -55,19 +55,19 @@
 		"initializing": "Inicializujem...",
 		"discoveringFiles": "Zisťujem súbory...",
 		"gettingContext": "Získavam kontext...",
-		"activated": "Generátor správ pre commit Kilo Code aktivovaný",
+		"activated": "Generátor správ pre commit SpeXcode aktivovaný",
 		"gitNotFound": "⚠️ Git repozitár nebol nájdený alebo git nie je dostupný",
 		"gitInitError": "⚠️ Chyba inicializácie Gitu: {{error}}",
-		"generating": "Kilo: Generujem správu commitu...",
-		"noChanges": "Kilo: Nenájdené žiadne zmeny na analýzu",
-		"generated": "Kilo: Správa bola vygenerovaná!",
-		"generationFailed": "Kilo: Nepodarilo sa vygenerovať správu commitu: {{errorMessage}}",
-		"generatingFromUnstaged": "Kilo: Generovanie správy s použitím nenapojených zmien",
-		"activationFailed": "Kilo: Aktivácia generátora správ sa nepodarila: {{error}}",
-		"providerRegistered": "Kilo: Poskytovateľ správ commitov zaregistrovaný",
+		"generating": "SpeXcode: Generujem správu commitu...",
+		"noChanges": "SpeXcode: Nenájdené žiadne zmeny na analýzu",
+		"generated": "SpeXcode: Správa bola vygenerovaná!",
+		"generationFailed": "SpeXcode: Nepodarilo sa vygenerovať správu commitu: {{errorMessage}}",
+		"generatingFromUnstaged": "SpeXcode: Generovanie správy s použitím nenapojených zmien",
+		"activationFailed": "SpeXcode: Aktivácia generátora správ sa nepodarila: {{error}}",
+		"providerRegistered": "SpeXcode: Poskytovateľ správ commitov zaregistrovaný",
 		"errors": {
 			"noProject": "Žiadny projekt k dispozícii",
-			"connectionFailed": "Nepodarilo sa pripojiť k rozšíreniu Kilo Code",
+			"connectionFailed": "Nepodarilo sa pripojiť k rozšíreniu SpeXcode",
 			"timeout": "Časový limit požiadavky vypršal po 30 sekundách",
 			"invalidResponse": "Neplatný formát odpovede prijatý od rozšírenia",
 			"missingMessage": "Z rozšírenia nebola prijatá žiadna správa o commite",
@@ -91,7 +91,7 @@
 		},
 		"progress": {
 			"title": "Generovanie Commit Message",
-			"connecting": "Pripájanie k Kilo Code...",
+			"connecting": "Pripájanie k SpeXcode...",
 			"analyzing": "Analyzujem zmeny...",
 			"generating": "Generujem správu commitu..."
 		},
@@ -136,9 +136,9 @@
 			"snoozed": "pozastavené",
 			"warning": "$(warning) Autocomplete",
 			"tooltip": {
-				"basic": "Kilo Code Autocomplete",
-				"disabled": "Kilo Code Autocomplete (zakázané)",
-				"noCredits": "**Na tvojom účte nie sú žiadne kredity**\n\nTvoj účet Kilo Code nemá žiadne kredity. Pre použitie automatického doplňovania prosím pridaj kredity na svoj účet.\n\n[Otvoriť Nastavenia](command:kilo-code.settingsButtonClicked)",
+				"basic": "SpeXcode Autocomplete",
+				"disabled": "SpeXcode Autocomplete (zakázané)",
+				"noCredits": "**Na tvojom účte nie sú žiadne kredity**\n\nTvoj účet SpeXcode nemá žiadne kredity. Pre použitie automatického doplňovania prosím pridaj kredity na svoj účet.\n\n[Otvoriť Nastavenia](command:kilo-code.settingsButtonClicked)",
 				"noUsableProvider": "**Nie je nakonfigurovaný žiadny model automatického doplňovania**\n\nPre povolenie automatického doplňovania pridaj profil s jedným z týchto podporovaných poskytovateľov: {{providers}}.\n\n[Otvoriť Nastavenia](command:kilo-code.settingsButtonClicked)",
 				"sessionTotal": "Celkové náklady relácie:",
 				"provider": "Poskytovateľ:",
@@ -153,54 +153,54 @@
 				"lessThanCent": "<$0.01"
 			}
 		},
-		"toggleMessage": "Kilo Code Autocomplete {{status}}",
+		"toggleMessage": "SpeXcode Autocomplete {{status}}",
 		"progress": {
-			"title": "Kilo Code",
+			"title": "SpeXcode",
 			"analyzing": "Analyzujem tvoj kód...",
 			"generating": "Generujem navrhované úpravy...",
 			"processing": "Spracovávam navrhované úpravy...",
 			"showing": "Zobrazujem navrhované úpravy..."
 		},
 		"input": {
-			"title": "Kilo Code: Rýchla úloha",
+			"title": "SpeXcode: Rýchla úloha",
 			"placeholder": "napr. 'refaktoruj túto funkciu, aby bola efektívnejšia'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code: Generovať navrhované úpravy",
+			"generateSuggestions": "SpeXcode: Generovať navrhované úpravy",
 			"displaySuggestions": "Zobraziť navrhované úpravy",
 			"cancelSuggestions": "Zrušiť navrhované úpravy",
 			"applyCurrentSuggestion": "Použiť aktuálnu navrhnutú úpravu",
 			"applyAllSuggestions": "Použiť všetky navrhované úpravy",
-			"category": "Kilo Code"
+			"category": "SpeXcode"
 		},
 		"codeAction": {
-			"title": "Kilo Code: Navrhované úpravy"
+			"title": "SpeXcode: Navrhované úpravy"
 		},
 		"chatParticipant": {
-			"fullName": "Kilo Code Agent",
+			"fullName": "SpeXcode Agent",
 			"name": "Agent",
 			"description": "Môžem ti pomôcť s rýchlymi úlohami a navrhnutými úpravami."
 		},
 		"incompatibilityExtensionPopup": {
-			"message": "Kilo Code Autocomplete je blokované konfliktom s GitHub Copilot. Pre vyriešenie tohto problému musíš zakázať inline návrhy Copilot.",
+			"message": "SpeXcode Autocomplete je blokované konfliktom s GitHub Copilot. Pre vyriešenie tohto problému musíš zakázať inline návrhy Copilot.",
 			"disableCopilot": "Zakázať Copilot",
 			"disableInlineAssist": "Zakázať Autocomplete"
 		}
 	},
 	"terminalCommandGenerator": {
-		"inputPrompt": "Kilo: Popíšte príkaz, ktorý chcete vygenerovať",
-		"noActiveTerminal": "Kilo: Nebol nájdený žiadny aktívny terminál. Najprv prosím otvorte terminál.",
+		"inputPrompt": "SpeXcode: Popíšte príkaz, ktorý chcete vygenerovať",
+		"noActiveTerminal": "SpeXcode: Nebol nájdený žiadny aktívny terminál. Najprv prosím otvorte terminál.",
 		"inputPlaceholder": "napr. ukončiť proces bežiaci na porte 3001, nájsť veľké súbory atď.",
-		"generatingProgress": "Kilo: Generujem príkaz terminálu...",
-		"generationFailed": "Kilo: Príkaz sa nepodarilo vygenerovať: {{error}}",
-		"commandGenerated": "Kilo: Vygenerovaný príkaz: {{command}}",
+		"generatingProgress": "SpeXcode: Generujem príkaz terminálu...",
+		"generationFailed": "SpeXcode: Príkaz sa nepodarilo vygenerovať: {{error}}",
+		"commandGenerated": "SpeXcode: Vygenerovaný príkaz: {{command}}",
 		"warningDialog": {
 			"title": "Bezpečnostné Upozornenie Terminálu",
 			"okButton": "Rozumiem",
 			"message": "Dvakrát skontrolujte všetky vygenerované príkazy pred ich spustením. Akcie v termináli sa nedajú vždy vrátiť späť – spustenie neoverených príkazov môže viesť k nevratnej strate dát alebo poškodeniu systému. Pred pokračovaním si príkaz dôkladne prejdite a uistite sa, že mu rozumiete!",
 			"cancelButton": "Zrušiť"
 		},
-		"tipMessage": "Kilo: Stlačte {{shortcut}} pre generovanie príkazov v termináli"
+		"tipMessage": "SpeXcode: Stlačte {{shortcut}} pre generovanie príkazov v termináli"
 	},
 	"speechToText": {
 		"errors": {
@@ -210,6 +210,6 @@
 	},
 	"configDiscovery": {
 		"added": "Kód kilo: Pridané {{source}} {{configType}}: {{name}}{{modeStr}}",
-		"removed": "Kód Kilo: Odstránené {{source}} {{configType}}: {{name}}{{modeStr}}"
+		"removed": "Kód SpeXcode: Odstránené {{source}} {{configType}}: {{name}}{{modeStr}}"
 	}
 }

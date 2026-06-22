@@ -1,10 +1,10 @@
-# Kilo Code File Locations
+# SpeXcode File Locations
 
-Kilo Code stores configuration, data, and cache files in several locations depending on context (VS Code extension vs CLI) and operating system.
+SpeXcode stores configuration, data, and cache files in several locations depending on context (VS Code extension vs CLI) and operating system.
 
 ## VS Code Extension
 
-When running as a VS Code extension, Kilo Code uses VS Code's built-in `globalStorageUri` for data storage. The exact path depends on your OS and VS Code variant:
+When running as a VS Code extension, SpeXcode uses VS Code's built-in `globalStorageUri` for data storage. The exact path depends on your OS and VS Code variant:
 
 | OS      | Base path                                                                   |
 | ------- | --------------------------------------------------------------------------- |
@@ -34,7 +34,7 @@ You can override the storage base path via the `kilo-code.customStoragePath` VS 
 
 This repository currently ships and maintains the VS Code extension product graph. The CLI / `agent-runtime` paths below are kept as historical/reference documentation rather than an active surface in this monorepo.
 
-When running via the former Kilo CLI (`@kilocode/agent-runtime`), files were stored under `~/.kilocode/cli/` (on Windows: `%USERPROFILE%\.kilocode\cli\`):
+When running via the former SpeXcode CLI (`@kilocode/agent-runtime`), files were stored under `~/.kilocode/cli/` (on Windows: `%USERPROFILE%\.kilocode\cli\`):
 
 | Path                                            | Description                          |
 | ----------------------------------------------- | ------------------------------------ |
@@ -67,7 +67,7 @@ Global rules and workflows can also be placed in your home directory:
 
 ## VS Code User Configuration
 
-Kilo Code reads VS Code's `settings.json` for extension settings. The location follows the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) on Linux:
+SpeXcode reads VS Code's `settings.json` for extension settings. The location follows the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) on Linux:
 
 | OS      | Path                                                                                      |
 | ------- | ----------------------------------------------------------------------------------------- |

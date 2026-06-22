@@ -52,19 +52,19 @@
 		}
 	},
 	"commitMessage": {
-		"activated": "Trình tạo thông báo commit Kilo Code đã được kích hoạt",
+		"activated": "Trình tạo thông báo commit SpeXcode đã được kích hoạt",
 		"gitNotFound": "⚠️ Không tìm thấy kho lưu trữ Git hoặc git không khả dụng",
 		"gitInitError": "⚠️ Lỗi khởi tạo Git: {{error}}",
-		"generating": "Kilo: Đang tạo thông báo commit...",
-		"noChanges": "Kilo: Không tìm thấy thay đổi nào để phân tích",
-		"generated": "Kilo: Đã tạo thông báo commit!",
-		"generationFailed": "Kilo: Tạo thông báo commit không thành công: {{errorMessage}}",
-		"generatingFromUnstaged": "Kilo: Đang tạo thông báo bằng các thay đổi chưa được chuẩn bị",
-		"activationFailed": "Kilo: Kích hoạt trình tạo thông báo không thành công: {{error}}",
-		"providerRegistered": "Kilo: Nhà cung cấp thông báo commit đã được đăng ký",
+		"generating": "SpeXcode: Đang tạo thông báo commit...",
+		"noChanges": "SpeXcode: Không tìm thấy thay đổi nào để phân tích",
+		"generated": "SpeXcode: Đã tạo thông báo commit!",
+		"generationFailed": "SpeXcode: Tạo thông báo commit không thành công: {{errorMessage}}",
+		"generatingFromUnstaged": "SpeXcode: Đang tạo thông báo bằng các thay đổi chưa được chuẩn bị",
+		"activationFailed": "SpeXcode: Kích hoạt trình tạo thông báo không thành công: {{error}}",
+		"providerRegistered": "SpeXcode: Nhà cung cấp thông báo commit đã được đăng ký",
 		"errors": {
 			"noProject": "Không có dự án nào",
-			"connectionFailed": "Không thể kết nối với tiện ích mở rộng Kilo Code",
+			"connectionFailed": "Không thể kết nối với tiện ích mở rộng SpeXcode",
 			"timeout": "Yêu cầu đã hết thời gian sau 30 giây",
 			"invalidResponse": "Nhận được định dạng phản hồi không hợp lệ từ tiện ích mở rộng",
 			"noChanges": "Không tìm thấy thay đổi nào để commit",
@@ -89,7 +89,7 @@
 		"progress": {
 			"title": "Tạo Message Cam Kết",
 			"generating": "Đang tạo thông điệp commit...",
-			"connecting": "Đang kết nối tới Kilo Code...",
+			"connecting": "Đang kết nối tới SpeXcode...",
 			"analyzing": "Đang phân tích các thay đổi..."
 		},
 		"ui": {
@@ -103,9 +103,9 @@
 			"snoozed": "tạm dừng",
 			"warning": "$(warning) Autocomplete",
 			"tooltip": {
-				"basic": "Kilo Code Autocomplete",
-				"disabled": "Kilo Code Autocomplete (đã tắt)",
-				"noCredits": "**Không có tín dụng trong tài khoản của bạn**\n\nTài khoản Kilo Code của bạn không có tín dụng. Để sử dụng tự động hoàn thành, vui lòng thêm tín dụng vào tài khoản của bạn.\n\n[Mở Cài đặt](command:kilo-code.settingsButtonClicked)",
+				"basic": "SpeXcode Autocomplete",
+				"disabled": "SpeXcode Autocomplete (đã tắt)",
+				"noCredits": "**Không có tín dụng trong tài khoản của bạn**\n\nTài khoản SpeXcode của bạn không có tín dụng. Để sử dụng tự động hoàn thành, vui lòng thêm tín dụng vào tài khoản của bạn.\n\n[Mở Cài đặt](command:kilo-code.settingsButtonClicked)",
 				"noUsableProvider": "**Chưa cấu hình mô hình tự động hoàn thành**\n\nĐể bật tự động hoàn thành, hãy thêm hồ sơ với một trong các nhà cung cấp được hỗ trợ sau: {{providers}}.\n\n[Mở Cài đặt](command:kilo-code.settingsButtonClicked)",
 				"sessionTotal": "Tổng chi phí phiên:",
 				"provider": "Nhà cung cấp:",
@@ -120,54 +120,54 @@
 				"lessThanCent": "<$0.01"
 			}
 		},
-		"toggleMessage": "Kilo Code Autocomplete {{status}}",
+		"toggleMessage": "SpeXcode Autocomplete {{status}}",
 		"progress": {
-			"title": "Kilo Code",
+			"title": "SpeXcode",
 			"analyzing": "Đang phân tích mã của bạn...",
 			"generating": "Đang tạo các chỉnh sửa được đề xuất...",
 			"processing": "Đang xử lý các chỉnh sửa được đề xuất...",
 			"showing": "Đang hiển thị các chỉnh sửa được đề xuất..."
 		},
 		"input": {
-			"title": "Kilo Code: Tác Vụ Nhanh",
+			"title": "SpeXcode: Tác Vụ Nhanh",
 			"placeholder": "ví dụ, 'tái cấu trúc hàm này để hiệu quả hơn'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code: Tạo Các Chỉnh Sửa Được Đề Xuất",
+			"generateSuggestions": "SpeXcode: Tạo Các Chỉnh Sửa Được Đề Xuất",
 			"displaySuggestions": "Hiển Thị Các Chỉnh Sửa Được Đề Xuất",
 			"cancelSuggestions": "Hủy Các Chỉnh Sửa Được Đề Xuất",
 			"applyCurrentSuggestion": "Áp Dụng Chỉnh Sửa Được Đề Xuất Hiện Tại",
 			"applyAllSuggestions": "Áp Dụng Tất Cả Các Chỉnh Sửa Được Đề Xuất",
-			"category": "Kilo Code"
+			"category": "SpeXcode"
 		},
 		"codeAction": {
-			"title": "Kilo Code: Các Chỉnh Sửa Được Đề Xuất"
+			"title": "SpeXcode: Các Chỉnh Sửa Được Đề Xuất"
 		},
 		"chatParticipant": {
-			"fullName": "Kilo Code Agent",
+			"fullName": "SpeXcode Agent",
 			"name": "Agent",
 			"description": "Tôi có thể giúp bạn với các tác vụ nhanh và chỉnh sửa được đề xuất."
 		},
 		"incompatibilityExtensionPopup": {
-			"message": "Kilo Code Autocomplete đang bị chặn do xung đột với GitHub Copilot. Để khắc phục điều này, bạn phải tắt các gợi ý inline của Copilot.",
+			"message": "SpeXcode Autocomplete đang bị chặn do xung đột với GitHub Copilot. Để khắc phục điều này, bạn phải tắt các gợi ý inline của Copilot.",
 			"disableCopilot": "Tắt Copilot",
 			"disableInlineAssist": "Tắt Autocomplete"
 		}
 	},
 	"terminalCommandGenerator": {
-		"inputPrompt": "Kilo: Mô tả lệnh bạn muốn tạo",
-		"generatingProgress": "Kilo: Đang tạo lệnh terminal...",
+		"inputPrompt": "SpeXcode: Mô tả lệnh bạn muốn tạo",
+		"generatingProgress": "SpeXcode: Đang tạo lệnh terminal...",
 		"inputPlaceholder": "ví dụ: tắt tiến trình đang chạy trên cổng 3001, tìm các tệp tin lớn, v.v.",
-		"noActiveTerminal": "Kilo: Không tìm thấy terminal đang hoạt động. Vui lòng mở terminal trước.",
-		"commandGenerated": "Kilo: Lệnh đã tạo: {{command}}",
-		"generationFailed": "Kilo: Không thể tạo lệnh: {{error}}",
+		"noActiveTerminal": "SpeXcode: Không tìm thấy terminal đang hoạt động. Vui lòng mở terminal trước.",
+		"commandGenerated": "SpeXcode: Lệnh đã tạo: {{command}}",
+		"generationFailed": "SpeXcode: Không thể tạo lệnh: {{error}}",
 		"warningDialog": {
 			"okButton": "Tôi Hiểu",
 			"title": "Cảnh Báo An Toàn Thiết Bị Đầu Cuối",
 			"message": "Kiểm tra kỹ lưỡng tất cả các lệnh được tạo ra trước khi chạy chúng. Các thao tác trên terminal không phải lúc nào cũng có thể hoàn tác — việc chạy các lệnh chưa được xác minh có thể dẫn đến mất dữ liệu không thể khôi phục hoặc làm hỏng hệ thống. Hãy xem xét và hiểu rõ hoàn toàn lệnh trước khi tiếp tục!",
 			"cancelButton": "Hủy"
 		},
-		"tipMessage": "Kilo: Nhấn {{shortcut}} để tạo lệnh terminal"
+		"tipMessage": "SpeXcode: Nhấn {{shortcut}} để tạo lệnh terminal"
 	},
 	"seeNewChanges": {
 		"title": "Đang hiển thị các thay đổi mới",
@@ -206,7 +206,7 @@
 		}
 	},
 	"configDiscovery": {
-		"added": "Mã Kilo: Đã thêm {{source}} {{configType}}: {{name}}{{modeStr}}",
-		"removed": "Mã Kilo: Đã xóa {{source}} {{configType}}: {{name}}{{modeStr}}"
+		"added": "Mã SpeXcode: Đã thêm {{source}} {{configType}}: {{name}}{{modeStr}}",
+		"removed": "Mã SpeXcode: Đã xóa {{source}} {{configType}}: {{name}}{{modeStr}}"
 	}
 }

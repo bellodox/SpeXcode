@@ -52,20 +52,20 @@
 		}
 	},
 	"commitMessage": {
-		"activated": "Générateur de messages de commit Kilo Code activé",
+		"activated": "Générateur de messages de commit SpeXcode activé",
 		"gitNotFound": "⚠️ Dépôt Git introuvable ou git non disponible",
 		"gitInitError": "⚠️ Erreur d'initialisation Git : {{error}}",
-		"generating": "Kilo : Génération du message de commit...",
-		"noChanges": "Kilo : Aucun changement trouvé à analyser",
-		"generated": "Kilo : Message de commit généré !",
-		"generationFailed": "Kilo : Échec de la génération du message de commit : {{errorMessage}}",
-		"generatingFromUnstaged": "Kilo : Génération du message à partir des modifications non préparées",
-		"activationFailed": "Kilo : Échec de l'activation du générateur de messages : {{error}}",
-		"providerRegistered": "Kilo : Fournisseur de messages de commit enregistré",
+		"generating": "SpeXcode : Génération du message de commit...",
+		"noChanges": "SpeXcode : Aucun changement trouvé à analyser",
+		"generated": "SpeXcode : Message de commit généré !",
+		"generationFailed": "SpeXcode : Échec de la génération du message de commit : {{errorMessage}}",
+		"generatingFromUnstaged": "SpeXcode : Génération du message à partir des modifications non préparées",
+		"activationFailed": "SpeXcode : Échec de l'activation du générateur de messages : {{error}}",
+		"providerRegistered": "SpeXcode : Fournisseur de messages de commit enregistré",
 		"errors": {
 			"noProject": "Aucun projet disponible",
 			"timeout": "La requête a expiré après 30 secondes",
-			"connectionFailed": "Échec de connexion à l'extension Kilo Code",
+			"connectionFailed": "Échec de connexion à l'extension SpeXcode",
 			"invalidResponse": "Format de réponse invalide reçu de l'extension",
 			"missingMessage": "Aucun message de commit reçu de l'extension",
 			"noWorkspacePath": "Impossible de déterminer le chemin d'espace de travail pour le dépôt Git",
@@ -88,7 +88,7 @@
 		},
 		"progress": {
 			"title": "Génération du Message de Commit",
-			"connecting": "Connexion à Kilo Code...",
+			"connecting": "Connexion à SpeXcode...",
 			"analyzing": "Analyse des changements en cours...",
 			"generating": "Génération du message de commit..."
 		},
@@ -103,9 +103,9 @@
 			"snoozed": "en pause",
 			"warning": "$(warning) Autocomplete",
 			"tooltip": {
-				"basic": "Kilo Code Autocomplete",
-				"disabled": "Kilo Code Autocomplete (désactivé)",
-				"noCredits": "**Pas de crédits sur ton compte**\n\nTon compte Kilo Code n'a pas de crédits. Pour utiliser l'autocomplétion, ajoute des crédits à ton compte.\n\n[Ouvrir les Paramètres](command:kilo-code.settingsButtonClicked)",
+				"basic": "SpeXcode Autocomplete",
+				"disabled": "SpeXcode Autocomplete (désactivé)",
+				"noCredits": "**Pas de crédits sur ton compte**\n\nTon compte SpeXcode n'a pas de crédits. Pour utiliser l'autocomplétion, ajoute des crédits à ton compte.\n\n[Ouvrir les Paramètres](command:kilo-code.settingsButtonClicked)",
 				"noUsableProvider": "**Aucun modèle d'autocomplétion configuré**\n\nPour activer l'autocomplétion, ajoute un profil avec l'un de ces fournisseurs pris en charge : {{providers}}.\n\n[Ouvrir les Paramètres](command:kilo-code.settingsButtonClicked)",
 				"sessionTotal": "Coût total de la session :",
 				"provider": "Fournisseur:",
@@ -120,54 +120,54 @@
 				"lessThanCent": "<$0.01"
 			}
 		},
-		"toggleMessage": "Kilo Code Autocomplete {{status}}",
+		"toggleMessage": "SpeXcode Autocomplete {{status}}",
 		"progress": {
-			"title": "Kilo Code",
+			"title": "SpeXcode",
 			"analyzing": "Analyse de ton code...",
 			"generating": "Génération des modifications suggérées...",
 			"processing": "Traitement des modifications suggérées...",
 			"showing": "Affichage des modifications suggérées..."
 		},
 		"input": {
-			"title": "Kilo Code : Tâche Rapide",
+			"title": "SpeXcode : Tâche Rapide",
 			"placeholder": "ex., 'refactorise cette fonction pour plus d'efficacité'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code : Générer des Modifications Suggérées",
+			"generateSuggestions": "SpeXcode : Générer des Modifications Suggérées",
 			"displaySuggestions": "Afficher les Modifications Suggérées",
 			"cancelSuggestions": "Annuler les Modifications Suggérées",
 			"applyCurrentSuggestion": "Appliquer la Modification Suggérée Actuelle",
 			"applyAllSuggestions": "Appliquer Toutes les Modifications Suggérées",
-			"category": "Kilo Code"
+			"category": "SpeXcode"
 		},
 		"codeAction": {
-			"title": "Kilo Code : Modifications Suggérées"
+			"title": "SpeXcode : Modifications Suggérées"
 		},
 		"chatParticipant": {
-			"fullName": "Kilo Code Agent",
+			"fullName": "SpeXcode Agent",
 			"name": "Agent",
 			"description": "Je peux t'aider avec des tâches rapides et des modifications suggérées."
 		},
 		"incompatibilityExtensionPopup": {
-			"message": "Le Kilo Code Autocomplete est bloqué par un conflit avec GitHub Copilot. Pour résoudre cela, tu dois désactiver les suggestions en ligne de Copilot.",
+			"message": "Le SpeXcode Autocomplete est bloqué par un conflit avec GitHub Copilot. Pour résoudre cela, tu dois désactiver les suggestions en ligne de Copilot.",
 			"disableCopilot": "Désactiver Copilot",
 			"disableInlineAssist": "Désactiver Autocomplete"
 		}
 	},
 	"terminalCommandGenerator": {
-		"inputPrompt": "Kilo : Décrivez la commande que vous souhaitez générer",
+		"inputPrompt": "SpeXcode : Décrivez la commande que vous souhaitez générer",
 		"inputPlaceholder": "par exemple, arrêter le processus en cours d'exécution sur le port 3001, trouver des fichiers volumineux, etc.",
-		"noActiveTerminal": "Kilo : Aucun terminal actif trouvé. Veuillez d'abord ouvrir un terminal.",
-		"generatingProgress": "Kilo : Génération de la commande terminal...",
-		"commandGenerated": "Kilo : Commande générée : {{command}}",
-		"generationFailed": "Kilo : Échec de la génération de la commande : {{error}}",
+		"noActiveTerminal": "SpeXcode : Aucun terminal actif trouvé. Veuillez d'abord ouvrir un terminal.",
+		"generatingProgress": "SpeXcode : Génération de la commande terminal...",
+		"commandGenerated": "SpeXcode : Commande générée : {{command}}",
+		"generationFailed": "SpeXcode : Échec de la génération de la commande : {{error}}",
 		"warningDialog": {
 			"title": "Avertissement de Sécurité du Terminal",
 			"okButton": "Je comprends",
 			"message": "Vérifiez attentivement toutes les commandes générées avant de les exécuter. Les actions effectuées dans le terminal ne peuvent pas toujours être annulées — l'exécution de commandes non vérifiées peut entraîner une perte irréversible de données ou endommager votre système. Examinez et comprenez entièrement la commande avant de continuer !",
 			"cancelButton": "Annuler"
 		},
-		"tipMessage": "Kilo : Appuyez sur {{shortcut}} pour générer des commandes de terminal"
+		"tipMessage": "SpeXcode : Appuyez sur {{shortcut}} pour générer des commandes de terminal"
 	},
 	"seeNewChanges": {
 		"title": "Affichage des nouveaux changements",
@@ -206,7 +206,7 @@
 		}
 	},
 	"configDiscovery": {
-		"removed": "Code Kilo : Supprimé {{source}} {{configType}} : {{name}}{{modeStr}}",
-		"added": "Code Kilo : Ajouté {{source}} {{configType}} : {{name}}{{modeStr}}"
+		"removed": "Code SpeXcode : Supprimé {{source}} {{configType}} : {{name}}{{modeStr}}",
+		"added": "Code SpeXcode : Ajouté {{source}} {{configType}} : {{name}}{{modeStr}}"
 	}
 }

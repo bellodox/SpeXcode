@@ -1,6 +1,6 @@
-# Contributing to Kilo Code
+# Contributing to SpeXcode
 
-> **Note**: New versions of the VS Code extension and CLI are being developed in [Kilo-Org/Kilo](https://github.com/Kilo-Org/Kilo) (extension at `packages/kilo-vscode`, CLI at `packages/opencode`). If you're looking to contribute to the extension or CLI, please head over to that repository.
+> **Note**: New versions of the VS Code extension and CLI are being developed in [SpeXcode-Org/SpeXcode](https://github.com/SpeXcode-Org/SpeXcode) (extension at `packages/kilo-vscode`, CLI at `packages/opencode`). If you're looking to contribute to the extension or CLI, please head over to that repository.
 
 First off, thanks for taking the time to contribute! ❤️
 
@@ -9,7 +9,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 If you don't have time to contribute, that's fine. There are other easy ways to support the project and show your appreciation, which we would also be very happy about:
 
 - Star the project
-- Post on X or Linkedin about Kilo Code `#kilocode
+- Post on X or LinkedIn about SpeXcode `#SpeXcode`
 - Mention the project at local meetups and tell your friends/colleagues
 
 ## Table of Contents
@@ -29,18 +29,18 @@ If you don't have time to contribute, that's fine. There are other easy ways to 
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [Code of Conduct](https://github.com/Kilo-Org/kilocode/blob/main/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior
+This project and everyone participating in it is governed by the [Code of Conduct](https://github.com/bellodox/SpeXcode/blob/main/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior
 to [hi@kilocode.ai](mailto:hi@kilocode.ai).
 
 ## I Have a Question
 
-If you need clarification after reading this document, we encourage you to join our [discord](https://kilo.ai/discord) workspace and join channels [kilo-dev-contributors](https://discord.com/channels/1349288496988160052/1391109167275577464) and [extensions-support channel](https://discord.com/channels/1349288496988160052/1349358641295265864).
+If you need clarification after reading this document, we encourage you to join our [discord](https://github.com/bellodox/SpeXcode/discussions) workspace and join channels [kilo-dev-contributors](https://discord.com/channels/1349288496988160052/1391109167275577464) and [extensions-support channel](https://discord.com/channels/1349288496988160052/1349358641295265864).
 
 ## I Want To Contribute
 
 ### Code Contributors
 
-We’re excited that you’re interested in contributing code to Kilo Code! Before you start, please take a look at our [Development Guide](https://github.com/Kilo-Org/kilocode/blob/main/DEVELOPMENT.md), it includes setup instructions, build steps, and details on running tests locally.
+We’re excited that you’re interested in contributing code to SpeXcode! Before you start, please take a look at our [Development Guide](https://github.com/bellodox/SpeXcode/blob/main/DEVELOPMENT.md), it includes setup instructions, build steps, and details on running tests locally.
 
 #### What to Expect
 
@@ -66,24 +66,24 @@ Please use our issues templates that provide hints on what information we need t
 
 ### Custom Modes
 
-Custom modes are a powerful way to extend Kilo Code's capabilities. To create and share a custom mode:
+Custom modes are a powerful way to extend SpeXcode's capabilities. To create and share a custom mode:
 
-- Follow the [Custom Modes documentation](https://kilo.ai/docs/customize/custom-modes) to create your mode.
+- Follow the [Custom Modes documentation](https://github.com/bellodox/SpeXcode/tree/main/docs/customize/custom-modes) to create your mode.
 
 - Test your mode thoroughly
 
-- Share your mode with the community on [Reddit](https://www.reddit.com/r/kilocode/) or you can show off / start a discussion on [show-off-your-builds](https://discord.com/channels/1349288496988160052/1375399779760214037) or [workflows-and-integration](https://discord.com/channels/1349288496988160052/1420236932780130418) on discord.
+- Share your mode with the community on [Reddit](https://github.com/bellodox/SpeXcode/discussions) or you can show off / start a discussion on [show-off-your-builds](https://discord.com/channels/1349288496988160052/1375399779760214037) or [workflows-and-integration](https://discord.com/channels/1349288496988160052/1420236932780130418) on discord.
 
 ### Feature Requests
 
-Suggest feature requests in [Discussion](https://github.com/Kilo-Org/kilocode/discussions), only open an [Issue](https://github.com/Kilo-Org/kilocode/issues/new/choose) for reporting a bug or actual contributions. Don't open issues for questions or support, instead join our [Discord workspace](https://kilo.ai/discord) and ask there.
+Suggest feature requests in [Discussion](https://github.com/bellodox/SpeXcode/discussions), only open an [Issue](https://github.com/bellodox/SpeXcode/issues/new/choose) for reporting a bug or actual contributions. Don't open issues for questions or support, instead join our [Discord workspace](https://github.com/bellodox/SpeXcode/discussions) and ask there.
 
 - Provide as much context as you can about what you're running into.
 
 ### Improving The Documentation
 
 If you notice outdated information or areas that could be clarified, kindly start a discussion in the [general](https://discord.com/channels/1349288496988160052/1349288496988160055) channel on discord.
-Please note that the main [documentation](https://github.com/Kilo-Org/docs) repository has been archived, you can still view it for reference.
+Please note that the main [documentation](https://github.com/SpeXcode-Org/docs) repository has been archived, you can still view it for reference.
 
 ### Improving The Design
 
@@ -92,8 +92,8 @@ This helps us gather the right context (such as wireframes, mockups, or visual r
 
 ### Publish a Blog Post or Case Study
 
-We love hearing how people use or extend Kilo Code in their own projects. If you’ve written about your experience, we’re happy to review it!
-Our blog and case study repository has been archived, you can still access it [here](https://github.com/Kilo-Org/docs/tree/main/blog-posts) for reference. To share your work, please start a discussion in the [general](https://discord.com/channels/1349288496988160052/1349288496988160055) channel on discord, summarizing your post or case study, with a link to the full content.
+We love hearing how people use or extend SpeXcode in their own projects. If you’ve written about your experience, we’re happy to review it!
+Our blog and case study repository has been archived, you can still access it [here](https://github.com/SpeXcode-Org/docs/tree/main/blog-posts) for reference. To share your work, please start a discussion in the [general](https://discord.com/channels/1349288496988160052/1349288496988160055) channel on discord, summarizing your post or case study, with a link to the full content.
 
 ### Commit Messages
 
@@ -119,7 +119,7 @@ When you’re ready to contribute your changes, follow these steps to create a c
     git push origin your-branch-name
     ```
 
-- Open a Pull Request against the main Kilo Code repository.
+- Open a Pull Request against the main SpeXcode repository.
 
 - Select "Compare across forks" and choose your fork and branch.
 
@@ -133,9 +133,9 @@ When you’re ready to contribute your changes, follow these steps to create a c
 
     - Notes for reviewers, if special attention is needed
 
-For more context, kindly read the official [contributing docs](https://kilo.ai/docs/contributing).
+For more context, kindly read the official [contributing docs](https://github.com/bellodox/SpeXcode/tree/main/docs/contributing).
 
-Your contributions, big or small help make Kilo Code better for everyone!🫶
+Your contributions, big or small help make SpeXcode better for everyone!🫶
 
 ## References
 

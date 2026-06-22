@@ -47,20 +47,20 @@
 		}
 	},
 	"commitMessage": {
-		"activated": "Генератор сообщений коммитов Kilo Code активирован",
+		"activated": "Генератор сообщений коммитов SpeXcode активирован",
 		"gitNotFound": "⚠️ Репозиторий Git не найден или git недоступен",
 		"gitInitError": "⚠️ Ошибка инициализации Git: {{error}}",
-		"generating": "Kilo: Генерация сообщения коммита...",
-		"noChanges": "Kilo: Изменения для анализа не найдены",
-		"generated": "Kilo: Сообщение коммита сгенерировано!",
-		"generationFailed": "Kilo: Ошибка генерации сообщения коммита: {{errorMessage}}",
-		"generatingFromUnstaged": "Kilo: Генерация сообщения с использованием незафиксированных изменений",
-		"activationFailed": "Kilo: Не удалось активировать генератор сообщений: {{error}}",
-		"providerRegistered": "Kilo: Поставщик сообщений коммитов зарегистрирован",
+		"generating": "SpeXcode: Генерация сообщения коммита...",
+		"noChanges": "SpeXcode: Изменения для анализа не найдены",
+		"generated": "SpeXcode: Сообщение коммита сгенерировано!",
+		"generationFailed": "SpeXcode: Ошибка генерации сообщения коммита: {{errorMessage}}",
+		"generatingFromUnstaged": "SpeXcode: Генерация сообщения с использованием незафиксированных изменений",
+		"activationFailed": "SpeXcode: Не удалось активировать генератор сообщений: {{error}}",
+		"providerRegistered": "SpeXcode: Поставщик сообщений коммитов зарегистрирован",
 		"errors": {
 			"noProject": "Нет доступных проектов",
 			"invalidResponse": "Получен неверный формат ответа от расширения",
-			"connectionFailed": "Не удалось подключиться к расширению Kilo Code",
+			"connectionFailed": "Не удалось подключиться к расширению SpeXcode",
 			"timeout": "Время запроса истекло после 30 секунд",
 			"missingMessage": "Не получено сообщение о коммите от расширения",
 			"noChanges": "Изменений для фиксации не найдено",
@@ -83,7 +83,7 @@
 		},
 		"progress": {
 			"title": "Генерация Сообщения Коммита",
-			"connecting": "Подключение к Kilo Code...",
+			"connecting": "Подключение к SpeXcode...",
 			"analyzing": "Анализируем изменения...",
 			"generating": "Генерация сообщения коммита..."
 		},
@@ -98,9 +98,9 @@
 			"snoozed": "приостановлено",
 			"warning": "$(warning) Autocomplete",
 			"tooltip": {
-				"basic": "Kilo Code Autocomplete",
-				"disabled": "Kilo Code Autocomplete (отключено)",
-				"noCredits": "**На вашем счёте нет кредитов**\n\nНа вашем счёте Kilo Code нет кредитов. Чтобы использовать автодополнение, пожалуйста, пополните счёт.\n\n[Открыть Настройки](command:kilo-code.settingsButtonClicked)",
+				"basic": "SpeXcode Autocomplete",
+				"disabled": "SpeXcode Autocomplete (отключено)",
+				"noCredits": "**На вашем счёте нет кредитов**\n\nНа вашем счёте SpeXcode нет кредитов. Чтобы использовать автодополнение, пожалуйста, пополните счёт.\n\n[Открыть Настройки](command:kilo-code.settingsButtonClicked)",
 				"noUsableProvider": "**Модель автодополнения не настроена**\n\nЧтобы включить автодополнение, добавьте профиль с одним из поддерживаемых провайдеров: {{providers}}.\n\n[Открыть Настройки](command:kilo-code.settingsButtonClicked)",
 				"sessionTotal": "Общая стоимость сессии:",
 				"provider": "Провайдер:",
@@ -115,54 +115,54 @@
 				"lessThanCent": "<$0.01"
 			}
 		},
-		"toggleMessage": "Kilo Code Autocomplete {{status}}",
+		"toggleMessage": "SpeXcode Autocomplete {{status}}",
 		"progress": {
-			"title": "Kilo Code",
+			"title": "SpeXcode",
 			"analyzing": "Анализирую твой код...",
 			"generating": "Генерирую предлагаемые правки...",
 			"processing": "Обрабатываю предлагаемые правки...",
 			"showing": "Показываю предлагаемые правки..."
 		},
 		"input": {
-			"title": "Kilo Code: Быстрая Задача",
+			"title": "SpeXcode: Быстрая Задача",
 			"placeholder": "напр., 'рефактори эту функцию для большей эффективности'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code: Генерировать Предлагаемые Правки",
+			"generateSuggestions": "SpeXcode: Генерировать Предлагаемые Правки",
 			"displaySuggestions": "Показать Предлагаемые Правки",
 			"cancelSuggestions": "Отменить Предлагаемые Правки",
 			"applyCurrentSuggestion": "Применить Текущую Предлагаемую Правку",
 			"applyAllSuggestions": "Применить Все Предлагаемые Правки",
-			"category": "Kilo Code"
+			"category": "SpeXcode"
 		},
 		"codeAction": {
-			"title": "Kilo Code: Предлагаемые Правки"
+			"title": "SpeXcode: Предлагаемые Правки"
 		},
 		"chatParticipant": {
-			"fullName": "Kilo Code Agent",
+			"fullName": "SpeXcode Agent",
 			"name": "Agent",
 			"description": "Я могу помочь тебе с быстрыми задачами и предлагаемыми правками."
 		},
 		"incompatibilityExtensionPopup": {
-			"message": "Kilo Code Autocomplete блокируется конфликтом с GitHub Copilot. Чтобы исправить это, ты должен отключить встроенные предложения Copilot.",
+			"message": "SpeXcode Autocomplete блокируется конфликтом с GitHub Copilot. Чтобы исправить это, ты должен отключить встроенные предложения Copilot.",
 			"disableCopilot": "Отключить Copilot",
 			"disableInlineAssist": "Отключить Autocomplete"
 		}
 	},
 	"terminalCommandGenerator": {
-		"inputPrompt": "Kilo: Опишите команду, которую вы хотите сгенерировать",
+		"inputPrompt": "SpeXcode: Опишите команду, которую вы хотите сгенерировать",
 		"inputPlaceholder": "например, завершить процесс, работающий на порту 3001, найти большие файлы и т.д.",
-		"generatingProgress": "Kilo: Создание команды терминала...",
-		"generationFailed": "Kilo: Не удалось сгенерировать команду: {{error}}",
-		"commandGenerated": "Kilo: Сгенерированная команда: {{command}}",
-		"noActiveTerminal": "Kilo: Активный терминал не найден. Пожалуйста, сначала откройте терминал.",
+		"generatingProgress": "SpeXcode: Создание команды терминала...",
+		"generationFailed": "SpeXcode: Не удалось сгенерировать команду: {{error}}",
+		"commandGenerated": "SpeXcode: Сгенерированная команда: {{command}}",
+		"noActiveTerminal": "SpeXcode: Активный терминал не найден. Пожалуйста, сначала откройте терминал.",
 		"warningDialog": {
 			"title": "Предупреждение о безопасности терминала",
 			"okButton": "Я понимаю",
 			"message": "Перепроверяйте все сгенерированные команды перед их выполнением. Действия в терминале не всегда можно отменить — запуск непроверенных команд может привести к необратимой потере данных или повреждению системы. Полностью просмотрите и осознайте команду перед тем, как продолжить!",
 			"cancelButton": "Отменить"
 		},
-		"tipMessage": "Kilo: Нажмите {{shortcut}}, чтобы сгенерировать команды терминала"
+		"tipMessage": "SpeXcode: Нажмите {{shortcut}}, чтобы сгенерировать команды терминала"
 	},
 	"checkpoints": {
 		"nestedGitRepos": "Контрольные точки недоступны, поскольку обнаружен вложенный Git-репозиторий по адресу: {{path}}. Пожалуйста, удалите или переместите вложенные Git-репозитории для использования функции контрольных точек или отключите контрольные точки в настройках, чтобы скрыть это предупреждение.",
@@ -207,6 +207,6 @@
 	},
 	"configDiscovery": {
 		"added": "Код Кило: Добавлен {{source}} {{configType}}: {{name}}{{modeStr}}",
-		"removed": "Код Kilo: Удалено {{source}} {{configType}}: {{name}}{{modeStr}}"
+		"removed": "Код SpeXcode: Удалено {{source}} {{configType}}: {{name}}{{modeStr}}"
 	}
 }

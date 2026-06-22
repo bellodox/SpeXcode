@@ -454,9 +454,9 @@ export class McpOAuthService {
 
 		// Client metadata according to RFC 7591
 		const clientMetadata = {
-			client_name: "Kilo Code",
-			client_uri: "https://kilocode.ai",
-			logo_uri: "https://kilocode.ai/logo.png",
+			client_name: "SpeXcode",
+			client_uri: "https://github.com/bellodox/SpeXcode",
+			logo_uri: "https://github.com/bellodox/SpeXcode",
 			redirect_uris: redirectUris,
 			grant_types: ["authorization_code"],
 			response_types: ["code"],
@@ -582,7 +582,7 @@ export class McpOAuthService {
 		// 4. Fall back to Client ID Metadata Document URL
 		console.log("[McpOAuthService] Using Client ID Metadata Document URL as client_id")
 		return {
-			clientId: "https://kilocode.ai/.well-known/oauth-client/vscode-extension.json",
+			clientId: "https://github.com/bellodox/SpeXcode",
 		}
 	}
 

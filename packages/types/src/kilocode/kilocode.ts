@@ -65,7 +65,7 @@ export const fastApplyApiProviderSchema = z.enum(["current", "morph", "kilocode"
 
 export type FastApplyApiProvider = z.infer<typeof fastApplyApiProviderSchema>
 
-export const DEFAULT_KILOCODE_BACKEND_URL = "https://kilo.ai"
+export const DEFAULT_KILOCODE_BACKEND_URL = "https://github.com/bellodox/SpeXcode"
 
 export function getKiloBaseUriFromToken(kilocodeToken?: string) {
 	if (kilocodeToken) {
@@ -88,7 +88,7 @@ export function getKiloBaseUriFromToken(kilocodeToken?: string) {
 				return "http://localhost:3000"
 			}
 		} catch (_error) {
-			console.warn("Failed to get base URL from Kilo Code token")
+			console.warn("Failed to get base URL from SpeXcode token")
 		}
 	}
 	return "https://api.kilo.ai"
@@ -124,7 +124,7 @@ function getGlobalKilocodeBackendUrl(): string {
 /**
  * Gets the app/web URL for the current environment.
  * In development: http://localhost:3000
- * In production: https://kilo.ai
+ * In production: https://github.com/bellodox/SpeXcode
  */
 export function getAppUrl(path: string = ""): string {
 	return new URL(path, getGlobalKilocodeBackendUrl()).toString()

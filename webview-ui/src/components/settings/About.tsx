@@ -64,7 +64,7 @@ export const About = ({
 						<Trans
 							i18nKey="settings:footer.telemetry.description"
 							components={{
-								privacyLink: <VSCodeLink href="https://kilo.ai/privacy" />,
+								privacyLink: <VSCodeLink href="https://github.com/bellodox/SpeXcode/blob/main/PRIVACY.md" />,
 							}}
 						/>
 					</p>
@@ -74,9 +74,9 @@ export const About = ({
 					<Trans
 						i18nKey="settings:footer.feedback"
 						components={{
-							githubLink: <VSCodeLink href="https://github.com/Kilo-Org/kilocode" />,
-							redditLink: <VSCodeLink href="https://reddit.com/r/kilocode" />,
-							discordLink: <VSCodeLink href="https://kilo.ai/discord" />,
+							githubLink: <VSCodeLink href="https://github.com/bellodox/SpeXcode" />,
+							redditLink: <VSCodeLink href="https://github.com/bellodox/SpeXcode/discussions" />,
+							discordLink: <VSCodeLink href="https://github.com/bellodox/SpeXcode/discussions" />,
 						}}
 					/>
 				</div>
@@ -86,7 +86,7 @@ export const About = ({
 					<Trans
 						i18nKey="settings:footer.support"
 						components={{
-							supportLink: <VSCodeLink href="https://kilo.ai/support" />,
+							supportLink: <VSCodeLink href="https://github.com/bellodox/SpeXcode/issues" />,
 						}}
 					/>
 				</div>

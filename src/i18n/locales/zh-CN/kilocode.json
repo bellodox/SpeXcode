@@ -52,19 +52,19 @@
 		}
 	},
 	"commitMessage": {
-		"activated": "Kilo Code: 提交信息生成器已启动",
+		"activated": "SpeXcode: 提交信息生成器已启动",
 		"gitNotFound": "⚠️ Git 仓库未找到或 git 不可用",
 		"gitInitError": "⚠️ Git 初始化错误：{{error}}",
-		"generating": "Kilo: 正在生成提交信息...",
-		"noChanges": "Kilo: 未发现可分析的更改",
-		"generated": "Kilo: 已生成提交信息！",
-		"generationFailed": "Kilo：生成提交信息失败：{{errorMessage}}",
-		"generatingFromUnstaged": "Kilo：使用未暂存的更改生成消息",
-		"providerRegistered": "Kilo：提交消息提供程序已注册",
-		"activationFailed": "Kilo：消息生成器激活失败：{{error}}",
+		"generating": "SpeXcode: 正在生成提交信息...",
+		"noChanges": "SpeXcode: 未发现可分析的更改",
+		"generated": "SpeXcode: 已生成提交信息！",
+		"generationFailed": "SpeXcode：生成提交信息失败：{{errorMessage}}",
+		"generatingFromUnstaged": "SpeXcode：使用未暂存的更改生成消息",
+		"providerRegistered": "SpeXcode：提交消息提供程序已注册",
+		"activationFailed": "SpeXcode：消息生成器激活失败：{{error}}",
 		"errors": {
 			"noProject": "没有可用项目",
-			"connectionFailed": "连接到 Kilo Code 扩展失败",
+			"connectionFailed": "连接到 SpeXcode 扩展失败",
 			"missingMessage": "未从扩展接收到提交信息",
 			"invalidResponse": "从扩展程序收到的响应格式无效",
 			"timeout": "请求在 30 秒后超时",
@@ -90,7 +90,7 @@
 			"title": "生成提交信息",
 			"analyzing": "分析更改中...",
 			"generating": "生成提交消息中...",
-			"connecting": "连接到 Kilo Code..."
+			"connecting": "连接到 SpeXcode..."
 		},
 		"ui": {
 			"generateButton": "生成提交信息",
@@ -133,9 +133,9 @@
 			"snoozed": "已暂停",
 			"warning": "$(warning) Autocomplete",
 			"tooltip": {
-				"basic": "Kilo Code Autocomplete",
-				"disabled": "Kilo Code Autocomplete（已禁用）",
-				"noCredits": "**账户余额不足**\n\n你的 Kilo Code 账户没有余额。要使用自动补全功能，请为账户充值。\n\n[打开设置](command:kilo-code.settingsButtonClicked)",
+				"basic": "SpeXcode Autocomplete",
+				"disabled": "SpeXcode Autocomplete（已禁用）",
+				"noCredits": "**账户余额不足**\n\n你的 SpeXcode 账户没有余额。要使用自动补全功能，请为账户充值。\n\n[打开设置](command:kilo-code.settingsButtonClicked)",
 				"noUsableProvider": "**未配置自动补全模型**\n\n要启用自动补全，请添加一个使用以下支持的提供商的配置文件：{{providers}}。\n\n[打开设置](command:kilo-code.settingsButtonClicked)",
 				"sessionTotal": "会话总费用:",
 				"provider": "提供商:",
@@ -150,54 +150,54 @@
 				"lessThanCent": "<$0.01"
 			}
 		},
-		"toggleMessage": "Kilo Code Autocomplete {{status}}",
+		"toggleMessage": "SpeXcode Autocomplete {{status}}",
 		"progress": {
-			"title": "Kilo Code",
+			"title": "SpeXcode",
 			"analyzing": "正在分析你的代码...",
 			"generating": "正在生成建议编辑...",
 			"processing": "正在处理建议编辑...",
 			"showing": "正在显示建议编辑..."
 		},
 		"input": {
-			"title": "Kilo Code: 快速任务",
+			"title": "SpeXcode: 快速任务",
 			"placeholder": "例如：'重构这个函数使其更高效'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code: 生成建议编辑",
+			"generateSuggestions": "SpeXcode: 生成建议编辑",
 			"displaySuggestions": "显示建议编辑",
 			"cancelSuggestions": "取消建议编辑",
 			"applyCurrentSuggestion": "应用当前建议编辑",
 			"applyAllSuggestions": "应用所有建议编辑",
-			"category": "Kilo Code"
+			"category": "SpeXcode"
 		},
 		"codeAction": {
-			"title": "Kilo Code: 建议编辑"
+			"title": "SpeXcode: 建议编辑"
 		},
 		"chatParticipant": {
-			"fullName": "Kilo Code Agent",
+			"fullName": "SpeXcode Agent",
 			"name": "Agent",
 			"description": "我可以帮助你完成快速任务和建议编辑。"
 		},
 		"incompatibilityExtensionPopup": {
-			"message": "Kilo Code Autocomplete 被与 GitHub Copilot 的冲突阻止。要解决此问题，你必须禁用 Copilot 的内联建议。",
+			"message": "SpeXcode Autocomplete 被与 GitHub Copilot 的冲突阻止。要解决此问题，你必须禁用 Copilot 的内联建议。",
 			"disableCopilot": "禁用 Copilot",
 			"disableInlineAssist": "禁用 Autocomplete"
 		}
 	},
 	"terminalCommandGenerator": {
-		"inputPrompt": "Kilo：描述您想要生成的命令",
+		"inputPrompt": "SpeXcode：描述您想要生成的命令",
 		"inputPlaceholder": "例如，终止在3001端口上运行的进程，查找大文件等",
-		"noActiveTerminal": "Kilo：未找到活动终端。请先打开一个终端。",
-		"generatingProgress": "Kilo：正在生成终端命令...",
-		"commandGenerated": "Kilo：生成的命令：{{command}}",
-		"generationFailed": "Kilo：命令生成失败：{{error}}",
+		"noActiveTerminal": "SpeXcode：未找到活动终端。请先打开一个终端。",
+		"generatingProgress": "SpeXcode：正在生成终端命令...",
+		"commandGenerated": "SpeXcode：生成的命令：{{command}}",
+		"generationFailed": "SpeXcode：命令生成失败：{{error}}",
 		"warningDialog": {
 			"title": "终端安全警告",
 			"message": "在运行生成的命令之前请再次检查。终端操作并非总是可以撤销——运行未经验证的命令可能导致不可逆转的数据丢失或系统损坏。在继续操作前，请完全理解并检查命令！",
 			"okButton": "我明白",
 			"cancelButton": "取消"
 		},
-		"tipMessage": "Kilo Code: 按下 {{shortcut}} 生成终端命令"
+		"tipMessage": "SpeXcode: 按下 {{shortcut}} 生成终端命令"
 	},
 	"speechToText": {
 		"errors": {
@@ -206,7 +206,7 @@
 		}
 	},
 	"configDiscovery": {
-		"added": "Kilo 代码：添加了{{source}} {{configType}}：{{name}}{{modeStr}}",
+		"added": "SpeXcode 代码：添加了{{source}} {{configType}}：{{name}}{{modeStr}}",
 		"removed": "Kilo代码：已移除{{source}} {{configType}}：{{name}}{{modeStr}}"
 	}
 }

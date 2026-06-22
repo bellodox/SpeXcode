@@ -2,7 +2,7 @@
 
 ## Project Type
 
-Kilo Code is now an extension-only monorepo centered on the VS Code extension, its bundled webview frontend, and the internal packages required to build and package that extension. Current workspace membership is reflected by [`pnpm-workspace.yaml`](pnpm-workspace.yaml:1).
+SpeXcode is now an extension-only monorepo centered on the VS Code extension, its bundled webview frontend, and the internal packages required to build and package that extension. Current workspace membership is reflected by [`pnpm-workspace.yaml`](pnpm-workspace.yaml:1).
 
 ## Main Directories
 

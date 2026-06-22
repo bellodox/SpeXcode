@@ -52,19 +52,19 @@
 		}
 	},
 	"commitMessage": {
-		"activated": "Генератор повідомлень коммітів Kilo Code активовано",
+		"activated": "Генератор повідомлень коммітів SpeXcode активовано",
 		"gitNotFound": "⚠️ Репозиторій Git не знайдено або git недоступний",
 		"gitInitError": "⚠️ Помилка ініціалізації Git: {{error}}",
-		"generating": "Kilo: Генерування повідомлення комміту...",
-		"noChanges": "Kilo: Змін для аналізу не знайдено",
-		"generated": "Kilo: Повідомлення комміту згенеровано!",
-		"generationFailed": "Kilo: Помилка генерації повідомлення комміту: {{errorMessage}}",
-		"generatingFromUnstaged": "Kilo: Генерація повідомлення з використанням незафіксованих змін",
-		"activationFailed": "Kilo: Не вдалося активувати генератор повідомлень: {{error}}",
-		"providerRegistered": "Kilo: Постачальник повідомлень коммітів зареєстровано",
+		"generating": "SpeXcode: Генерування повідомлення комміту...",
+		"noChanges": "SpeXcode: Змін для аналізу не знайдено",
+		"generated": "SpeXcode: Повідомлення комміту згенеровано!",
+		"generationFailed": "SpeXcode: Помилка генерації повідомлення комміту: {{errorMessage}}",
+		"generatingFromUnstaged": "SpeXcode: Генерація повідомлення з використанням незафіксованих змін",
+		"activationFailed": "SpeXcode: Не вдалося активувати генератор повідомлень: {{error}}",
+		"providerRegistered": "SpeXcode: Постачальник повідомлень коммітів зареєстровано",
 		"errors": {
 			"noProject": "Проєкти відсутні",
-			"connectionFailed": "Не вдалося підключитися до розширення Kilo Code",
+			"connectionFailed": "Не вдалося підключитися до розширення SpeXcode",
 			"timeout": "Запит завершився після 30 секунд очікування",
 			"noWorkspacePath": "Не вдалося визначити шлях робочої області для Git-репозиторію",
 			"invalidResponse": "Отримано недійсний формат відповіді від розширення",
@@ -88,7 +88,7 @@
 		},
 		"progress": {
 			"analyzing": "Аналіз змін...",
-			"connecting": "Підключення до Kilo Code...",
+			"connecting": "Підключення до SpeXcode...",
 			"generating": "Створення повідомлення коміту...",
 			"title": "Генерація Повідомлення Коміту"
 		},
@@ -103,9 +103,9 @@
 			"snoozed": "призупинено",
 			"warning": "$(warning) Autocomplete",
 			"tooltip": {
-				"basic": "Kilo Code Autocomplete",
-				"disabled": "Kilo Code Autocomplete (вимкнено)",
-				"noCredits": "**На вашому рахунку немає кредитів**\n\nНа вашому рахунку Kilo Code немає кредитів. Щоб використовувати автодоповнення, будь ласка, поповніть рахунок.\n\n[Відкрити Налаштування](command:kilo-code.settingsButtonClicked)",
+				"basic": "SpeXcode Autocomplete",
+				"disabled": "SpeXcode Autocomplete (вимкнено)",
+				"noCredits": "**На вашому рахунку немає кредитів**\n\nНа вашому рахунку SpeXcode немає кредитів. Щоб використовувати автодоповнення, будь ласка, поповніть рахунок.\n\n[Відкрити Налаштування](command:kilo-code.settingsButtonClicked)",
 				"noUsableProvider": "**Модель автодоповнення не налаштована**\n\nЩоб увімкнути автодоповнення, додайте профіль з одним із підтримуваних провайдерів: {{providers}}.\n\n[Відкрити Налаштування](command:kilo-code.settingsButtonClicked)",
 				"sessionTotal": "Загальна вартість сесії:",
 				"provider": "Провайдер:",
@@ -120,54 +120,54 @@
 				"lessThanCent": "<$0.01"
 			}
 		},
-		"toggleMessage": "Kilo Code Autocomplete {{status}}",
+		"toggleMessage": "SpeXcode Autocomplete {{status}}",
 		"progress": {
-			"title": "Kilo Code",
+			"title": "SpeXcode",
 			"analyzing": "Аналізую твій код...",
 			"generating": "Генерую запропоновані правки...",
 			"processing": "Обробляю запропоновані правки...",
 			"showing": "Показую запропоновані правки..."
 		},
 		"input": {
-			"title": "Kilo Code: Швидке Завдання",
+			"title": "SpeXcode: Швидке Завдання",
 			"placeholder": "напр., 'рефактори цю функцію для більшої ефективності'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code: Генерувати Запропоновані Правки",
+			"generateSuggestions": "SpeXcode: Генерувати Запропоновані Правки",
 			"displaySuggestions": "Показати Запропоновані Правки",
 			"cancelSuggestions": "Скасувати Запропоновані Правки",
 			"applyCurrentSuggestion": "Застосувати Поточну Запропоновану Правку",
 			"applyAllSuggestions": "Застосувати Всі Запропоновані Правки",
-			"category": "Kilo Code"
+			"category": "SpeXcode"
 		},
 		"codeAction": {
-			"title": "Kilo Code: Запропоновані Правки"
+			"title": "SpeXcode: Запропоновані Правки"
 		},
 		"chatParticipant": {
-			"fullName": "Kilo Code Agent",
+			"fullName": "SpeXcode Agent",
 			"name": "Agent",
 			"description": "Я можу допомогти тобі зі швидкими завданнями та запропонованими правками."
 		},
 		"incompatibilityExtensionPopup": {
-			"message": "Kilo Code Autocomplete блокується конфліктом з GitHub Copilot. Щоб виправити це, ти повинен вимкнути вбудовані пропозиції Copilot.",
+			"message": "SpeXcode Autocomplete блокується конфліктом з GitHub Copilot. Щоб виправити це, ти повинен вимкнути вбудовані пропозиції Copilot.",
 			"disableCopilot": "Вимкнути Copilot",
 			"disableInlineAssist": "Вимкнути Autocomplete"
 		}
 	},
 	"terminalCommandGenerator": {
-		"inputPrompt": "Kilo: Опишіть команду, яку ви хочете згенерувати",
+		"inputPrompt": "SpeXcode: Опишіть команду, яку ви хочете згенерувати",
 		"inputPlaceholder": "напр., завершити процес на порту 3001, знайти великі файли і т.д.",
-		"noActiveTerminal": "Kilo: Не знайдено активного терміналу. Будь ласка, спочатку відкрийте термінал.",
-		"generatingProgress": "Kilo: Генерування команди терміналу...",
-		"commandGenerated": "Kilo: Згенерована команда: {{command}}",
-		"generationFailed": "Kilo: Не вдалося згенерувати команду: {{error}}",
+		"noActiveTerminal": "SpeXcode: Не знайдено активного терміналу. Будь ласка, спочатку відкрийте термінал.",
+		"generatingProgress": "SpeXcode: Генерування команди терміналу...",
+		"commandGenerated": "SpeXcode: Згенерована команда: {{command}}",
+		"generationFailed": "SpeXcode: Не вдалося згенерувати команду: {{error}}",
 		"warningDialog": {
 			"title": "Попередження щодо Безпеки Терміналу",
 			"okButton": "Я розумію",
 			"message": "Перевіряйте двічі всі згенеровані команди перед їх запуском. Дії в терміналі не завжди можна скасувати — запуск неперевірених команд може призвести до незворотної втрати даних або пошкодження системи. Перегляньте та повністю зрозумійте команду перед тим, як продовжити!",
 			"cancelButton": "Скасувати"
 		},
-		"tipMessage": "Kilo: Натисніть {{shortcut}}, щоб генерувати команди терміналу"
+		"tipMessage": "SpeXcode: Натисніть {{shortcut}}, щоб генерувати команди терміналу"
 	},
 	"seeNewChanges": {
 		"title": "Показ нових змін",

@@ -8,6 +8,7 @@ coverage/
 mock/
 .DS_Store
 *.orig
+*.~*
 
 # Builds
 bin/
@@ -16,10 +17,12 @@ bin-unpacked/
 
 # Local prompts and rules
 /local-prompts
+.kilocode
 
 # Test environment
 .test_env
 .vscode-test/
+*test*
 
 # Docs
 docs/_site/
@@ -77,3 +80,6 @@ qdrant_storage/
 ./plans/
 
 roo-cli-*.tar.gz*
+
+# Local task requirements
+*.*~

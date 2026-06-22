@@ -15,8 +15,8 @@
 		}
 	},
 	"welcome": {
-		"greeting": "歡迎使用 Kilo Code！",
-		"introText1": "Kilo Code 是一款免費、開放原始碼的 AI Coding Agent。",
+		"greeting": "歡迎使用 SpeXcode！",
+		"introText1": "SpeXcode 是一款免費、開放原始碼的 AI Coding Agent。",
 		"introText2": "可搭配最新的 AI 模型使用，如 Claude Opus 4.5、Gemini 3 Pro、GPT-5.2 以及其他 450 多種模型。",
 		"introText3": "建立免費帳戶，首次儲值即可獲得 20 美元獎勵額度。",
 		"ctaButton": "開始使用",
@@ -26,7 +26,7 @@
 	},
 	"lowCreditWarning": {
 		"addCredit": "增加額度",
-		"lowBalance": "Kilo Code 餘額不足",
+		"lowBalance": "SpeXcode 餘額不足",
 		"switchToFreeModel": "改為切換至免費模型"
 	},
 	"memoryWarning": {
@@ -76,10 +76,10 @@
 			"skills": "技能"
 		},
 		"provider": {
-			"account": "Kilo Code 帳戶",
-			"apiKey": "Kilo Code API 金鑰",
-			"login": "登入 Kilo Code",
-			"logout": "登出 Kilo Code",
+			"account": "SpeXcode 帳戶",
+			"apiKey": "SpeXcode API 金鑰",
+			"login": "登入 SpeXcode",
+			"logout": "登出 SpeXcode",
 			"loginForPremiumModels": "登入以存取進階模型與功能",
 			"providerRouting": {
 				"title": "供應商路由",
@@ -103,7 +103,7 @@
 		"modelInfo": {
 			"contextWindow": "上下文視窗",
 			"providerBreakdown": "供應商價格與功能明細",
-			"averageKiloCodeCost": "此為過去一週 Kilo Code 使用此模型的平均實際花費。由於使用了提示快取，費用可能低於列出的價格。",
+			"averageKiloCodeCost": "此為過去一週 SpeXcode 使用此模型的平均實際花費。由於使用了提示快取，費用可能低於列出的價格。",
 			"table": {
 				"provider": "供應商",
 				"context": "此端點可處理的 Token 數量（輸入 + 輸出）。",
@@ -116,15 +116,15 @@
 		"contextManagement": {
 			"allowVeryLargeReads": {
 				"label": "允許讀取超大檔案",
-				"description": "啟用後，即使極有可能超出上下文視窗（內容大小 > 上下文視窗的 80%），Kilo Code 仍會讀取超大檔案或 MCP 輸出。"
+				"description": "啟用後，即使極有可能超出上下文視窗（內容大小 > 上下文視窗的 80%），SpeXcode 仍會讀取超大檔案或 MCP 輸出。"
 			}
 		},
 		"systemNotifications": {
 			"label": "啟用系統通知",
-			"description": "啟用後，Kilo Code 會發送系統通知，提醒任務完成或錯誤等重要事件。",
+			"description": "啟用後，SpeXcode 會發送系統通知，提醒任務完成或錯誤等重要事件。",
 			"testButton": "測試通知",
-			"testTitle": "Kilo Code",
-			"testMessage": "這是來自 Kilo Code 的測試通知。"
+			"testTitle": "SpeXcode",
+			"testMessage": "這是來自 SpeXcode 的測試通知。"
 		},
 		"terminal": {
 			"commandGenerator": {
@@ -145,7 +145,7 @@
 	},
 	"chat": {
 		"condense": {
-			"wantsToCondense": "Kilo Code 想要壓縮對話",
+			"wantsToCondense": "SpeXcode 想要壓縮對話",
 			"condenseConversation": "壓縮對話"
 		},
 		"seeNewChanges": "檢視新變更",
@@ -184,14 +184,14 @@
 			"modes": "模式",
 			"skills": "技能"
 		},
-		"ariaLabel": "Kilo Code 規則",
+		"ariaLabel": "SpeXcode 規則",
 		"tabs": {
 			"rules": "規則",
 			"workflows": "工作流程"
 		},
 		"description": {
-			"rules": "規則可讓 Kilo Code 在所有模式和所有提示中遵循指定的指示。這是在工作區或全域的所有對話中持續納入上下文和偏好設定的方式。",
-			"workflows": "工作流程是預先準備好的對話範本。工作流程可讓您定義經常使用的提示，並可包含一系列步驟，引導 Kilo Code 完成重複性任務，例如部署服務或提交 PR。若要叫用工作流程，請在聊天中輸入",
+			"rules": "規則可讓 SpeXcode 在所有模式和所有提示中遵循指定的指示。這是在工作區或全域的所有對話中持續納入上下文和偏好設定的方式。",
+			"workflows": "工作流程是預先準備好的對話範本。工作流程可讓您定義經常使用的提示，並可包含一系列步驟，引導 SpeXcode 完成重複性任務，例如部署服務或提交 PR。若要叫用工作流程，請在聊天中輸入",
 			"workflowsInChat": "。"
 		},
 		"sections": {
@@ -258,7 +258,7 @@
 	"toolCallStyle": {
 		"title": "工具呼叫樣式",
 		"description": "選擇系統提示中工具呼叫的格式。JSON 目前為實驗性質，主要供有興趣參與開發的使用者使用。",
-		"automatic": "讓 Kilo 決定",
+		"automatic": "讓 SpeXcode 決定",
 		"xml": "XML",
 		"json": "JSON"
 	},
@@ -307,7 +307,7 @@
 			},
 			"noCredits": {
 				"title": "帳戶中沒有額度",
-				"description": "Kilo Code 帳戶沒有額度。若要使用 Autocomplete，請為帳戶儲值。",
+				"description": "SpeXcode 帳戶沒有額度。若要使用 Autocomplete，請為帳戶儲值。",
 				"buyCredits": "購買額度 →"
 			},
 			"configureAutocompleteProfile": "前往設定檔並設定一個類型為「Autocomplete」的設定檔，即可使用任何模型。"
@@ -350,7 +350,7 @@
 		"shareModesNewBanner": "新功能：建立組織以分享模式"
 	},
 	"deviceAuth": {
-		"title": "登入 Kilo Code",
+		"title": "登入 SpeXcode",
 		"step1": "在瀏覽器中開啟下列 URL",
 		"step2": "驗證代碼並在瀏覽器中授權此裝置",
 		"scanQr": "或用手機掃描此 QR Code",
@@ -377,7 +377,7 @@
 			"title": "語音轉文字",
 			"description": "語音轉文字無法使用。語音轉文字需要同時安裝 FFmpeg 並設定有效的 OpenAI 供應商。<moreInfoLink>按一下這裡以取得更多資訊</moreInfoLink>。",
 			"openAiReason": "需要具有 API 金鑰的有效 OpenAI 供應商才能使用語音轉錄。",
-			"ffmpegReason": "需要安裝 FFmpeg。<ffmpegLink>按一下這裡</ffmpegLink>讓 Kilo 協助安裝 FFmpeg。",
+			"ffmpegReason": "需要安裝 FFmpeg。<ffmpegLink>按一下這裡</ffmpegLink>讓 SpeXcode 協助安裝 FFmpeg。",
 			"ffmpegMessage": "協助我安裝 FFmpeg"
 		},
 		"microphone": {

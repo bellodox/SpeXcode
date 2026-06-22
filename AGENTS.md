@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Kilo Code is an open source AI coding agent for VS Code that generates code from natural language, automates tasks, and supports 500+ AI models.
+SpeXcode is an open source AI coding agent for VS Code that generates code from natural language, automates tasks, and supports 500+ AI models.
 
 ## Project Structure
 
@@ -70,11 +70,11 @@ Keep changesets concise and feature-oriented as they appear directly in release 
 
 ## Fork Merge Process
 
-Kilo Code is a fork of [Roo Code](https://github.com/RooVetGit/Roo-Code). We periodically merge upstream changes using scripts in `scripts/kilocode/`.
+SpeXcode is a fork of [Roo Code](https://github.com/RooVetGit/Roo-Code). We periodically merge upstream changes using scripts in `scripts/kilocode/`.
 
 ## kilocode_change Markers
 
-To minimize merge conflicts when syncing with upstream, mark Kilo Code-specific changes in shared code with `kilocode_change` comments.
+To minimize merge conflicts when syncing with upstream, mark SpeXcode-specific changes in shared code with `kilocode_change` comments.
 
 **Single line:**
 
@@ -99,7 +99,7 @@ const bar = 2
 
 ### When markers are NOT needed
 
-Code in these directories is Kilo Code-specific and doesn't need markers:
+Code in these directories is SpeXcode-specific and doesn't need markers:
 
 - `agent-manager/` directories
 - Any path containing `kilocode` in filename or directory name
@@ -109,7 +109,7 @@ Code in these directories is Kilo Code-specific and doesn't need markers:
 
 All modifications to core extension code (files that exist in upstream Roo Code) require markers:
 
-- `src/` (except Kilo-specific subdirectories listed above)
+- `src/` (except SpeXcode-specific subdirectories listed above)
 - `webview-ui/`
 - `packages/` (shared packages)
 
