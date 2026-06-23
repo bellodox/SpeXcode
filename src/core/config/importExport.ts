@@ -638,7 +638,8 @@ async function importEnvironmentBundle(bundle: EnvironmentBundle, options: Impor
 				throw new Error(`Invalid MCP JSON in bundle entry ${bundleFileEntry.path}`)
 			}
 
-			await safeWriteJson(targetPath, parsedConfig)
+			const sanitizedMcpConfig = sanitizeMcpConfigForBundleExport(parsedConfig)
+			await safeWriteJson(targetPath, sanitizedMcpConfig)
 			continue
 		}
 

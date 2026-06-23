@@ -81,6 +81,7 @@ describe("importExport bundle helpers", () => {
 					openRouterModelId: "openai/gpt-4o",
 					openAiHeaders: {
 						Authorization: "Bearer profile-token",
+						"X-Trace-Id": "trace-123",
 					},
 				},
 			},
@@ -170,6 +171,39 @@ describe("importExport bundle helpers", () => {
 					},
 					oauth: {
 						clientId: "public-client",
+					},
+				},
+			},
+		})
+	})
+
+	it("sanitizes project MCP config content for public bundle export", () => {
+		const sanitizedMcpContent = sanitizeBundleFileContentForExport(
+			"project/mcp.json",
+			JSON.stringify({
+				mcpServers: {
+					filesystem: {
+						type: "stdio",
+						command: "npx",
+						args: ["-y", "server-filesystem"],
+						env: { ACCESS_TOKEN: "secret-token" },
+						headers: {
+							"X-Api-Key": "secret-api-key",
+							"X-Trace-Id": "trace-123",
+						},
+					},
+				},
+			}),
+		)
+
+		expect(JSON.parse(sanitizedMcpContent!)).toEqual({
+			mcpServers: {
+				filesystem: {
+					type: "stdio",
+					command: "npx",
+					args: ["-y", "server-filesystem"],
+					headers: {
+						"X-Trace-Id": "trace-123",
 					},
 				},
 			},
