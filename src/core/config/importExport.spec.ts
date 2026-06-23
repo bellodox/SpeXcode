@@ -7,6 +7,7 @@ import {
 	sanitizeBundleFileContentForExport,
 	sanitizeGlobalSettingsForBundleExport,
 	sanitizeProviderProfilesForBundleExport,
+	sanitizeMcpConfigForBundleExport,
 	validateBundleRelativePath,
 } from "./importExport"
 
@@ -98,9 +99,31 @@ describe("importExport bundle helpers", () => {
 			openRouterImageApiKey: "image-secret",
 			kiloCodeImageApiKey: "kilo-secret",
 			enableCheckpoints: true,
+			customModes: [
+				{
+					slug: "secure-mode",
+					name: "Secure Mode",
+					roleDefinition: "Use API_KEY=sk-live-1234567890 in docs examples only.",
+					customInstructions: "Authorization: Bearer super-secret-token-value",
+					groups: ["read"],
+					source: "global",
+				},
+			],
 		})
 
-		expect(sanitizedGlobalSettings).toEqual({ enableCheckpoints: true })
+		expect(sanitizedGlobalSettings).toEqual({
+			enableCheckpoints: true,
+			customModes: [
+				{
+					slug: "secure-mode",
+					name: "Secure Mode",
+					roleDefinition: "Use [REDACTED] in docs examples only.",
+					customInstructions: "Authorization: [REDACTED]",
+					groups: ["read"],
+					source: "global",
+				},
+			],
+		})
 	})
 
 	it("omits provider authorization-style headers from bundle settings export", () => {
@@ -109,7 +132,7 @@ describe("importExport bundle helpers", () => {
 			apiConfigs: {
 				default: {
 					id: "profile-1",
-					apiProvider: "openai-compatible",
+					apiProvider: "openrouter",
 					openAiHeaders: {
 						Authorization: "Bearer profile-token",
 						"X-API-Key": "secret-api-key",
@@ -210,19 +233,103 @@ describe("importExport bundle helpers", () => {
 		})
 	})
 
-	it("omits arbitrary rule workflow and skill file contents from public bundle export", () => {
+	it("skips malformed MCP JSON content during bundle sanitization", () => {
+		expect(sanitizeBundleFileContentForExport("global/mcp.json", "{not valid json")).toBeUndefined()
+	})
+
+	it("sanitizes rule workflow skill and mode-rule file content while preserving importable files", () => {
 		expect(
 			sanitizeBundleFileContentForExport(
 				"project/rules/private-rule.md",
 				"API_KEY=sk-live-1234567890\nUse this secret carefully",
 			),
-		).toBeUndefined()
+		).toBe("API_KEY=[REDACTED]\nUse this secret carefully")
 
 		expect(
 			sanitizeBundleFileContentForExport(
 				"global/skills/example-skill/SKILL.md",
-				"Authorization: Bearer secret-token",
+				"Authorization: Bearer secret-token-value",
 			),
-		).toBeUndefined()
+		).toBe("Authorization: [REDACTED]")
+
+		expect(
+			sanitizeBundleFileContentForExport(
+				"project/workflows/deploy.md",
+				"```env\nOPENAI_API_KEY=sk-live-1234567890\n```\nRun deployment.",
+			),
+		).toBe("```env\nOPENAI_API_KEY=[REDACTED]\n```\nRun deployment.")
+
+		expect(
+			sanitizeBundleFileContentForExport(
+				"global/mode-rules/rules-code/secure.md",
+				"token: ghp_1234567890abcdef1234567890abcd\n# keep text",
+			),
+		).toBe("token: [REDACTED]\n# keep text")
+	})
+
+	it("preserves safe non-secret rule-like content unchanged", () => {
+		const safeContent = "# Workflow\nUse pnpm build and review logs.\nNo credentials here."
+
+		expect(sanitizeBundleFileContentForExport("project/workflows/build.md", safeContent)).toBe(safeContent)
+	})
+
+	it("re-sanitizes imported rule-like bundle text content", () => {
+		const sanitizedOnce = sanitizeBundleFileContentForExport(
+			"project/workflows/deploy.md",
+			"Deployment notes only.",
+		)
+
+		expect(
+			sanitizeBundleFileContentForExport(
+				"project/workflows/deploy.md",
+				`${sanitizedOnce}\nOPENAI_API_KEY=sk-live-1234567890`,
+			),
+		).toBe("Deployment notes only.\nOPENAI_API_KEY=[REDACTED]")
+	})
+
+	it("redacts private key blocks in bundle text files", () => {
+		const sanitized = sanitizeBundleFileContentForExport(
+			"global/skills/example-skill/SKILL.md",
+			"Before\n-----BEGIN PRIVATE KEY-----\nabc123\n-----END PRIVATE KEY-----\nAfter",
+		)
+
+		expect(sanitized).toBe("Before\n[REDACTED PRIVATE KEY BLOCK]\nAfter")
+	})
+
+	it("keeps MCP structural sanitization behavior intact", () => {
+		expect(
+			sanitizeMcpConfigForBundleExport({
+				servers: {
+					service: {
+						type: "sse",
+						url: "https://example.com/mcp",
+						headers: {
+							"X-Trace-Id": "trace-123",
+							"X-Api-Key": "secret",
+						},
+						oauth: {
+							clientId: "public-client",
+							clientSecret: "top-secret",
+						},
+						env: {
+							TOKEN: "secret",
+						},
+					},
+				},
+			}),
+		).toEqual({
+			servers: {
+				service: {
+					type: "sse",
+					url: "https://example.com/mcp",
+					headers: {
+						"X-Trace-Id": "trace-123",
+					},
+					oauth: {
+						clientId: "public-client",
+					},
+				},
+			},
+		})
 	})
 })

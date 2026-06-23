@@ -113,6 +113,115 @@ const MCP_SAFE_SERVER_KEYS = new Set([
 ])
 
 const AUTHORIZATION_HEADER_PATTERN = /^(authorization|proxy-authorization|x-api-key)$/i
+const SECRET_REDACTION_PLACEHOLDER = "[REDACTED]" // kilocode_change
+const PRIVATE_KEY_BLOCK_PLACEHOLDER = "[REDACTED PRIVATE KEY BLOCK]" // kilocode_change
+const SECRET_LINE_PATH_PATTERN = /(?:^|\/)(rules|workflows|skills|mode-rules)\//i // kilocode_change
+const PEM_PRIVATE_KEY_BLOCK_PATTERN =
+	/-----BEGIN [A-Z0-9 ]*PRIVATE KEY-----[\s\S]*?-----END [A-Z0-9 ]*PRIVATE KEY-----/g // kilocode_change
+const PEM_BLOCK_PATTERN = /-----BEGIN ([A-Z0-9 ]+)-----[\s\S]*?-----END \1-----/g // kilocode_change
+const ENV_ASSIGNMENT_KEY_PATTERN =
+	/(?:^|[^A-Z0-9_])(?:api[_-]?key|auth(?:orization)?|bearer|client[_-]?secret|password|secret|token|private[_-]?key)(?:[^A-Z0-9_]|$)/i // kilocode_change
+const SECRET_VALUE_PATTERN =
+	/(?:\b(?:sk|rk|pk)_(?:live|test)?[A-Za-z0-9_-]{8,}\b|\bgh[pousr]_[A-Za-z0-9]{8,}\b|\bgithub_pat_[A-Za-z0-9_]{20,}\b|\bAIza[0-9A-Za-z\-_]{20,}\b|\bBearer\s+[A-Za-z0-9._~+\/-]{12,}\b|\b(?:token|password|secret|api[_-]?key|client[_-]?secret)\b\s*[:=]\s*["']?[A-Za-z0-9._~+\/-]{8,}["']?)/i // kilocode_change
+const SECRET_LINE_KEY_PREFIX_PATTERN =
+	/^\s*(?:export\s+)?(?:const|let|var)?\s*[A-Za-z0-9_.\-"']*(?:api[_-]?key|auth(?:orization)?|bearer|client[_-]?secret|password|secret|token|private[_-]?key)[A-Za-z0-9_.\-"']*\s*[:=]/i // kilocode_change
+
+function redactQuotedValue(value: string): string {
+	const trimmedValue = value.trim()
+	if (!trimmedValue) {
+		return value
+	}
+
+	const leadingWhitespace = value.match(/^\s*/)?.[0] ?? ""
+	const trailingWhitespace = value.match(/\s*$/)?.[0] ?? ""
+	const coreValue = value.slice(leadingWhitespace.length, value.length - trailingWhitespace.length)
+	const quoteMatch = coreValue.match(/^(["'])([\s\S]*)(\1)$/)
+	const redactedCore = quoteMatch
+		? `${quoteMatch[1]}${SECRET_REDACTION_PLACEHOLDER}${quoteMatch[1]}`
+		: SECRET_REDACTION_PLACEHOLDER
+
+	return `${leadingWhitespace}${redactedCore}${trailingWhitespace}`
+}
+
+function sanitizeTextLine(line: string): string {
+	const assignmentMatch = line.match(/^(\s*[^:=\n]+?\s*[:=]\s*)(.+?)(\s*(?:#.*|\/\/.*)?)$/)
+	if (assignmentMatch) {
+		const [, prefix, value, suffix] = assignmentMatch
+		if (
+			SECRET_LINE_KEY_PREFIX_PATTERN.test(prefix) ||
+			(ENV_ASSIGNMENT_KEY_PATTERN.test(prefix) && SECRET_VALUE_PATTERN.test(value))
+		) {
+			return `${prefix}${redactQuotedValue(value)}${suffix}`
+		}
+	}
+
+	const authHeaderMatch = line.match(
+		/^(\s*(?:[-*]\s+)?[A-Za-z0-9_.\-"']*authorization[A-Za-z0-9_.\-"']*\s*:\s*)(.+)$/i,
+	)
+	if (authHeaderMatch) {
+		return `${authHeaderMatch[1]}${redactQuotedValue(authHeaderMatch[2])}`
+	}
+
+	const bearerHeaderMatch = line.match(
+		/^(\s*(?:[-*]\s+)?[A-Za-z0-9_.\-"']*(?:x-api-key|api[_-]?key|token|password|secret|client[_-]?secret)[A-Za-z0-9_.\-"']*\s*:\s*)(.+)$/i,
+	)
+	if (bearerHeaderMatch && SECRET_VALUE_PATTERN.test(bearerHeaderMatch[2])) {
+		return `${bearerHeaderMatch[1]}${redactQuotedValue(bearerHeaderMatch[2])}`
+	}
+
+	const envExportMatch = line.match(
+		/^(\s*(?:export\s+)?[A-Z0-9_]*(?:API[_-]?KEY|AUTH(?:ORIZATION)?|BEARER|CLIENT[_-]?SECRET|PASSWORD|SECRET|TOKEN|PRIVATE[_-]?KEY)[A-Z0-9_]*\s*=\s*)(.+)$/i,
+	)
+	if (envExportMatch) {
+		return `${envExportMatch[1]}${redactQuotedValue(envExportMatch[2])}`
+	}
+
+	if (SECRET_VALUE_PATTERN.test(line) && ENV_ASSIGNMENT_KEY_PATTERN.test(line)) {
+		return line.replace(SECRET_VALUE_PATTERN, SECRET_REDACTION_PLACEHOLDER)
+	}
+
+	return line
+}
+
+function sanitizeBundleTextContent(content: string): string | undefined {
+	let sanitizedContent = content
+
+	sanitizedContent = sanitizedContent.replace(PEM_PRIVATE_KEY_BLOCK_PATTERN, PRIVATE_KEY_BLOCK_PLACEHOLDER)
+	sanitizedContent = sanitizedContent.replace(PEM_BLOCK_PATTERN, (match, label: string) => {
+		if (/PRIVATE KEY/i.test(label)) {
+			return PRIVATE_KEY_BLOCK_PLACEHOLDER
+		}
+		return match
+	})
+
+	if (/-----BEGIN [A-Z0-9 ]*PRIVATE KEY-----/i.test(sanitizedContent)) {
+		return undefined
+	}
+
+	const sanitizedLines = sanitizedContent.split(/\r?\n/).map((line) => sanitizeTextLine(line))
+	return sanitizedLines.join("\n")
+}
+
+function sanitizeCustomModeLikeValue<T>(value: T): T {
+	if (typeof value === "string") {
+		const sanitizedString = sanitizeBundleTextContent(value) ?? SECRET_REDACTION_PLACEHOLDER
+		return sanitizedString as T
+	}
+
+	if (Array.isArray(value)) {
+		return value.map((item) => sanitizeCustomModeLikeValue(item)) as T
+	}
+
+	if (isPlainObject(value)) {
+		return Object.fromEntries(
+			Object.entries(value)
+				.filter(([key]) => !isSecretStateKey(key) && !shouldRemoveMcpSecretKey(key))
+				.map(([key, nestedValue]) => [key, sanitizeCustomModeLikeValue(nestedValue)]),
+		) as T
+	}
+
+	return value
+}
 
 function isPlainObject(value: unknown): value is Record<string, unknown> {
 	return typeof value === "object" && value !== null && !Array.isArray(value)
@@ -228,7 +337,17 @@ export function sanitizeGlobalSettingsForBundleExport(globalSettings: Record<str
 		return globalSettings
 	}
 
-	return Object.fromEntries(Object.entries(globalSettings).filter(([key]) => !isSecretStateKey(key)))
+	return Object.fromEntries(
+		Object.entries(globalSettings)
+			.filter(([key]) => !isSecretStateKey(key))
+			.map(([key, value]) => {
+				if (key === "customModes" || key === "customModePrompts" || key === "customSupportPrompts") {
+					return [key, sanitizeCustomModeLikeValue(value)]
+				}
+
+				return [key, value]
+			}),
+	)
 }
 
 export function sanitizeMcpConfigForBundleExport(mcpConfig: unknown): unknown {
@@ -270,17 +389,19 @@ export function sanitizeMcpConfigForBundleExport(mcpConfig: unknown): unknown {
 
 export function sanitizeBundleFileContentForExport(bundlePath: string, content: string): string | undefined {
 	if (bundlePath === "global/mcp.json" || bundlePath === "project/mcp.json") {
-		const sanitizedConfig = sanitizeMcpConfigForBundleExport(JSON.parse(content))
+		let parsedConfig: unknown
+		try {
+			parsedConfig = JSON.parse(content)
+		} catch {
+			return undefined
+		}
+
+		const sanitizedConfig = sanitizeMcpConfigForBundleExport(parsedConfig)
 		return JSON.stringify(sanitizedConfig, null, 2)
 	}
 
-	if (
-		bundlePath.includes("/rules/") ||
-		bundlePath.includes("/workflows/") ||
-		bundlePath.includes("/skills/") ||
-		bundlePath.includes("/mode-rules/")
-	) {
-		return undefined
+	if (SECRET_LINE_PATH_PATTERN.test(bundlePath)) {
+		return sanitizeBundleTextContent(content)
 	}
 
 	return content
@@ -643,7 +764,15 @@ async function importEnvironmentBundle(bundle: EnvironmentBundle, options: Impor
 			continue
 		}
 
-		await fs.writeFile(targetPath, bundleFileEntry.content, "utf-8")
+		const sanitizedBundleTextContent = sanitizeBundleFileContentForExport(
+			bundleFileEntry.path,
+			bundleFileEntry.content,
+		)
+		if (typeof sanitizedBundleTextContent === "undefined") {
+			continue
+		}
+
+		await fs.writeFile(targetPath, sanitizedBundleTextContent, "utf-8")
 	}
 
 	return { ...legacyImportResult, isBundle: true }
