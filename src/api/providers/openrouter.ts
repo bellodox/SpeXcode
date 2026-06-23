@@ -66,6 +66,7 @@ type OpenRouterChatCompletionParams = OpenAI.Chat.ChatCompletionCreateParams & {
 	// https://openrouter.ai/docs/use-cases/reasoning-tokens
 	reasoning?: OpenRouterReasoningParams
 	provider?: OpenRouterProviderParams // kilocode_change
+	verbosity?: string // kilocode_change
 }
 
 // Zod schema for OpenRouter error response structure (for caught exceptions)
@@ -417,7 +418,7 @@ export class OpenRouterHandler extends BaseProvider implements SingleCompletionH
 			...(reasoning && { reasoning }),
 			...(metadata?.tools && { tools: this.convertToolsForOpenAI(metadata.tools) }),
 			...(metadata?.tool_choice && { tool_choice: metadata.tool_choice }),
-			verbosity: model.verbosity === "max" ? "high" : model.verbosity, // kilocode_change
+			verbosity: model.verbosity === "max" || model.verbosity === "xhigh" ? "high" : model.verbosity, // kilocode_change
 		}
 
 		// kilocode_change start
@@ -730,7 +731,7 @@ export class OpenRouterHandler extends BaseProvider implements SingleCompletionH
 			stream: false,
 			...this.getProviderParams(), // kilocode_change: original expression was moved into function
 			...(reasoning && { reasoning }),
-			verbosity: verbosity === "max" ? "high" : verbosity, // kilocode_change
+			verbosity: verbosity === "max" || verbosity === "xhigh" ? "high" : verbosity, // kilocode_change
 		}
 
 		// kilocode_change start

@@ -10,6 +10,7 @@ import {
 	ModelInfo,
 	BEDROCK_1M_CONTEXT_MODEL_IDS,
 	litellmDefaultModelInfo,
+	openAiNativeModels,
 	openAiModelInfoSaneDefaults,
 	moonshotModels,
 } from "@roo-code/types"
@@ -1088,6 +1089,20 @@ describe("useSelectedModel", () => {
 			expect(result.current.info).toEqual(openAiModelInfoSaneDefaults)
 			expect(result.current.info?.supportsNativeTools).toBe(true)
 			expect(result.current.info?.defaultToolProtocol).toBe("native")
+		})
+
+		it("should return GPT-5.5 metadata for OpenAI provider", () => {
+			const apiConfiguration: ProviderSettings = {
+				apiProvider: "openai-native",
+				apiModelId: "gpt-5.5",
+			}
+
+			const wrapper = createWrapper()
+			const { result } = renderHook(() => useSelectedModel(apiConfiguration), { wrapper })
+
+			expect(result.current.provider).toBe("openai-native")
+			expect(result.current.id).toBe("gpt-5.5")
+			expect(result.current.info).toEqual(openAiNativeModels["gpt-5.5"])
 		})
 
 		it("should merge native tool defaults with custom model info", () => {

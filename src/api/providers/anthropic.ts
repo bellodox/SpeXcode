@@ -73,7 +73,8 @@ export class AnthropicHandler extends BaseProvider implements SingleCompletionHa
 			(modelId === "claude-sonnet-4-20250514" ||
 				modelId === "claude-sonnet-4-5" ||
 				modelId === "claude-sonnet-4-6" ||
-				modelId === "claude-opus-4-6") &&
+				modelId === "claude-opus-4-6" ||
+				modelId === "claude-opus-4-7") &&
 			this.options.anthropicBeta1MContext
 		) {
 			betas.push("context-1m-2025-08-07")
@@ -120,6 +121,7 @@ export class AnthropicHandler extends BaseProvider implements SingleCompletionHa
 			: {}
 
 		switch (modelId) {
+			case "claude-opus-4-7": // kilocode_change
 			case "claude-opus-4-6": // kilocode_change
 			case "claude-sonnet-4-6":
 			case "claude-sonnet-4-5":
@@ -195,6 +197,7 @@ export class AnthropicHandler extends BaseProvider implements SingleCompletionHa
 
 							// Then check for models that support prompt caching
 							switch (modelId) {
+								case "claude-opus-4-7": // kilocode_change
 								case "claude-opus-4-6": // kilocode_change
 								case "claude-sonnet-4-6":
 								case "claude-sonnet-4-5":
@@ -261,8 +264,6 @@ export class AnthropicHandler extends BaseProvider implements SingleCompletionHa
 
 		// kilocode_change start
 		let thinkingDeltaAccumulator = ""
-		let thinkText = ""
-		let thinkSignature = ""
 		// kilocode_change end
 
 		for await (const chunk of stream) {
@@ -314,18 +315,6 @@ export class AnthropicHandler extends BaseProvider implements SingleCompletionHa
 							}
 
 							yield { type: "reasoning", text: chunk.content_block.thinking }
-
-							// kilocode_change start
-							thinkText = chunk.content_block.thinking
-							thinkSignature = chunk.content_block.signature
-							if (thinkText && thinkSignature) {
-								yield {
-									type: "ant_thinking",
-									thinking: thinkText,
-									signature: thinkSignature,
-								}
-							}
-							// kilocode_change end
 
 							break
 
@@ -439,7 +428,8 @@ export class AnthropicHandler extends BaseProvider implements SingleCompletionHa
 			(id === "claude-sonnet-4-20250514" ||
 				id === "claude-sonnet-4-5" ||
 				id === "claude-sonnet-4-6" ||
-				id === "claude-opus-4-6") &&
+				id === "claude-opus-4-6" ||
+				id === "claude-opus-4-7") &&
 			this.options.anthropicBeta1MContext
 		) {
 			// Use the tier pricing for 1M context
