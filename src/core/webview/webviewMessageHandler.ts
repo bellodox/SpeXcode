@@ -70,7 +70,7 @@ import { playTts, setTtsEnabled, setTtsSpeed, stopTts } from "../../utils/tts"
 import { showSystemNotification } from "../../integrations/notifications" // kilocode_change
 import { singleCompletionHandler } from "../../utils/single-completion-handler" // kilocode_change
 import { searchCommits } from "../../utils/git"
-import { exportSettings, importSettingsWithFeedback } from "../config/importExport"
+import { exportEnvironmentBundle, exportSettings, importSettingsWithFeedback } from "../config/importExport" // kilocode_change
 import { getOpenAiModels } from "../../api/providers/openai"
 import { getVsCodeLmModels } from "../../api/providers/vscode-lm"
 import { openMention } from "../mentions"
@@ -887,10 +887,19 @@ export const webviewMessageHandler = async (
 			break
 		}
 		case "exportSettings":
-			await exportSettings({
-				providerSettingsManager: provider.providerSettingsManager,
-				contextProxy: provider.contextProxy,
-			})
+			if (message.values?.bundle === true) {
+				// kilocode_change start
+				await exportEnvironmentBundle({
+					providerSettingsManager: provider.providerSettingsManager,
+					contextProxy: provider.contextProxy,
+				})
+				// kilocode_change end
+			} else {
+				await exportSettings({
+					providerSettingsManager: provider.providerSettingsManager,
+					contextProxy: provider.contextProxy,
+				})
+			}
 
 			break
 		case "resetState":
