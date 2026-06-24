@@ -1,0 +1,73 @@
+# .understandignore — patterns for files/dirs to exclude from analysis
+# Syntax: same as .gitignore (globs, # comments, ! negation, trailing / for dirs)
+# Lines below are suggestions — uncomment to activate.
+# Use ! prefix to force-include something excluded by defaults.
+#
+# Built-in defaults (always excluded unless negated):
+#   node_modules/, .git/, dist/, build/, obj/, *.lock, *.min.js, etc.
+#
+
+# --- From .gitignore (uncomment to exclude) ---
+
+# .pnpm-store
+# out-*
+# mock/
+# .DS_Store
+# *.orig
+# *.~*
+# bin/
+# bin-unpacked/
+# *.vsix
+# /local-prompts
+# .kilocode
+# .test_env
+# .vscode-test/
+# *test*
+# docs/_site/
+# .env
+# .env.*
+# !.env.*.sample
+# logs
+# .vite-port
+# .history/
+# .aider*
+# .docker-cache/
+# .qodo/
+# .vercel
+# .roo/mcp.json
+# .direnv
+# mise.toml
+# mise.local.toml
+# context_portal/
+# deps/vscode/*
+# !deps/vscode/.git
+# qdrant_storage/
+# *.code-workspace
+# .secrets
+# ./plans/
+# roo-cli-*.tar.gz*
+# *.*~
+
+# --- Detected directories (uncomment to exclude) ---
+
+# docs/
+# scripts/
+
+# --- Test file patterns (uncomment to exclude) ---
+
+# JS / TS
+# *.test.*
+# *.spec.*
+# *.snap
+# C# / .NET
+# **/*Tests.cs
+# **/*Test.cs
+# **/*Fixture.cs
+# **/*.Tests.csproj
+# Java / Kotlin
+# **/src/test/**
+# **/*Test.java
+# **/*IT.java
+# **/*Spec.kt
+# Go
+# **/*_test.go

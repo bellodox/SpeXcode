@@ -14,52 +14,22 @@
 			"fileCategory": "docs"
 		},
 		{
-			"path": ".devcontainer/.dockerignore",
-			"language": "unknown",
-			"sizeLines": 47,
-			"fileCategory": "infra"
-		},
-		{
-			"path": ".devcontainer/devcontainer.json",
-			"language": "json",
-			"sizeLines": 68,
-			"fileCategory": "config"
-		},
-		{
-			"path": ".devcontainer/Dockerfile",
-			"language": "dockerfile",
-			"sizeLines": 34,
-			"fileCategory": "infra"
-		},
-		{
-			"path": ".devcontainer/README.md",
+			"path": ".changeset/release-5-16-2.md",
 			"language": "markdown",
-			"sizeLines": 87,
+			"sizeLines": 5,
 			"fileCategory": "docs"
 		},
 		{
-			"path": ".devcontainer/setup.sh",
-			"language": "shell",
-			"sizeLines": 23,
-			"fileCategory": "script"
-		},
-		{
-			"path": ".dockerignore",
-			"language": "unknown",
-			"sizeLines": 90,
-			"fileCategory": "infra"
+			"path": ".changeset/release-5-16-3-environment-bundle-security.md",
+			"language": "markdown",
+			"sizeLines": 5,
+			"fileCategory": "docs"
 		},
 		{
 			"path": ".env.sample",
 			"language": "config",
 			"sizeLines": 6,
 			"fileCategory": "config"
-		},
-		{
-			"path": ".envrc",
-			"language": "unknown",
-			"sizeLines": 4,
-			"fileCategory": "code"
 		},
 		{
 			"path": ".git-blame-ignore-revs",
@@ -146,21 +116,9 @@
 			"fileCategory": "infra"
 		},
 		{
-			"path": ".github/workflows/evals.yml",
-			"language": "yaml",
-			"sizeLines": 74,
-			"fileCategory": "infra"
-		},
-		{
 			"path": ".github/workflows/marketplace-publish.yml",
 			"language": "yaml",
 			"sizeLines": 247,
-			"fileCategory": "infra"
-		},
-		{
-			"path": ".github/workflows/storybook-playwright-snapshot.yml",
-			"language": "yaml",
-			"sizeLines": 127,
 			"fileCategory": "infra"
 		},
 		{
@@ -186,6 +144,24 @@
 			"language": "unknown",
 			"sizeLines": 50,
 			"fileCategory": "code"
+		},
+		{
+			"path": ".kilocode/rules/memory-bank/active.md",
+			"language": "markdown",
+			"sizeLines": 16,
+			"fileCategory": "docs"
+		},
+		{
+			"path": ".kilocode/rules/memory-bank/brief.md",
+			"language": "markdown",
+			"sizeLines": 5,
+			"fileCategory": "docs"
+		},
+		{
+			"path": ".kilocode/rules/memory-bank/context.md",
+			"language": "markdown",
+			"sizeLines": 17,
+			"fileCategory": "docs"
 		},
 		{
 			"path": ".kilocode/skills/translation/SKILL.md",
@@ -230,10 +206,16 @@
 			"fileCategory": "code"
 		},
 		{
-			"path": ".tool-versions",
+			"path": ".understand-anything/.understandignore",
 			"language": "unknown",
-			"sizeLines": 1,
+			"sizeLines": 73,
 			"fileCategory": "code"
+		},
+		{
+			"path": ".understand-anything/intermediate/scan-result.json",
+			"language": "json",
+			"sizeLines": 24022,
+			"fileCategory": "config"
 		},
 		{
 			"path": ".vscodeignore",
@@ -244,1754 +226,8 @@
 		{
 			"path": "AGENTS.md",
 			"language": "markdown",
-			"sizeLines": 223,
-			"fileCategory": "docs"
-		},
-		{
-			"path": "apps/kilocode-docs/docs/providers/poe.md",
-			"language": "markdown",
-			"sizeLines": 29,
-			"fileCategory": "docs"
-		},
-		{
-			"path": "apps/kilocode-docs/pages/ai-providers/aihubmix.md",
-			"language": "markdown",
-			"sizeLines": 28,
-			"fileCategory": "docs"
-		},
-		{
-			"path": "apps/playwright-e2e/.dockerignore",
-			"language": "unknown",
-			"sizeLines": 65,
-			"fileCategory": "infra"
-		},
-		{
-			"path": "apps/playwright-e2e/.env.local.sample",
-			"language": "config",
-			"sizeLines": 2,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/playwright-e2e/.pnpmrc",
-			"language": "unknown",
-			"sizeLines": 10,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/docker-entrypoint.sh",
-			"language": "shell",
-			"sizeLines": 164,
-			"fileCategory": "script"
-		},
-		{
-			"path": "apps/playwright-e2e/Dockerfile.playwright-ci",
-			"language": "dockerfile",
-			"sizeLines": 54,
-			"fileCategory": "infra"
-		},
-		{
-			"path": "apps/playwright-e2e/eslint.config.mjs",
-			"language": "javascript",
-			"sizeLines": 23,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/helpers/chat-helpers.ts",
-			"language": "typescript",
-			"sizeLines": 16,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/helpers/console-logging.ts",
-			"language": "typescript",
-			"sizeLines": 62,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/helpers/css-extraction-helpers.ts",
-			"language": "typescript",
-			"sizeLines": 77,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/helpers/dom-stability-helpers.ts",
-			"language": "typescript",
-			"sizeLines": 72,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/helpers/index.ts",
-			"language": "typescript",
-			"sizeLines": 7,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/helpers/test-setup-helpers.ts",
-			"language": "typescript",
-			"sizeLines": 15,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/helpers/vscode-helpers.ts",
-			"language": "typescript",
-			"sizeLines": 73,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/helpers/webview-helpers.ts",
-			"language": "typescript",
-			"sizeLines": 157,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/package.json",
-			"language": "json",
-			"sizeLines": 31,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/playwright-e2e/playwright.config.ts",
-			"language": "typescript",
-			"sizeLines": 33,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/playwright.globalSetup.ts",
-			"language": "typescript",
-			"sizeLines": 28,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/run-docker-playwright.js",
-			"language": "javascript",
-			"sizeLines": 279,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/scripts/extract-vscode-variables.js",
-			"language": "javascript",
-			"sizeLines": 54,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/scripts/theme-extraction-script.test.ts",
-			"language": "typescript",
-			"sizeLines": 37,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/scripts/theme-extraction.config.ts",
-			"language": "typescript",
-			"sizeLines": 25,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/tests/chat.test.ts",
-			"language": "typescript",
-			"sizeLines": 28,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/tests/playwright-base-test.ts",
-			"language": "typescript",
-			"sizeLines": 235,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/tests/sanity.test.ts",
-			"language": "typescript",
-			"sizeLines": 15,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/tests/settings.test.ts",
-			"language": "typescript",
-			"sizeLines": 51,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/playwright-e2e/tsconfig.json",
-			"language": "json",
-			"sizeLines": 29,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/playwright-e2e/types/window.d.ts",
-			"language": "typescript",
-			"sizeLines": 14,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/.storybook/ChromaticDecorator.tsx",
-			"language": "typescript",
-			"sizeLines": 73,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/.storybook/main.ts",
-			"language": "typescript",
-			"sizeLines": 83,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/.storybook/preview.ts",
-			"language": "typescript",
-			"sizeLines": 61,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/.storybook/storybook.css",
-			"language": "css",
-			"sizeLines": 26,
-			"fileCategory": "markup"
-		},
-		{
-			"path": "apps/storybook/.storybook/theme-variables.css",
-			"language": "css",
-			"sizeLines": 277,
-			"fileCategory": "markup"
-		},
-		{
-			"path": "apps/storybook/generated-theme-styles/dark-modern.css",
-			"language": "css",
-			"sizeLines": 805,
-			"fileCategory": "markup"
-		},
-		{
-			"path": "apps/storybook/generated-theme-styles/light-modern.css",
-			"language": "css",
-			"sizeLines": 810,
-			"fileCategory": "markup"
-		},
-		{
-			"path": "apps/storybook/package.json",
-			"language": "json",
-			"sizeLines": 51,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/storybook/README.md",
-			"language": "markdown",
-			"sizeLines": 48,
-			"fileCategory": "docs"
-		},
-		{
-			"path": "apps/storybook/scripts/generate-playwright-screenshot-stories.js",
-			"language": "javascript",
-			"sizeLines": 183,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/components/ChatRowGallery.tsx",
-			"language": "typescript",
-			"sizeLines": 68,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/decorators/withExtensionState.tsx",
-			"language": "typescript",
-			"sizeLines": 25,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/decorators/withFixedContainment.tsx",
-			"language": "typescript",
-			"sizeLines": 11,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/decorators/withI18n.tsx",
-			"language": "typescript",
-			"sizeLines": 22,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/decorators/withLimitedWidth.tsx",
-			"language": "typescript",
-			"sizeLines": 11,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/decorators/withPostMessageMock.tsx",
-			"language": "typescript",
-			"sizeLines": 43,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/decorators/withQueryClient.tsx",
-			"language": "typescript",
-			"sizeLines": 13,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/decorators/withSidebarContainer.tsx",
-			"language": "typescript",
-			"sizeLines": 11,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/decorators/withTheme.tsx",
-			"language": "typescript",
-			"sizeLines": 16,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/decorators/withTooltipProvider.tsx",
-			"language": "typescript",
-			"sizeLines": 10,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/lib/utils.ts",
-			"language": "typescript",
-			"sizeLines": 6,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/mockData/chatMessages.ts",
-			"language": "typescript",
-			"sizeLines": 411,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/mockData/clineMessages.ts",
-			"language": "typescript",
-			"sizeLines": 685,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/mockData/index.ts",
-			"language": "typescript",
-			"sizeLines": 91,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/mocks/ProfileValidator.ts",
-			"language": "typescript",
-			"sizeLines": 6,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/mocks/vscode.ts",
-			"language": "typescript",
-			"sizeLines": 59,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/utils/createExtensionStateMock.ts",
-			"language": "typescript",
-			"sizeLines": 90,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/utils/createTableStory.tsx",
-			"language": "typescript",
-			"sizeLines": 70,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/utils/randomUtils.ts",
-			"language": "typescript",
-			"sizeLines": 11,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/src/utils/StoryTable.tsx",
-			"language": "typescript",
-			"sizeLines": 78,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/Badge.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 36,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/Button.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 51,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/ChatRow.Ask.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 52,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/ChatRow.Say.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 52,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/ChatView.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 263,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/Colors.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 78,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/ContextWindowProgress.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 53,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/DisplaySettings.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 26,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/ImageWarningBanner.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 28,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/KilocodeNotifications.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 71,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/KiloModeSelector.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 77,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/KiloProfileSelector.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 67,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/KiloTaskHeader.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 69,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/LabeledProgress.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 61,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/MarketplaceView.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 68,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/McpExecution.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 172,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/MicrophoneButton.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 43,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/ModesView.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 39,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/ShimmerText.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 96,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/STTSetupPopover.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 48,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/TabbedCodeIndexPopover.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 29,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/Tabs.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 40,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/TaskHeader.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 32,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/TaskTimeline.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 81,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/TelemetryBanner.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 13,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/VirtualQuotaFallbackProvider.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 83,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/stories/VolumeVisualizer.stories.tsx",
-			"language": "typescript",
-			"sizeLines": 37,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/storybook/tsconfig.json",
-			"language": "json",
-			"sizeLines": 25,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/vscode-e2e/.env.integration.example",
-			"language": "config",
-			"sizeLines": 1,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/vscode-e2e/.env.local.sample",
-			"language": "config",
-			"sizeLines": 1,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/vscode-e2e/.vscode-test.mjs",
-			"language": "javascript",
-			"sizeLines": 16,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/eslint.config.mjs",
-			"language": "javascript",
-			"sizeLines": 4,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/package.json",
-			"language": "json",
-			"sizeLines": 26,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/vscode-e2e/README.md",
-			"language": "markdown",
-			"sizeLines": 405,
-			"fileCategory": "docs"
-		},
-		{
-			"path": "apps/vscode-e2e/src/runTest.ts",
-			"language": "typescript",
-			"sizeLines": 52,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/extension.test.ts",
-			"language": "typescript",
-			"sizeLines": 39,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/index.ts",
-			"language": "typescript",
 			"sizeLines": 149,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/markdown-lists.test.ts",
-			"language": "typescript",
-			"sizeLines": 168,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/modes.test.ts",
-			"language": "typescript",
-			"sizeLines": 27,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/subtasks.test.ts",
-			"language": "typescript",
-			"sizeLines": 93,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/task.test.ts",
-			"language": "typescript",
-			"sizeLines": 36,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/test-utils.ts",
-			"language": "typescript",
-			"sizeLines": 5,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/tools/apply-diff.test.ts",
-			"language": "typescript",
-			"sizeLines": 534,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/tools/execute-command.test.ts",
-			"language": "typescript",
-			"sizeLines": 381,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/tools/list-files.test.ts",
-			"language": "typescript",
-			"sizeLines": 466,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/tools/read-file.test.ts",
-			"language": "typescript",
-			"sizeLines": 678,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/tools/search-files.test.ts",
-			"language": "typescript",
-			"sizeLines": 805,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/tools/use-mcp-tool.test.ts",
-			"language": "typescript",
-			"sizeLines": 416,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/tools/write-to-file.test.ts",
-			"language": "typescript",
-			"sizeLines": 240,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/suite/utils.ts",
-			"language": "typescript",
-			"sizeLines": 64,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/src/types/global.d.ts",
-			"language": "typescript",
-			"sizeLines": 8,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-e2e/tsconfig.esm.json",
-			"language": "json",
-			"sizeLines": 8,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/vscode-e2e/tsconfig.json",
-			"language": "json",
-			"sizeLines": 16,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/vscode-nightly/esbuild.mjs",
-			"language": "javascript",
-			"sizeLines": 174,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/vscode-nightly/package.json",
-			"language": "json",
-			"sizeLines": 14,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/vscode-nightly/package.nightly.json",
-			"language": "json",
-			"sizeLines": 6,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/vscode-nightly/package.nls.nightly.json",
-			"language": "json",
-			"sizeLines": 7,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/vscode-nightly/turbo.json",
-			"language": "json",
-			"sizeLines": 15,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/web-evals/.env",
-			"language": "config",
-			"sizeLines": 1,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/web-evals/components.json",
-			"language": "json",
-			"sizeLines": 21,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/web-evals/eslint.config.mjs",
-			"language": "javascript",
-			"sizeLines": 17,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/next-env.d.ts",
-			"language": "typescript",
-			"sizeLines": 5,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/next.config.ts",
-			"language": "typescript",
-			"sizeLines": 10,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/package.json",
-			"language": "json",
-			"sizeLines": 63,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/web-evals/postcss.config.mjs",
-			"language": "javascript",
-			"sizeLines": 5,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/public/.gitkeep",
-			"language": "unknown",
-			"sizeLines": 0,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/scripts/check-services.sh",
-			"language": "shell",
-			"sizeLines": 20,
-			"fileCategory": "script"
-		},
-		{
-			"path": "apps/web-evals/src/actions/__tests__/killRun.spec.ts",
-			"language": "typescript",
-			"sizeLines": 207,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/actions/exercises.ts",
-			"language": "typescript",
-			"sizeLines": 22,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/actions/heartbeat.ts",
-			"language": "typescript",
-			"sizeLines": 8,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/actions/runners.ts",
-			"language": "typescript",
-			"sizeLines": 8,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/actions/runs.ts",
-			"language": "typescript",
-			"sizeLines": 377,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/actions/tasks.ts",
-			"language": "typescript",
-			"sizeLines": 11,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/api/runs/[id]/logs/[taskId]/route.ts",
-			"language": "typescript",
-			"sizeLines": 74,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/api/runs/[id]/logs/failed/route.ts",
-			"language": "typescript",
-			"sizeLines": 147,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/api/runs/[id]/stream/route.ts",
-			"language": "typescript",
-			"sizeLines": 71,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/globals.css",
-			"language": "css",
-			"sizeLines": 141,
-			"fileCategory": "markup"
-		},
-		{
-			"path": "apps/web-evals/src/app/layout.tsx",
-			"language": "typescript",
-			"sizeLines": 35,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/page.tsx",
-			"language": "typescript",
-			"sizeLines": 10,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/runs/[id]/page.tsx",
-			"language": "typescript",
-			"sizeLines": 14,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/runs/[id]/run-status.tsx",
-			"language": "typescript",
-			"sizeLines": 79,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/runs/[id]/run.tsx",
-			"language": "typescript",
-			"sizeLines": 1058,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/runs/[id]/task-status.tsx",
-			"language": "typescript",
-			"sizeLines": 20,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/runs/new/new-run.tsx",
-			"language": "typescript",
-			"sizeLines": 1129,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/runs/new/page.tsx",
-			"language": "typescript",
-			"sizeLines": 9,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/app/runs/new/settings-diff.tsx",
-			"language": "typescript",
-			"sizeLines": 58,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/home/run.tsx",
-			"language": "typescript",
-			"sizeLines": 433,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/home/runs.tsx",
-			"language": "typescript",
-			"sizeLines": 1024,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/layout/header.tsx",
-			"language": "typescript",
-			"sizeLines": 7,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/layout/logo.tsx",
-			"language": "typescript",
-			"sizeLines": 54,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/providers/index.ts",
-			"language": "typescript",
-			"sizeLines": 2,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/providers/react-query-provider.tsx",
-			"language": "typescript",
-			"sizeLines": 8,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/providers/theme-provider.tsx",
-			"language": "typescript",
-			"sizeLines": 13,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/alert-dialog.tsx",
-			"language": "typescript",
-			"sizeLines": 113,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/badge.tsx",
-			"language": "typescript",
-			"sizeLines": 36,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/button.tsx",
-			"language": "typescript",
-			"sizeLines": 51,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/checkbox.tsx",
-			"language": "typescript",
-			"sizeLines": 27,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/command.tsx",
-			"language": "typescript",
-			"sizeLines": 134,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/dialog.tsx",
-			"language": "typescript",
-			"sizeLines": 110,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/drawer.tsx",
-			"language": "typescript",
-			"sizeLines": 98,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/dropdown-menu.tsx",
-			"language": "typescript",
-			"sizeLines": 171,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/form.tsx",
-			"language": "typescript",
-			"sizeLines": 138,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/index.ts",
-			"language": "typescript",
-			"sizeLines": 22,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/input.tsx",
-			"language": "typescript",
-			"sizeLines": 22,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/label.tsx",
-			"language": "typescript",
-			"sizeLines": 21,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/multi-select.tsx",
-			"language": "typescript",
-			"sizeLines": 300,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/popover.tsx",
-			"language": "typescript",
-			"sizeLines": 42,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/scroll-area.tsx",
-			"language": "typescript",
-			"sizeLines": 51,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/select.tsx",
-			"language": "typescript",
-			"sizeLines": 156,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/separator.tsx",
-			"language": "typescript",
-			"sizeLines": 28,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/slider.tsx",
-			"language": "typescript",
-			"sizeLines": 56,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/sonner.tsx",
-			"language": "typescript",
-			"sizeLines": 25,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/table.tsx",
-			"language": "typescript",
-			"sizeLines": 75,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/tabs.tsx",
-			"language": "typescript",
-			"sizeLines": 122,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/textarea.tsx",
-			"language": "typescript",
-			"sizeLines": 19,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/components/ui/tooltip.tsx",
-			"language": "typescript",
-			"sizeLines": 47,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/hooks/use-copy-run.ts",
-			"language": "typescript",
-			"sizeLines": 28,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/hooks/use-event-source.ts",
-			"language": "typescript",
-			"sizeLines": 101,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/hooks/use-fuzzy-model-search.ts",
-			"language": "typescript",
-			"sizeLines": 37,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/hooks/use-open-router-models.ts",
-			"language": "typescript",
-			"sizeLines": 38,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/hooks/use-roo-code-cloud-models.ts",
-			"language": "typescript",
-			"sizeLines": 66,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/hooks/use-run-status.ts",
-			"language": "typescript",
-			"sizeLines": 110,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/__tests__/formatters.spec.ts",
-			"language": "typescript",
-			"sizeLines": 30,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/__tests__/normalize-create-run.spec.ts",
-			"language": "typescript",
-			"sizeLines": 65,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/__tests__/roo-last-model-selection.spec.ts",
-			"language": "typescript",
-			"sizeLines": 78,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/actions.ts",
-			"language": "typescript",
-			"sizeLines": 19,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/formatters.ts",
-			"language": "typescript",
-			"sizeLines": 59,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/normalize-create-run.ts",
-			"language": "typescript",
-			"sizeLines": 20,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/roo-last-model-selection.ts",
-			"language": "typescript",
-			"sizeLines": 76,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/schemas.ts",
-			"language": "typescript",
-			"sizeLines": 46,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/server/__tests__/sse-stream.spec.ts",
-			"language": "typescript",
-			"sizeLines": 111,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/server/redis.ts",
-			"language": "typescript",
-			"sizeLines": 13,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/server/sse-stream.ts",
-			"language": "typescript",
-			"sizeLines": 59,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/src/lib/utils.ts",
-			"language": "typescript",
-			"sizeLines": 6,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-evals/tsconfig.json",
-			"language": "json",
-			"sizeLines": 10,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/web-evals/turbo.json",
-			"language": "json",
-			"sizeLines": 10,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/web-evals/vitest.config.ts",
-			"language": "typescript",
-			"sizeLines": 8,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/.env.example",
-			"language": "config",
-			"sizeLines": 11,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/web-roo-code/.npmrc",
-			"language": "unknown",
-			"sizeLines": 0,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/components.json",
-			"language": "json",
-			"sizeLines": 21,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/web-roo-code/eslint.config.mjs",
-			"language": "javascript",
-			"sizeLines": 4,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/next-sitemap.config.cjs",
-			"language": "javascript",
-			"sizeLines": 72,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/next.config.ts",
-			"language": "typescript",
-			"sizeLines": 39,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/package.json",
-			"language": "json",
-			"sizeLines": 56,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/web-roo-code/postcss.config.cjs",
-			"language": "javascript",
-			"sizeLines": 6,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/actions/evals.ts",
-			"language": "typescript",
-			"sizeLines": 29,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/api/og/route.tsx",
-			"language": "typescript",
-			"sizeLines": 165,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/cloud/page.tsx",
-			"language": "typescript",
-			"sizeLines": 289,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/cloud/team/page.tsx",
-			"language": "typescript",
-			"sizeLines": 297,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/enterprise/page.tsx",
-			"language": "typescript",
-			"sizeLines": 559,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/evals/evals.tsx",
-			"language": "typescript",
-			"sizeLines": 149,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/evals/page.tsx",
-			"language": "typescript",
-			"sizeLines": 52,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/evals/plot.tsx",
-			"language": "typescript",
-			"sizeLines": 336,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/evals/types.ts",
-			"language": "typescript",
-			"sizeLines": 9,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/extension/page.tsx",
-			"language": "typescript",
-			"sizeLines": 84,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/globals.css",
-			"language": "css",
-			"sizeLines": 72,
-			"fileCategory": "markup"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/layout.tsx",
-			"language": "typescript",
-			"sizeLines": 111,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/legal/cookies/page.tsx",
-			"language": "typescript",
-			"sizeLines": 199,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/legal/subprocessors/page.tsx",
-			"language": "typescript",
-			"sizeLines": 190,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/page.tsx",
-			"language": "typescript",
-			"sizeLines": 82,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/pr-fixer/content-a.tsx",
-			"language": "typescript",
-			"sizeLines": 95,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/pr-fixer/page.tsx",
-			"language": "typescript",
-			"sizeLines": 67,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/pricing/page.tsx",
-			"language": "typescript",
-			"sizeLines": 395,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/privacy/page.tsx",
-			"language": "typescript",
-			"sizeLines": 322,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/provider/page.tsx",
-			"language": "typescript",
-			"sizeLines": 263,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/provider/pricing/components/model-card.tsx",
-			"language": "typescript",
-			"sizeLines": 190,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/reviewer/content-b.ts",
-			"language": "typescript",
-			"sizeLines": 93,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/reviewer/content.ts",
-			"language": "typescript",
-			"sizeLines": 93,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/reviewer/page.tsx",
-			"language": "typescript",
-			"sizeLines": 70,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/robots.ts",
-			"language": "typescript",
-			"sizeLines": 13,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/shared/agent-page-content.ts",
-			"language": "typescript",
-			"sizeLines": 75,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/shared/AgentLandingContent.tsx",
-			"language": "typescript",
-			"sizeLines": 235,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/shared/getContentVariant.ts",
-			"language": "typescript",
-			"sizeLines": 36,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/shell.tsx",
-			"language": "typescript",
-			"sizeLines": 18,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/terms/page.tsx",
-			"language": "typescript",
-			"sizeLines": 99,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/app/terms/terms.md",
-			"language": "markdown",
-			"sizeLines": 306,
 			"fileCategory": "docs"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/animated-text.tsx",
-			"language": "typescript",
-			"sizeLines": 24,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/chromes/footer.tsx",
-			"language": "typescript",
-			"sizeLines": 391,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/chromes/index.ts",
-			"language": "typescript",
-			"sizeLines": 4,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/chromes/nav-bar.tsx",
-			"language": "typescript",
-			"sizeLines": 283,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/chromes/stats-display.tsx",
-			"language": "typescript",
-			"sizeLines": 31,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/chromes/theme-toggle.tsx",
-			"language": "typescript",
-			"sizeLines": 40,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/CookieConsentWrapper.tsx",
-			"language": "typescript",
-			"sizeLines": 111,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/enterprise/contact-form.tsx",
-			"language": "typescript",
-			"sizeLines": 291,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/animated-background.tsx",
-			"language": "typescript",
-			"sizeLines": 280,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/cloud-section.tsx",
-			"language": "typescript",
-			"sizeLines": 109,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/code-example.tsx",
-			"language": "typescript",
-			"sizeLines": 236,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/company-logos.tsx",
-			"language": "typescript",
-			"sizeLines": 37,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/cta-section.tsx",
-			"language": "typescript",
-			"sizeLines": 37,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/ecosystem-section.tsx",
-			"language": "typescript",
-			"sizeLines": 82,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/faq-section.tsx",
-			"language": "typescript",
-			"sizeLines": 305,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/features.tsx",
-			"language": "typescript",
-			"sizeLines": 171,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/index.ts",
-			"language": "typescript",
-			"sizeLines": 14,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/install-section.tsx",
-			"language": "typescript",
-			"sizeLines": 105,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/option-overview-section.tsx",
-			"language": "typescript",
-			"sizeLines": 99,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/pillars-section.tsx",
-			"language": "typescript",
-			"sizeLines": 202,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/testimonials.tsx",
-			"language": "typescript",
-			"sizeLines": 274,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/use-examples-section.tsx",
-			"language": "typescript",
-			"sizeLines": 438,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/homepage/whats-new-button.tsx",
-			"language": "typescript",
-			"sizeLines": 229,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/providers/google-tag-manager-provider.tsx",
-			"language": "typescript",
-			"sizeLines": 65,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/providers/index.ts",
-			"language": "typescript",
-			"sizeLines": 1,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/providers/posthog-provider.tsx",
-			"language": "typescript",
-			"sizeLines": 75,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/providers/providers.tsx",
-			"language": "typescript",
-			"sizeLines": 23,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/structured-data.tsx",
-			"language": "typescript",
-			"sizeLines": 26,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/ui/button.tsx",
-			"language": "typescript",
-			"sizeLines": 48,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/ui/chart.tsx",
-			"language": "typescript",
-			"sizeLines": 311,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/ui/index.ts",
-			"language": "typescript",
-			"sizeLines": 6,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/ui/link.tsx",
-			"language": "typescript",
-			"sizeLines": 38,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/ui/modal.tsx",
-			"language": "typescript",
-			"sizeLines": 95,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/ui/scroll-button.tsx",
-			"language": "typescript",
-			"sizeLines": 33,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/components/ui/table.tsx",
-			"language": "typescript",
-			"sizeLines": 85,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/analytics/consent-manager.ts",
-			"language": "typescript",
-			"sizeLines": 72,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/analytics/google-ads.ts",
-			"language": "typescript",
-			"sizeLines": 15,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/constants.ts",
-			"language": "typescript",
-			"sizeLines": 36,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/format-currency.ts",
-			"language": "typescript",
-			"sizeLines": 14,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/format-duration.ts",
-			"language": "typescript",
-			"sizeLines": 26,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/format-score.ts",
-			"language": "typescript",
-			"sizeLines": 1,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/format-tokens.ts",
-			"language": "typescript",
-			"sizeLines": 19,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/formatters.ts",
-			"language": "typescript",
-			"sizeLines": 22,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/hooks/index.ts",
-			"language": "typescript",
-			"sizeLines": 2,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/hooks/use-logo-src.ts",
-			"language": "typescript",
-			"sizeLines": 24,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/hooks/use-open-router-models.ts",
-			"language": "typescript",
-			"sizeLines": 77,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/index.ts",
-			"language": "typescript",
-			"sizeLines": 4,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/og.ts",
-			"language": "typescript",
-			"sizeLines": 57,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/seo.ts",
-			"language": "typescript",
-			"sizeLines": 30,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/stats.ts",
-			"language": "typescript",
-			"sizeLines": 124,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/structured-data.ts",
-			"language": "typescript",
-			"sizeLines": 127,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/types/models.ts",
-			"language": "typescript",
-			"sizeLines": 31,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/src/lib/utils.ts",
-			"language": "typescript",
-			"sizeLines": 6,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/tailwind.config.ts",
-			"language": "typescript",
-			"sizeLines": 118,
-			"fileCategory": "code"
-		},
-		{
-			"path": "apps/web-roo-code/tsconfig.json",
-			"language": "json",
-			"sizeLines": 8,
-			"fileCategory": "config"
-		},
-		{
-			"path": "apps/web-roo-code/turbo.json",
-			"language": "json",
-			"sizeLines": 10,
-			"fileCategory": "config"
 		},
 		{
 			"path": "benchmark/src/runExercise.ts",
@@ -2032,19 +268,79 @@
 		{
 			"path": "DEVELOPMENT.md",
 			"language": "markdown",
-			"sizeLines": 295,
+			"sizeLines": 216,
 			"fileCategory": "docs"
 		},
 		{
 			"path": "docs/file-locations.md",
 			"language": "markdown",
-			"sizeLines": 80,
+			"sizeLines": 82,
 			"fileCategory": "docs"
 		},
 		{
 			"path": "docs/getting-started/troubleshooting/troubleshooting-kiloclaw.mdx",
 			"language": "markdown",
 			"sizeLines": 44,
+			"fileCategory": "docs"
+		},
+		{
+			"path": "docs/maintainer-wiki/agent-guide.md",
+			"language": "markdown",
+			"sizeLines": 7,
+			"fileCategory": "docs"
+		},
+		{
+			"path": "docs/maintainer-wiki/concept-architecture-overview.md",
+			"language": "markdown",
+			"sizeLines": 33,
+			"fileCategory": "docs"
+		},
+		{
+			"path": "docs/maintainer-wiki/concept-carbon-memory.md",
+			"language": "markdown",
+			"sizeLines": 11,
+			"fileCategory": "docs"
+		},
+		{
+			"path": "docs/maintainer-wiki/decisions.md",
+			"language": "markdown",
+			"sizeLines": 6,
+			"fileCategory": "docs"
+		},
+		{
+			"path": "docs/maintainer-wiki/index.md",
+			"language": "markdown",
+			"sizeLines": 13,
+			"fileCategory": "docs"
+		},
+		{
+			"path": "docs/maintainer-wiki/log.md",
+			"language": "markdown",
+			"sizeLines": 27,
+			"fileCategory": "docs"
+		},
+		{
+			"path": "docs/maintainer-wiki/open-work.md",
+			"language": "markdown",
+			"sizeLines": 6,
+			"fileCategory": "docs"
+		},
+		{
+			"path": "docs/maintainer-wiki/README.md",
+			"language": "markdown",
+			"sizeLines": 7,
+			"fileCategory": "docs"
+		},
+		{
+			"path": "docs/maintainer-wiki/tech-stack.md",
+			"language": "markdown",
+			"sizeLines": 35,
+			"fileCategory": "docs"
+		},
+		{
+			"path": "docs/maintainer-wiki/workflows.md",
+			"language": "markdown",
+			"sizeLines": 24,
 			"fileCategory": "docs"
 		},
 		{
@@ -2060,1395 +356,9 @@
 			"fileCategory": "config"
 		},
 		{
-			"path": "flake.nix",
-			"language": "nix",
-			"sizeLines": 137,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/bootstrap-cli.ts",
-			"language": "typescript",
-			"sizeLines": 11,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/bootstrap-esm.ts",
-			"language": "typescript",
-			"sizeLines": 126,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/bootstrap-fork.ts",
-			"language": "typescript",
-			"sizeLines": 251,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/bootstrap-import.ts",
-			"language": "typescript",
-			"sizeLines": 62,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/bootstrap-meta.ts",
-			"language": "typescript",
-			"sizeLines": 24,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/bootstrap-node.ts",
-			"language": "typescript",
-			"sizeLines": 193,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/bootstrap-server.ts",
-			"language": "typescript",
-			"sizeLines": 7,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/bootstrap-window.ts",
-			"language": "typescript",
-			"sizeLines": 252,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/cli.ts",
-			"language": "typescript",
-			"sizeLines": 36,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/electron.d.ts",
-			"language": "typescript",
-			"sizeLines": 38,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/eslint.config.mjs",
-			"language": "javascript",
-			"sizeLines": 41,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/extension.ts",
-			"language": "typescript",
-			"sizeLines": 142,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/package.json",
-			"language": "json",
-			"sizeLines": 177,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/host/server-cli.ts",
-			"language": "typescript",
-			"sizeLines": 40,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/server-main.ts",
-			"language": "typescript",
-			"sizeLines": 328,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/src/config.ts",
-			"language": "typescript",
-			"sizeLines": 6,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/src/extension.ts",
-			"language": "typescript",
-			"sizeLines": 286,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/src/extensionManager.ts",
-			"language": "typescript",
-			"sizeLines": 101,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/src/main.ts",
-			"language": "typescript",
-			"sizeLines": 202,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/src/rpcManager.ts",
-			"language": "typescript",
-			"sizeLines": 1050,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/src/webViewManager.ts",
-			"language": "typescript",
-			"sizeLines": 159,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/tsconfig.base.json",
-			"language": "json",
-			"sizeLines": 21,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/host/tsconfig.json",
-			"language": "json",
-			"sizeLines": 51,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/host/tsconfig.monaco.json",
-			"language": "json",
-			"sizeLines": 37,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/host/tsconfig.tsec.json",
-			"language": "json",
-			"sizeLines": 14,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/host/tsconfig.vscode-dts.json",
-			"language": "json",
-			"sizeLines": 18,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/host/tsconfig.vscode-proposed-dts.json",
-			"language": "json",
-			"sizeLines": 4,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/host/tsec.exemptions.json",
-			"language": "json",
-			"sizeLines": 34,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/host/tsup.config.ts",
-			"language": "typescript",
-			"sizeLines": 22,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/turbo.json",
-			"language": "json",
-			"sizeLines": 44,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/host/typings/base-common.d.ts",
-			"language": "typescript",
-			"sizeLines": 18,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/typings/crypto.d.ts",
-			"language": "typescript",
-			"sizeLines": 81,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/typings/css.d.ts",
-			"language": "typescript",
-			"sizeLines": 8,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/typings/editContext.d.ts",
-			"language": "typescript",
-			"sizeLines": 138,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/typings/thenable.d.ts",
-			"language": "typescript",
-			"sizeLines": 12,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/typings/vscode-globals-nls.d.ts",
-			"language": "typescript",
-			"sizeLines": 40,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/typings/vscode-globals-product.d.ts",
-			"language": "typescript",
-			"sizeLines": 31,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/host/typings/vscode-globals-ttp.d.ts",
-			"language": "typescript",
-			"sizeLines": 20,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/.run/Run Plugin.run.xml",
-			"language": "xml",
-			"sizeLines": 30,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/plugin/build.gradle.kts",
-			"language": "kotlin",
-			"sizeLines": 490,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/detekt.yml",
-			"language": "yaml",
-			"sizeLines": 716,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/plugin/genPlatform.gradle",
-			"language": "gradle",
-			"sizeLines": 179,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/plugin/gradle.properties.template",
-			"language": "template",
-			"sizeLines": 14,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/gradle/wrapper/gradle-wrapper.jar",
-			"language": "jar",
-			"sizeLines": 378,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/gradle/wrapper/gradle-wrapper.properties",
-			"language": "properties",
-			"sizeLines": 6,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/plugin/gradlew",
-			"language": "unknown",
-			"sizeLines": 234,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/gradlew.bat",
-			"language": "batch",
-			"sizeLines": 89,
-			"fileCategory": "script"
-		},
-		{
-			"path": "jetbrains/plugin/package.json",
-			"language": "json",
-			"sizeLines": 31,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/plugin/scripts/get_bundle_name.js",
-			"language": "javascript",
-			"sizeLines": 44,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/scripts/sync_version.js",
-			"language": "javascript",
-			"sizeLines": 49,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/scripts/update_change_notes.js",
-			"language": "javascript",
-			"sizeLines": 154,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/settings.gradle.kts",
-			"language": "kotlin",
-			"sizeLines": 5,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actions/ActionConstants.kt",
-			"language": "kotlin",
-			"sizeLines": 298,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actions/GitCommitMessageAction.kt",
-			"language": "kotlin",
-			"sizeLines": 211,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actions/RegisterCodeActions.kt",
-			"language": "kotlin",
-			"sizeLines": 304,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actions/RightClickChatActionGroup.kt",
-			"language": "kotlin",
-			"sizeLines": 70,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actions/VSCodeCommandActions.kt",
-			"language": "kotlin",
-			"sizeLines": 158,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadBulkEditsShape.kt",
-			"language": "kotlin",
-			"sizeLines": 151,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadClipboardShape.kt",
-			"language": "kotlin",
-			"sizeLines": 83,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadCommandsShape.kt",
-			"language": "kotlin",
-			"sizeLines": 155,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadConfigurationShape.kt",
-			"language": "kotlin",
-			"sizeLines": 377,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadConsoleShape.kt",
-			"language": "kotlin",
-			"sizeLines": 85,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadDebugServiceShape.kt",
-			"language": "kotlin",
-			"sizeLines": 309,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadDiaglogsShape.kt",
-			"language": "kotlin",
-			"sizeLines": 229,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadDocumentContentProvidersShape.kt",
-			"language": "kotlin",
-			"sizeLines": 56,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadDocumentsShape.kt",
-			"language": "kotlin",
-			"sizeLines": 145,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadEditorTabsShape.kt",
-			"language": "kotlin",
-			"sizeLines": 50,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadErrorsShape.kt",
-			"language": "kotlin",
-			"sizeLines": 44,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadExtensionServiceShape.kt",
-			"language": "kotlin",
-			"sizeLines": 281,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadFileSystemEventServiceShape.kt",
-			"language": "kotlin",
-			"sizeLines": 82,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadFileSystemShape.kt",
-			"language": "kotlin",
-			"sizeLines": 615,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadLanguageFeaturesShape.kt",
-			"language": "kotlin",
-			"sizeLines": 748,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadLanguageModelToolsShape.kt",
-			"language": "kotlin",
-			"sizeLines": 120,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadLoggerShape.kt",
-			"language": "kotlin",
-			"sizeLines": 93,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadMessageServiceShape.kt",
-			"language": "kotlin",
-			"sizeLines": 115,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadOutputServiceShape.kt",
-			"language": "kotlin",
-			"sizeLines": 113,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadSearchShape.kt",
-			"language": "kotlin",
-			"sizeLines": 169,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadSecretStateShape.kt",
-			"language": "kotlin",
-			"sizeLines": 146,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadStatusBarShape.kt",
-			"language": "kotlin",
-			"sizeLines": 180,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadStorageShape.kt",
-			"language": "kotlin",
-			"sizeLines": 71,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadTaskShape.kt",
-			"language": "kotlin",
-			"sizeLines": 216,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadTelemetryShape.kt",
-			"language": "kotlin",
-			"sizeLines": 43,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadTerminalServiceShape.kt",
-			"language": "kotlin",
-			"sizeLines": 435,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadTerminalShellIntegrationShape.kt",
-			"language": "kotlin",
-			"sizeLines": 50,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadTextEditorsShape.kt",
-			"language": "kotlin",
-			"sizeLines": 221,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadUrlsShape.kt",
-			"language": "kotlin",
-			"sizeLines": 61,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadWebviewsShape.kt",
-			"language": "kotlin",
-			"sizeLines": 113,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadWebviewViewsShape.kt",
-			"language": "kotlin",
-			"sizeLines": 108,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/actors/MainThreadWindowShape.kt",
-			"language": "kotlin",
-			"sizeLines": 136,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/commands/Commands.kt",
-			"language": "kotlin",
-			"sizeLines": 143,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/commands/KiloCodeAuthProtocolCommand.kt",
-			"language": "kotlin",
-			"sizeLines": 142,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/commands/SetContextCommands.kt",
-			"language": "kotlin",
-			"sizeLines": 79,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/config/PerformanceSettings.kt",
-			"language": "kotlin",
-			"sizeLines": 35,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/ContextManager.kt",
-			"language": "kotlin",
-			"sizeLines": 121,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/ExtensionHostManager.kt",
-			"language": "kotlin",
-			"sizeLines": 546,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/ExtensionHostMessageType.kt",
-			"language": "kotlin",
-			"sizeLines": 62,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/ExtensionIdentifier.kt",
-			"language": "kotlin",
-			"sizeLines": 107,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/ExtensionManager.kt",
-			"language": "kotlin",
-			"sizeLines": 247,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/ExtensionProcessManager.kt",
-			"language": "kotlin",
-			"sizeLines": 526,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/ExtensionSocketServer.kt",
-			"language": "kotlin",
-			"sizeLines": 361,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/ExtensionUnixDomainSocketServer.kt",
-			"language": "kotlin",
-			"sizeLines": 258,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/InitializationHealthCheck.kt",
-			"language": "kotlin",
-			"sizeLines": 145,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/InitializationStateMachine.kt",
-			"language": "kotlin",
-			"sizeLines": 238,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/PluginContext.kt",
-			"language": "kotlin",
-			"sizeLines": 85,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/RPCManager.kt",
-			"language": "kotlin",
-			"sizeLines": 288,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/ServiceProxyRegistry.kt",
-			"language": "kotlin",
-			"sizeLines": 384,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/core/WorkspaceManager.kt",
-			"language": "kotlin",
-			"sizeLines": 125,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/editor/EditorAndDocManager.kt",
-			"language": "kotlin",
-			"sizeLines": 735,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/editor/EditorCommands.kt",
-			"language": "kotlin",
-			"sizeLines": 140,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/editor/EditorHolder.kt",
-			"language": "kotlin",
-			"sizeLines": 351,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/editor/EditorListener.kt",
-			"language": "kotlin",
-			"sizeLines": 37,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/editor/EditorStateService.kt",
-			"language": "kotlin",
-			"sizeLines": 101,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/editor/EditorTypes.kt",
-			"language": "kotlin",
-			"sizeLines": 161,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/editor/MultiDiffCommands.kt",
-			"language": "kotlin",
-			"sizeLines": 222,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/editor/TabStateManager.kt",
-			"language": "kotlin",
-			"sizeLines": 495,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/editor/TabTypes.kt",
-			"language": "kotlin",
-			"sizeLines": 201,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/editor/WorkspaceEdit.kt",
-			"language": "kotlin",
-			"sizeLines": 64,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/events/EventBus.kt",
-			"language": "kotlin",
-			"sizeLines": 170,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/events/WebviewEvents.kt",
-			"language": "kotlin",
-			"sizeLines": 32,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/events/WorkspaceEvents.kt",
-			"language": "kotlin",
-			"sizeLines": 79,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/git/CommitMessageConstants.kt",
-			"language": "kotlin",
-			"sizeLines": 20,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/git/CommitMessageHandler.kt",
-			"language": "kotlin",
-			"sizeLines": 292,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/git/CommitMessageHandlerFactory.kt",
-			"language": "kotlin",
-			"sizeLines": 30,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/git/CommitMessageService.kt",
-			"language": "kotlin",
-			"sizeLines": 138,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/git/FileDiscoveryService.kt",
-			"language": "kotlin",
-			"sizeLines": 169,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/git/WorkspaceResolver.kt",
-			"language": "kotlin",
-			"sizeLines": 117,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/i18n/I18n.kt",
-			"language": "kotlin",
-			"sizeLines": 88,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/i18n/I18nUtils.kt",
-			"language": "kotlin",
-			"sizeLines": 18,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/inline/InlineCompletionConstants.kt",
-			"language": "kotlin",
-			"sizeLines": 23,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/inline/InlineCompletionManager.kt",
-			"language": "kotlin",
-			"sizeLines": 232,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/inline/InlineCompletionService.kt",
-			"language": "kotlin",
-			"sizeLines": 250,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/inline/KiloCodeInlineCompletionInsertHandler.kt",
-			"language": "kotlin",
-			"sizeLines": 69,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/inline/KiloCodeInlineCompletionProvider.kt",
-			"language": "kotlin",
-			"sizeLines": 140,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/BufferedEmitter.kt",
-			"language": "kotlin",
-			"sizeLines": 127,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/ChunkStream.kt",
-			"language": "kotlin",
-			"sizeLines": 130,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/ILoadEstimator.kt",
-			"language": "kotlin",
-			"sizeLines": 17,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/IMessagePassingProtocol.kt",
-			"language": "kotlin",
-			"sizeLines": 39,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/ISocket.kt",
-			"language": "kotlin",
-			"sizeLines": 77,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/LoadEstimator.kt",
-			"language": "kotlin",
-			"sizeLines": 83,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/MessageListener.kt",
-			"language": "kotlin",
-			"sizeLines": 16,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/NodeSocket.kt",
-			"language": "kotlin",
-			"sizeLines": 382,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/PersistentProtocol.kt",
-			"language": "kotlin",
-			"sizeLines": 471,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/ProtocolConstants.kt",
-			"language": "kotlin",
-			"sizeLines": 44,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/ProtocolMessage.kt",
-			"language": "kotlin",
-			"sizeLines": 65,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/ProtocolMessageType.kt",
-			"language": "kotlin",
-			"sizeLines": 84,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/ProtocolReader.kt",
-			"language": "kotlin",
-			"sizeLines": 166,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/ProtocolWriter.kt",
-			"language": "kotlin",
-			"sizeLines": 440,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostCommandsProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 17,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostConfigurationProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 32,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostDocumentsAndEditorsProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 11,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostDocumentsProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 16,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostEditorsProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 14,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostEditorTabsProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 14,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostExtensionServiceProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 96,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostFileSystemEventServiceProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 88,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostTerminalServiceProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 138,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostTerminalShellIntegrationProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 17,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostWebviewsProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 40,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostWebviewViewsProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 46,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/interfaces/ExtHostWorkspaceProxy.kt",
-			"language": "kotlin",
-			"sizeLines": 42,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/IRPCProtocol.kt",
-			"language": "kotlin",
-			"sizeLines": 44,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/LazyPromise.kt",
-			"language": "kotlin",
-			"sizeLines": 45,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/logger/FileRPCProtocolLogger.kt",
-			"language": "kotlin",
-			"sizeLines": 276,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/MessageBuffer.kt",
-			"language": "kotlin",
-			"sizeLines": 340,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/MessageIO.kt",
-			"language": "kotlin",
-			"sizeLines": 469,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/MessageType.kt",
-			"language": "kotlin",
-			"sizeLines": 79,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/PendingRPCReply.kt",
-			"language": "kotlin",
-			"sizeLines": 36,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/ProxyIdentifier.kt",
-			"language": "kotlin",
-			"sizeLines": 82,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/RPCProtocol.kt",
-			"language": "kotlin",
-			"sizeLines": 876,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/uri/UriIpc.kt",
-			"language": "kotlin",
-			"sizeLines": 143,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/proxy/uri/UriTransformer.kt",
-			"language": "kotlin",
-			"sizeLines": 87,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/SocketCloseEvent.kt",
-			"language": "kotlin",
-			"sizeLines": 76,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/SocketDiagnosticsEventType.kt",
-			"language": "kotlin",
-			"sizeLines": 50,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ipc/SocketTimeoutEvent.kt",
-			"language": "kotlin",
-			"sizeLines": 26,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/model/WorkspaceData.kt",
-			"language": "kotlin",
-			"sizeLines": 52,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/monitoring/DisposableTracker.kt",
-			"language": "kotlin",
-			"sizeLines": 80,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/monitoring/ScopeRegistry.kt",
-			"language": "kotlin",
-			"sizeLines": 33,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/monitoring/ThreadMonitor.kt",
-			"language": "kotlin",
-			"sizeLines": 97,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/plugin/SystemObjectProvider.kt",
-			"language": "kotlin",
-			"sizeLines": 110,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/plugin/WecoderPlugin.kt",
-			"language": "kotlin",
-			"sizeLines": 541,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/service/DocumentSyncService.kt",
-			"language": "kotlin",
-			"sizeLines": 161,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/service/ExtensionStorageService.kt",
-			"language": "kotlin",
-			"sizeLines": 47,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/terminal/ProxyPtyProcess.kt",
-			"language": "kotlin",
-			"sizeLines": 118,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/terminal/ShellIntegrationOutputState.kt",
-			"language": "kotlin",
-			"sizeLines": 399,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/terminal/TerminalCommands.kt",
-			"language": "kotlin",
-			"sizeLines": 93,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/terminal/TerminalInstance.kt",
-			"language": "kotlin",
-			"sizeLines": 697,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/terminal/TerminalInstanceManager.kt",
-			"language": "kotlin",
-			"sizeLines": 138,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/terminal/TerminalShellIntegration.kt",
-			"language": "kotlin",
-			"sizeLines": 182,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/terminal/WeCoderTerminalCustomizer.kt",
-			"language": "kotlin",
-			"sizeLines": 292,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/theme/ThemeManager.kt",
-			"language": "kotlin",
-			"sizeLines": 702,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/ui/RooToolWindowFactory.kt",
-			"language": "kotlin",
-			"sizeLines": 476,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/util/ExtensionUtils.kt",
-			"language": "kotlin",
-			"sizeLines": 24,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/util/LogLevelConfig.kt",
-			"language": "kotlin",
-			"sizeLines": 75,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/util/MachineIdUtil.kt",
-			"language": "kotlin",
-			"sizeLines": 193,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/util/NodeVersionUtil.kt",
-			"language": "kotlin",
-			"sizeLines": 110,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/util/NotificationUtil.kt",
-			"language": "kotlin",
-			"sizeLines": 63,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/util/PluginConstants.kt",
-			"language": "kotlin",
-			"sizeLines": 13,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/util/PluginResourceUtil.kt",
-			"language": "kotlin",
-			"sizeLines": 118,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/util/PromiseUtils.kt",
-			"language": "kotlin",
-			"sizeLines": 145,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/util/ProxyConfigUtil.kt",
-			"language": "kotlin",
-			"sizeLines": 205,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/util/ReflectUtils.kt",
-			"language": "kotlin",
-			"sizeLines": 161,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/util/URIUtil.kt",
-			"language": "kotlin",
-			"sizeLines": 632,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/webview/DragDropHandler.kt",
-			"language": "kotlin",
-			"sizeLines": 338,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/webview/LocalResHandler.kt",
-			"language": "kotlin",
-			"sizeLines": 159,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/webview/WebViewManager.kt",
-			"language": "kotlin",
-			"sizeLines": 1674,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/kotlin/ai/kilocode/jetbrains/workspace/WorkspaceFileChangeManager.kt",
-			"language": "kotlin",
-			"sizeLines": 393,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/resources/kilocode-shell-integrations/vscode-bash/bashrc",
-			"language": "unknown",
-			"sizeLines": 234,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/resources/kilocode-shell-integrations/vscode-powershell/diagnose.ps1",
-			"language": "powershell",
-			"sizeLines": 57,
-			"fileCategory": "script"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/resources/kilocode-shell-integrations/vscode-powershell/profile.ps1",
-			"language": "powershell",
-			"sizeLines": 189,
-			"fileCategory": "script"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/resources/kilocode-shell-integrations/vscode-zsh/.zshenv",
-			"language": "unknown",
-			"sizeLines": 24,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/resources/kilocode-shell-integrations/vscode-zsh/.zshrc",
-			"language": "unknown",
-			"sizeLines": 158,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/resources/META-INF/plugin.xml.template",
-			"language": "template",
-			"sizeLines": 119,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/resources/themes/theme-variables.css",
-			"language": "css",
-			"sizeLines": 276,
-			"fileCategory": "markup"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/resources/themes/vscode-theme-dark.css",
-			"language": "css",
-			"sizeLines": 856,
-			"fileCategory": "markup"
-		},
-		{
-			"path": "jetbrains/plugin/src/main/resources/themes/vscode-theme-light.css",
-			"language": "css",
-			"sizeLines": 861,
-			"fileCategory": "markup"
-		},
-		{
-			"path": "jetbrains/plugin/src/test/kotlin/ai/kilocode/jetbrains/config/PerformanceSettingsTest.kt",
-			"language": "kotlin",
-			"sizeLines": 155,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/test/kotlin/ai/kilocode/jetbrains/core/InitializationHealthCheckTest.kt",
-			"language": "kotlin",
-			"sizeLines": 125,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/test/kotlin/ai/kilocode/jetbrains/core/InitializationStateMachineTest.kt",
-			"language": "kotlin",
-			"sizeLines": 233,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/test/kotlin/ai/kilocode/jetbrains/i18n/I18nTest.kt",
-			"language": "kotlin",
-			"sizeLines": 178,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/test/kotlin/ai/kilocode/jetbrains/integration/ThreadLeakPreventionTest.kt",
-			"language": "kotlin",
-			"sizeLines": 283,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/test/kotlin/ai/kilocode/jetbrains/monitoring/DisposableTrackerTest.kt",
-			"language": "kotlin",
-			"sizeLines": 191,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/test/kotlin/ai/kilocode/jetbrains/monitoring/ScopeRegistryTest.kt",
-			"language": "kotlin",
-			"sizeLines": 146,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/test/kotlin/ai/kilocode/jetbrains/monitoring/ThreadMonitorTest.kt",
-			"language": "kotlin",
-			"sizeLines": 100,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/test/kotlin/ai/kilocode/jetbrains/util/MachineIdUtilTest.kt",
-			"language": "kotlin",
-			"sizeLines": 94,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/test/kotlin/ai/kilocode/jetbrains/util/ReflectUtilsStatusBarTest.kt",
-			"language": "kotlin",
-			"sizeLines": 129,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/src/test/kotlin/ai/kilocode/jetbrains/util/ReflectUtilsTest.kt",
-			"language": "kotlin",
-			"sizeLines": 86,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/plugin/turbo.json",
-			"language": "json",
-			"sizeLines": 110,
-			"fileCategory": "config"
-		},
-		{
-			"path": "jetbrains/README.md",
-			"language": "markdown",
-			"sizeLines": 379,
-			"fileCategory": "docs"
-		},
-		{
-			"path": "jetbrains/scripts/check-dependencies.js",
-			"language": "javascript",
-			"sizeLines": 373,
-			"fileCategory": "code"
-		},
-		{
-			"path": "jetbrains/scripts/check-dependencies.sh",
-			"language": "shell",
-			"sizeLines": 312,
-			"fileCategory": "script"
-		},
-		{
 			"path": "knip.json",
 			"language": "json",
-			"sizeLines": 26,
+			"sizeLines": 24,
 			"fileCategory": "config"
 		},
 		{
@@ -3472,127 +382,7 @@
 		{
 			"path": "package.json",
 			"language": "json",
-			"sizeLines": 86,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/agent-runtime/package.json",
-			"language": "json",
-			"sizeLines": 63,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/agent-runtime/src/__tests__/extension.singleCompletion.test.ts",
-			"language": "typescript",
-			"sizeLines": 419,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/communication/__tests__/ipc.test.ts",
-			"language": "typescript",
-			"sizeLines": 252,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/communication/ipc.ts",
-			"language": "typescript",
-			"sizeLines": 230,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/constants/package.ts",
-			"language": "typescript",
-			"sizeLines": 6,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/host/__tests__/ExtensionHost.addHistoryItemForResume.spec.ts",
-			"language": "typescript",
-			"sizeLines": 93,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/host/__tests__/VSCode.applyEdit.spec.ts",
-			"language": "typescript",
-			"sizeLines": 87,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/host/ExtensionHost.ts",
-			"language": "typescript",
-			"sizeLines": 1365,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/host/VSCode.ts",
-			"language": "typescript",
-			"sizeLines": 2654,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/index.ts",
-			"language": "typescript",
-			"sizeLines": 100,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/models/index.ts",
-			"language": "typescript",
-			"sizeLines": 147,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/process.ts",
-			"language": "typescript",
-			"sizeLines": 531,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/services/extension.ts",
-			"language": "typescript",
-			"sizeLines": 505,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/types/index.ts",
-			"language": "typescript",
-			"sizeLines": 173,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/utils/__tests__/safe-stringify.test.ts",
-			"language": "typescript",
-			"sizeLines": 162,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/utils/extension-paths.ts",
-			"language": "typescript",
-			"sizeLines": 76,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/utils/logger.ts",
-			"language": "typescript",
-			"sizeLines": 94,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/utils/paths.ts",
-			"language": "typescript",
-			"sizeLines": 197,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/src/utils/safe-stringify.ts",
-			"language": "typescript",
-			"sizeLines": 103,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/agent-runtime/tsconfig.json",
-			"language": "json",
-			"sizeLines": 24,
+			"sizeLines": 78,
 			"fileCategory": "config"
 		},
 		{
@@ -4274,366 +1064,6 @@
 			"fileCategory": "code"
 		},
 		{
-			"path": "packages/evals/.docker/entrypoints/runner.sh",
-			"language": "shell",
-			"sizeLines": 10,
-			"fileCategory": "script"
-		},
-		{
-			"path": "packages/evals/.docker/entrypoints/web.sh",
-			"language": "shell",
-			"sizeLines": 48,
-			"fileCategory": "script"
-		},
-		{
-			"path": "packages/evals/.docker/scripts/postgres/create-databases.sh",
-			"language": "shell",
-			"sizeLines": 11,
-			"fileCategory": "script"
-		},
-		{
-			"path": "packages/evals/.env.development",
-			"language": "config",
-			"sizeLines": 3,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/.env.test",
-			"language": "config",
-			"sizeLines": 3,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/ADDING-EVALS.md",
-			"language": "markdown",
-			"sizeLines": 305,
-			"fileCategory": "docs"
-		},
-		{
-			"path": "packages/evals/ARCHITECTURE.md",
-			"language": "markdown",
-			"sizeLines": 282,
-			"fileCategory": "docs"
-		},
-		{
-			"path": "packages/evals/docker-compose.override.yml",
-			"language": "yaml",
-			"sizeLines": 45,
-			"fileCategory": "infra"
-		},
-		{
-			"path": "packages/evals/docker-compose.yml",
-			"language": "yaml",
-			"sizeLines": 87,
-			"fileCategory": "infra"
-		},
-		{
-			"path": "packages/evals/Dockerfile.runner",
-			"language": "dockerfile",
-			"sizeLines": 175,
-			"fileCategory": "infra"
-		},
-		{
-			"path": "packages/evals/Dockerfile.web",
-			"language": "dockerfile",
-			"sizeLines": 64,
-			"fileCategory": "infra"
-		},
-		{
-			"path": "packages/evals/drizzle.config.ts",
-			"language": "typescript",
-			"sizeLines": 10,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/eslint.config.mjs",
-			"language": "javascript",
-			"sizeLines": 4,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/package.json",
-			"language": "json",
-			"sizeLines": 54,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/README.md",
-			"language": "markdown",
-			"sizeLines": 148,
-			"fileCategory": "docs"
-		},
-		{
-			"path": "packages/evals/scripts/setup.sh",
-			"language": "shell",
-			"sizeLines": 349,
-			"fileCategory": "script"
-		},
-		{
-			"path": "packages/evals/src/cli/__tests__/messageLogDeduper.test.ts",
-			"language": "typescript",
-			"sizeLines": 35,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/cli/index.ts",
-			"language": "typescript",
-			"sizeLines": 55,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/cli/messageLogDeduper.ts",
-			"language": "typescript",
-			"sizeLines": 50,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/cli/processTask.ts",
-			"language": "typescript",
-			"sizeLines": 150,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/cli/redis.ts",
-			"language": "typescript",
-			"sizeLines": 63,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/cli/runCi.ts",
-			"language": "typescript",
-			"sizeLines": 30,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/cli/runEvals.ts",
-			"language": "typescript",
-			"sizeLines": 88,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/cli/runTaskInCli.ts",
-			"language": "typescript",
-			"sizeLines": 313,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/cli/runTaskInVscode.ts",
-			"language": "typescript",
-			"sizeLines": 327,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/cli/runUnitTest.ts",
-			"language": "typescript",
-			"sizeLines": 98,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/cli/types.ts",
-			"language": "typescript",
-			"sizeLines": 19,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/cli/utils.ts",
-			"language": "typescript",
-			"sizeLines": 251,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/db/db.ts",
-			"language": "typescript",
-			"sizeLines": 45,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/db/index.ts",
-			"language": "typescript",
-			"sizeLines": 9,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/0000_young_trauma.sql",
-			"language": "sql",
-			"sizeLines": 53,
-			"fileCategory": "data"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/0001_add_timeout_to_runs.sql",
-			"language": "sql",
-			"sizeLines": 0,
-			"fileCategory": "data"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/0001_lowly_captain_flint.sql",
-			"language": "sql",
-			"sizeLines": 0,
-			"fileCategory": "data"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/0002_bouncy_blazing_skull.sql",
-			"language": "sql",
-			"sizeLines": 5,
-			"fileCategory": "data"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/0003_simple_retro_girl.sql",
-			"language": "sql",
-			"sizeLines": 0,
-			"fileCategory": "data"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/0004_sloppy_black_knight.sql",
-			"language": "sql",
-			"sizeLines": 2,
-			"fileCategory": "data"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/0005_strong_skrulls.sql",
-			"language": "sql",
-			"sizeLines": 11,
-			"fileCategory": "data"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/0006_worried_spectrum.sql",
-			"language": "sql",
-			"sizeLines": 0,
-			"fileCategory": "data"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/meta/_journal.json",
-			"language": "json",
-			"sizeLines": 55,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/meta/0000_snapshot.json",
-			"language": "json",
-			"sizeLines": 410,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/meta/0001_snapshot.json",
-			"language": "json",
-			"sizeLines": 417,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/meta/0002_snapshot.json",
-			"language": "json",
-			"sizeLines": 453,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/meta/0003_snapshot.json",
-			"language": "json",
-			"sizeLines": 459,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/meta/0004_snapshot.json",
-			"language": "json",
-			"sizeLines": 472,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/meta/0005_snapshot.json",
-			"language": "json",
-			"sizeLines": 472,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/src/db/migrations/meta/0006_snapshot.json",
-			"language": "json",
-			"sizeLines": 479,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/src/db/queries/__tests__/copyRun.spec.ts",
-			"language": "typescript",
-			"sizeLines": 288,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/db/queries/__tests__/runs.test.ts",
-			"language": "typescript",
-			"sizeLines": 87,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/db/queries/copyRun.ts",
-			"language": "typescript",
-			"sizeLines": 183,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/db/queries/errors.ts",
-			"language": "typescript",
-			"sizeLines": 3,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/db/queries/runs.ts",
-			"language": "typescript",
-			"sizeLines": 200,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/db/queries/taskMetrics.ts",
-			"language": "typescript",
-			"sizeLines": 45,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/db/queries/tasks.ts",
-			"language": "typescript",
-			"sizeLines": 88,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/db/queries/toolErrors.ts",
-			"language": "typescript",
-			"sizeLines": 22,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/db/schema.ts",
-			"language": "typescript",
-			"sizeLines": 143,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/exercises/index.ts",
-			"language": "typescript",
-			"sizeLines": 25,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/src/index.ts",
-			"language": "typescript",
-			"sizeLines": 2,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/tsconfig.json",
-			"language": "json",
-			"sizeLines": 8,
-			"fileCategory": "config"
-		},
-		{
-			"path": "packages/evals/vitest-global-setup.ts",
-			"language": "typescript",
-			"sizeLines": 40,
-			"fileCategory": "code"
-		},
-		{
-			"path": "packages/evals/vitest.config.ts",
-			"language": "typescript",
-			"sizeLines": 10,
-			"fileCategory": "code"
-		},
-		{
 			"path": "packages/ipc/eslint.config.mjs",
 			"language": "javascript",
 			"sizeLines": 4,
@@ -5008,7 +1438,7 @@
 		{
 			"path": "packages/types/src/providers/anthropic.ts",
 			"language": "typescript",
-			"sizeLines": 225,
+			"sizeLines": 239,
 			"fileCategory": "code"
 		},
 		{
@@ -5026,7 +1456,7 @@
 		{
 			"path": "packages/types/src/providers/bedrock.ts",
 			"language": "typescript",
-			"sizeLines": 604,
+			"sizeLines": 605,
 			"fileCategory": "code"
 		},
 		{
@@ -5062,7 +1492,7 @@
 		{
 			"path": "packages/types/src/providers/deepseek.ts",
 			"language": "typescript",
-			"sizeLines": 42,
+			"sizeLines": 70,
 			"fileCategory": "code"
 		},
 		{
@@ -5080,7 +1510,7 @@
 		{
 			"path": "packages/types/src/providers/fireworks.ts",
 			"language": "typescript",
-			"sizeLines": 266,
+			"sizeLines": 278,
 			"fileCategory": "code"
 		},
 		{
@@ -5158,7 +1588,7 @@
 		{
 			"path": "packages/types/src/providers/moonshot.ts",
 			"language": "typescript",
-			"sizeLines": 121,
+			"sizeLines": 139,
 			"fileCategory": "code"
 		},
 		{
@@ -5182,13 +1612,13 @@
 		{
 			"path": "packages/types/src/providers/openai-codex.ts",
 			"language": "typescript",
-			"sizeLines": 211,
+			"sizeLines": 228,
 			"fileCategory": "code"
 		},
 		{
 			"path": "packages/types/src/providers/openai.ts",
 			"language": "typescript",
-			"sizeLines": 645,
+			"sizeLines": 668,
 			"fileCategory": "code"
 		},
 		{
@@ -5254,7 +1684,7 @@
 		{
 			"path": "packages/types/src/providers/vertex.ts",
 			"language": "typescript",
-			"sizeLines": 666,
+			"sizeLines": 680,
 			"fileCategory": "code"
 		},
 		{
@@ -5368,7 +1798,7 @@
 		{
 			"path": "pnpm-workspace.yaml",
 			"language": "yaml",
-			"sizeLines": 16,
+			"sizeLines": 21,
 			"fileCategory": "config"
 		},
 		{
@@ -5380,7 +1810,7 @@
 		{
 			"path": "README.md",
 			"language": "markdown",
-			"sizeLines": 124,
+			"sizeLines": 122,
 			"fileCategory": "docs"
 		},
 		{
@@ -5458,7 +1888,7 @@
 		{
 			"path": "scripts/update-contributors.js",
 			"language": "javascript",
-			"sizeLines": 170,
+			"sizeLines": 184,
 			"fileCategory": "code"
 		},
 		{
@@ -5764,7 +2194,7 @@
 		{
 			"path": "src/api/providers/__tests__/fireworks.spec.ts",
 			"language": "typescript",
-			"sizeLines": 504,
+			"sizeLines": 516,
 			"fileCategory": "code"
 		},
 		{
@@ -5848,7 +2278,7 @@
 		{
 			"path": "src/api/providers/__tests__/moonshot.spec.ts",
 			"language": "typescript",
-			"sizeLines": 762,
+			"sizeLines": 842,
 			"fileCategory": "code"
 		},
 		{
@@ -5890,7 +2320,7 @@
 		{
 			"path": "src/api/providers/__tests__/openai-native.spec.ts",
 			"language": "typescript",
-			"sizeLines": 1741,
+			"sizeLines": 1807,
 			"fileCategory": "code"
 		},
 		{
@@ -6046,7 +2476,7 @@
 		{
 			"path": "src/api/providers/anthropic.ts",
 			"language": "typescript",
-			"sizeLines": 536,
+			"sizeLines": 526,
 			"fileCategory": "code"
 		},
 		{
@@ -6484,7 +2914,7 @@
 		{
 			"path": "src/api/providers/kilocode-openrouter.ts",
 			"language": "typescript",
-			"sizeLines": 252,
+			"sizeLines": 249,
 			"fileCategory": "code"
 		},
 		{
@@ -6556,7 +2986,7 @@
 		{
 			"path": "src/api/providers/moonshot.ts",
 			"language": "typescript",
-			"sizeLines": 155,
+			"sizeLines": 159,
 			"fileCategory": "code"
 		},
 		{
@@ -6628,7 +3058,7 @@
 		{
 			"path": "src/api/providers/openrouter.ts",
 			"language": "typescript",
-			"sizeLines": 856,
+			"sizeLines": 857,
 			"fileCategory": "code"
 		},
 		{
@@ -6784,7 +3214,7 @@
 		{
 			"path": "src/api/providers/zenmux.ts",
 			"language": "typescript",
-			"sizeLines": 510,
+			"sizeLines": 511,
 			"fileCategory": "code"
 		},
 		{
@@ -7304,9 +3734,15 @@
 			"fileCategory": "code"
 		},
 		{
+			"path": "src/core/config/importExport.spec.ts",
+			"language": "typescript",
+			"sizeLines": 335,
+			"fileCategory": "code"
+		},
+		{
 			"path": "src/core/config/importExport.ts",
 			"language": "typescript",
-			"sizeLines": 218,
+			"sizeLines": 963,
 			"fileCategory": "code"
 		},
 		{
@@ -7666,7 +4102,7 @@
 		{
 			"path": "src/core/kilocode/agent-manager/RuntimeProcessHandler.ts",
 			"language": "typescript",
-			"sizeLines": 1103,
+			"sizeLines": 1084,
 			"fileCategory": "code"
 		},
 		{
@@ -7738,7 +4174,7 @@
 		{
 			"path": "src/core/kilocode/wrapper.ts",
 			"language": "typescript",
-			"sizeLines": 54,
+			"sizeLines": 48,
 			"fileCategory": "code"
 		},
 		{
@@ -9364,13 +5800,13 @@
 		{
 			"path": "src/core/webview/webviewMessageHandler.ts",
 			"language": "typescript",
-			"sizeLines": 4786,
+			"sizeLines": 4795,
 			"fileCategory": "code"
 		},
 		{
 			"path": "src/esbuild.mjs",
 			"language": "javascript",
-			"sizeLines": 226,
+			"sizeLines": 183,
 			"fileCategory": "code"
 		},
 		{
@@ -9382,7 +5818,7 @@
 		{
 			"path": "src/extension.ts",
 			"language": "typescript",
-			"sizeLines": 635,
+			"sizeLines": 632,
 			"fileCategory": "code"
 		},
 		{
@@ -11018,12 +7454,6 @@
 			"fileCategory": "code"
 		},
 		{
-			"path": "src/services/autocomplete/__tests__/AutocompleteJetbrainsBridge.spec.ts",
-			"language": "typescript",
-			"sizeLines": 359,
-			"fileCategory": "code"
-		},
-		{
 			"path": "src/services/autocomplete/__tests__/AutocompleteModel.spec.ts",
 			"language": "typescript",
 			"sizeLines": 732,
@@ -11057,12 +7487,6 @@
 			"path": "src/services/autocomplete/AutocompleteCodeActionProvider.ts",
 			"language": "typescript",
 			"sizeLines": 37,
-			"fileCategory": "code"
-		},
-		{
-			"path": "src/services/autocomplete/AutocompleteJetbrainsBridge.ts",
-			"language": "typescript",
-			"sizeLines": 291,
 			"fileCategory": "code"
 		},
 		{
@@ -11902,7 +8326,7 @@
 		{
 			"path": "src/services/autocomplete/continuedev/core/llm/model-info/providers/openai.ts",
 			"language": "typescript",
-			"sizeLines": 139,
+			"sizeLines": 146,
 			"fileCategory": "code"
 		},
 		{
@@ -12580,7 +9004,7 @@
 		{
 			"path": "src/services/autocomplete/index.ts",
 			"language": "typescript",
-			"sizeLines": 47,
+			"sizeLines": 43,
 			"fileCategory": "code"
 		},
 		{
@@ -13118,12 +9542,6 @@
 			"fileCategory": "code"
 		},
 		{
-			"path": "src/services/commit-message/adapters/JetBrainsCommitMessageAdapter.ts",
-			"language": "typescript",
-			"sizeLines": 31,
-			"fileCategory": "code"
-		},
-		{
 			"path": "src/services/commit-message/adapters/VSCodeCommitMessageAdapter.ts",
 			"language": "typescript",
 			"sizeLines": 111,
@@ -13144,7 +9562,7 @@
 		{
 			"path": "src/services/commit-message/CommitMessageProvider.ts",
 			"language": "typescript",
-			"sizeLines": 99,
+			"sizeLines": 76,
 			"fileCategory": "code"
 		},
 		{
@@ -13175,12 +9593,6 @@
 			"path": "src/services/commit-message/types/core.ts",
 			"language": "typescript",
 			"sizeLines": 45,
-			"fileCategory": "code"
-		},
-		{
-			"path": "src/services/commit-message/types/jetbrains.ts",
-			"language": "typescript",
-			"sizeLines": 2,
 			"fileCategory": "code"
 		},
 		{
@@ -13552,7 +9964,7 @@
 		{
 			"path": "src/services/ripgrep/index.ts",
 			"language": "typescript",
-			"sizeLines": 274,
+			"sizeLines": 282,
 			"fileCategory": "code"
 		},
 		{
@@ -14872,7 +11284,7 @@
 		{
 			"path": "src/shared/kilocode/wrapper.ts",
 			"language": "typescript",
-			"sizeLines": 84,
+			"sizeLines": 16,
 			"fileCategory": "code"
 		},
 		{
@@ -18382,7 +14794,7 @@
 		{
 			"path": "turbo.json",
 			"language": "json",
-			"sizeLines": 55,
+			"sizeLines": 24,
 			"fileCategory": "config"
 		},
 		{
@@ -18436,7 +14848,7 @@
 		{
 			"path": "webview-ui/package.json",
 			"language": "json",
-			"sizeLines": 126,
+			"sizeLines": 125,
 			"fileCategory": "config"
 		},
 		{
@@ -19756,7 +16168,7 @@
 		{
 			"path": "webview-ui/src/components/kilocode/helpers.ts",
 			"language": "typescript",
-			"sizeLines": 40,
+			"sizeLines": 28,
 			"fileCategory": "code"
 		},
 		{
@@ -19894,7 +16306,7 @@
 		{
 			"path": "webview-ui/src/components/kilocode/settings/KiloModelInfoView.tsx",
 			"language": "typescript",
-			"sizeLines": 176,
+			"sizeLines": 124,
 			"fileCategory": "code"
 		},
 		{
@@ -20188,7 +16600,7 @@
 		{
 			"path": "webview-ui/src/components/settings/About.tsx",
 			"language": "typescript",
-			"sizeLines": 132,
+			"sizeLines": 134,
 			"fileCategory": "code"
 		},
 		{
@@ -20992,7 +17404,7 @@
 		{
 			"path": "webview-ui/src/components/ui/hooks/__tests__/useSelectedModel.spec.ts",
 			"language": "typescript",
-			"sizeLines": 1151,
+			"sizeLines": 1166,
 			"fileCategory": "code"
 		},
 		{
@@ -21364,7 +17776,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/ar/kilocode.json",
 			"language": "json",
-			"sizeLines": 406,
+			"sizeLines": 405,
 			"fileCategory": "config"
 		},
 		{
@@ -21442,7 +17854,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/ca/kilocode.json",
 			"language": "json",
-			"sizeLines": 406,
+			"sizeLines": 405,
 			"fileCategory": "config"
 		},
 		{
@@ -21520,7 +17932,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/cs/kilocode.json",
 			"language": "json",
-			"sizeLines": 405,
+			"sizeLines": 404,
 			"fileCategory": "config"
 		},
 		{
@@ -21598,7 +18010,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/de/kilocode.json",
 			"language": "json",
-			"sizeLines": 405,
+			"sizeLines": 404,
 			"fileCategory": "config"
 		},
 		{
@@ -21676,7 +18088,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/en/kilocode.json",
 			"language": "json",
-			"sizeLines": 404,
+			"sizeLines": 403,
 			"fileCategory": "config"
 		},
 		{
@@ -21754,7 +18166,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/es/kilocode.json",
 			"language": "json",
-			"sizeLines": 405,
+			"sizeLines": 404,
 			"fileCategory": "config"
 		},
 		{
@@ -21832,7 +18244,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/fr/kilocode.json",
 			"language": "json",
-			"sizeLines": 405,
+			"sizeLines": 404,
 			"fileCategory": "config"
 		},
 		{
@@ -21910,7 +18322,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/hi/kilocode.json",
 			"language": "json",
-			"sizeLines": 405,
+			"sizeLines": 404,
 			"fileCategory": "config"
 		},
 		{
@@ -21982,7 +18394,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/id/kilocode.json",
 			"language": "json",
-			"sizeLines": 405,
+			"sizeLines": 404,
 			"fileCategory": "config"
 		},
 		{
@@ -22060,7 +18472,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/it/kilocode.json",
 			"language": "json",
-			"sizeLines": 406,
+			"sizeLines": 405,
 			"fileCategory": "config"
 		},
 		{
@@ -22138,7 +18550,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/ja/kilocode.json",
 			"language": "json",
-			"sizeLines": 406,
+			"sizeLines": 405,
 			"fileCategory": "config"
 		},
 		{
@@ -22216,7 +18628,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/ko/kilocode.json",
 			"language": "json",
-			"sizeLines": 405,
+			"sizeLines": 404,
 			"fileCategory": "config"
 		},
 		{
@@ -22288,7 +18700,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/nl/kilocode.json",
 			"language": "json",
-			"sizeLines": 404,
+			"sizeLines": 403,
 			"fileCategory": "config"
 		},
 		{
@@ -22366,7 +18778,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/pl/kilocode.json",
 			"language": "json",
-			"sizeLines": 406,
+			"sizeLines": 405,
 			"fileCategory": "config"
 		},
 		{
@@ -22444,7 +18856,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/pt-BR/kilocode.json",
 			"language": "json",
-			"sizeLines": 405,
+			"sizeLines": 404,
 			"fileCategory": "config"
 		},
 		{
@@ -22516,7 +18928,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/ru/kilocode.json",
 			"language": "json",
-			"sizeLines": 406,
+			"sizeLines": 405,
 			"fileCategory": "config"
 		},
 		{
@@ -22594,7 +19006,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/sk/kilocode.json",
 			"language": "json",
-			"sizeLines": 410,
+			"sizeLines": 409,
 			"fileCategory": "config"
 		},
 		{
@@ -22672,7 +19084,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/th/kilocode.json",
 			"language": "json",
-			"sizeLines": 405,
+			"sizeLines": 404,
 			"fileCategory": "config"
 		},
 		{
@@ -22750,7 +19162,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/tr/kilocode.json",
 			"language": "json",
-			"sizeLines": 405,
+			"sizeLines": 404,
 			"fileCategory": "config"
 		},
 		{
@@ -22828,7 +19240,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/uk/kilocode.json",
 			"language": "json",
-			"sizeLines": 405,
+			"sizeLines": 404,
 			"fileCategory": "config"
 		},
 		{
@@ -22900,7 +19312,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/vi/kilocode.json",
 			"language": "json",
-			"sizeLines": 406,
+			"sizeLines": 405,
 			"fileCategory": "config"
 		},
 		{
@@ -22978,7 +19390,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/zh-CN/kilocode.json",
 			"language": "json",
-			"sizeLines": 406,
+			"sizeLines": 405,
 			"fileCategory": "config"
 		},
 		{
@@ -23056,7 +19468,7 @@
 		{
 			"path": "webview-ui/src/i18n/locales/zh-TW/kilocode.json",
 			"language": "json",
-			"sizeLines": 404,
+			"sizeLines": 403,
 			"fileCategory": "config"
 		},
 		{
@@ -23938,7 +20350,7 @@
 		{
 			"path": "webview-ui/src/vite-plugins/sourcemapPlugin.ts",
 			"language": "typescript",
-			"sizeLines": 116,
+			"sizeLines": 108,
 			"fileCategory": "code"
 		},
 		{
@@ -23950,13 +20362,13 @@
 		{
 			"path": "webview-ui/turbo.json",
 			"language": "json",
-			"sizeLines": 12,
+			"sizeLines": 9,
 			"fileCategory": "config"
 		},
 		{
 			"path": "webview-ui/vite.config.ts",
 			"language": "typescript",
-			"sizeLines": 215,
+			"sizeLines": 201,
 			"fileCategory": "code"
 		},
 		{
@@ -23972,44 +20384,32 @@
 			"fileCategory": "code"
 		}
 	],
-	"totalFiles": 3995,
+	"totalFiles": 3397,
 	"filteredByIgnore": 0,
 	"estimatedComplexity": "very-large",
 	"stats": {
-		"filesScanned": 3995,
+		"filesScanned": 3397,
 		"byCategory": {
-			"config": 577,
-			"docs": 510,
-			"infra": 15,
-			"script": 15,
-			"code": 2849,
-			"markup": 21,
-			"data": 8
+			"config": 524,
+			"docs": 515,
+			"code": 2338,
+			"infra": 4,
+			"script": 4,
+			"markup": 12
 		},
 		"byLanguage": {
-			"json": 559,
-			"markdown": 44,
-			"unknown": 42,
-			"dockerfile": 4,
-			"shell": 12,
-			"config": 8,
-			"yaml": 15,
-			"javascript": 40,
+			"json": 517,
+			"markdown": 49,
+			"config": 1,
+			"unknown": 31,
+			"yaml": 10,
+			"javascript": 22,
 			"python": 5,
-			"typescript": 2502,
-			"css": 18,
+			"typescript": 2188,
 			"patch": 1,
-			"nix": 1,
-			"xml": 1,
-			"kotlin": 167,
-			"gradle": 1,
-			"template": 2,
-			"jar": 1,
-			"properties": 1,
-			"batch": 1,
-			"powershell": 2,
 			"snap": 30,
-			"sql": 8,
+			"shell": 4,
+			"css": 9,
 			"go": 1,
 			"php": 1,
 			"txt": 466,
