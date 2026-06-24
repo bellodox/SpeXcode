@@ -385,7 +385,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	if (!context.globalState.get("firstInstallCompleted")) {
 		outputChannel.appendLine("First installation detected, opening SpeXcode sidebar!")
 		try {
-			await vscode.commands.executeCommand("kilo-code.SidebarProvider.focus")
+			await vscode.commands.executeCommand(`${ClineProvider.sideBarId}.focus`)
 
 			outputChannel.appendLine("Opening SpeXcode walkthrough")
 

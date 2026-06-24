@@ -357,7 +357,7 @@ export class AutocompleteServiceManager {
 		if (response === disableCopilot) {
 			await vscode.commands.executeCommand<any>("github.copilot.completions.disable")
 		} else if (response === disableInlineAssist) {
-			await vscode.commands.executeCommand<any>("kilo-code.autocomplete.disable")
+			await vscode.commands.executeCommand<any>("spex-code.autocomplete.disable")
 		}
 	}
 
