@@ -7,6 +7,7 @@
 </p>
 
 # 🚀 SpeXcode
+## VS Code extension for Open-Source Setup for Agentic Engineering
 
 > SpeXcode is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
 
