@@ -1,0 +1,4 @@
+src/assets/icons/kilo.png (256, 256) RGBA
+src/assets/icons/kilo-dark.png (256, 256) P
+src/assets/icons/icon.png (128, 128) RGBA
+src/assets/icons/logo-outline-black.png (512, 512) RGB
