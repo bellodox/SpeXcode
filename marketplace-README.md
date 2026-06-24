@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/bellodox/SpeXcode"><img src="https://raster.shields.io/badge/VS_Code_Marketplace-007ACC?style=flat&logo=visualstudiocode&logoColor=white" alt="VS Code Marketplace"></a>
-  <a href="https://github.com/bellodox/SpeXcode"><img src="https://raster.shields.io/badge/kilocode-000000?style=flat&logo=x&logoColor=white" alt="X (Twitter)"></a>
+  <!-- <a href="https://github.com/bellodox/SpeXcode"><img src="https://raster.shields.io/badge/kilocode-000000?style=flat&logo=x&logoColor=white" alt="X (Twitter)"></a> -->
   <a href="https://github.com/bellodox/SpeXcode"><img src="https://raster.shields.io/badge/Blog-555?style=flat&logo=substack&logoColor=white" alt="Substack Blog"></a>
   <a href="https://github.com/bellodox/SpeXcode/discussions"><img src="https://raster.shields.io/badge/Join%20Discord-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord"></a>
   <a href="https://github.com/bellodox/SpeXcode/discussions"><img src="https://raster.shields.io/badge/Join%20r%2Fkilocode-D84315?style=flat&logo=reddit&logoColor=white" alt="Reddit"></a>
@@ -9,7 +9,6 @@
 # 🚀 SpeXcode
 
 > SpeXcode is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
-> #1 on OpenRouter. 1.5M+ SpeXcoders. 25T+ tokens processed
 
 - ✨ Generate code from natural language
 - ✅ Checks its own work
@@ -18,7 +17,6 @@
 - ⚡ Inline autocomplete suggestions
 - 🤖 Latest AI models
 - 🎁 API keys optional
-- 💡 **Get $20 in bonus credits when you top-up for the first time** Credits can be used with 500+ models like Gemini 3 Pro, Claude 4.5 Sonnet & Opus, and GPT-5
 
 ## Quick Links
 
