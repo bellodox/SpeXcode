@@ -14,7 +14,7 @@ import type {
 import { GlobalFileNames } from "../../shared/globalFileNames"
 import { ensureSettingsDirectoryExists } from "../../utils/globalContext"
 import type { CustomModesManager } from "../../core/config/CustomModesManager"
-import { getGlobalRooDirectory } from "../roo-config" // kilocode_change
+import { getGlobalRooDirectory, getPreferredRooDirectoryForBase } from "../roo-config" // kilocode_change
 import { extractTarball } from "./tarball-utils" // kilocode_change
 
 export interface InstallOptions extends InstallMarketplaceItemOptions {
@@ -255,7 +255,7 @@ export class SimpleInstaller {
 				existingData = { mcpServers: {} }
 			} else if (error instanceof SyntaxError) {
 				// JSON parsing error - don't overwrite the file!
-				const fileName = target === "project" ? ".kilocode/mcp.json" : "mcp-settings.json"
+				const fileName = target === "project" ? ".spexcode/mcp.json" : "mcp-settings.json"
 				throw new Error(
 					`Cannot install MCP server: The ${fileName} file contains invalid JSON. ` +
 						`Please fix the syntax errors in the file before installing new servers.`,
@@ -400,7 +400,7 @@ export class SimpleInstaller {
 			if (!workspaceFolder) {
 				throw new Error("No workspace folder found")
 			}
-			return path.join(workspaceFolder.uri.fsPath, ".kilocode", "mcp.json")
+			return path.join(getPreferredRooDirectoryForBase(workspaceFolder.uri.fsPath), "mcp.json")
 		} else {
 			const globalSettingsPath = await ensureSettingsDirectoryExists(this.context)
 			return path.join(globalSettingsPath, GlobalFileNames.mcpSettings)
@@ -467,7 +467,7 @@ export class SimpleInstaller {
 			if (!workspaceFolder) {
 				throw new Error("No workspace folder found")
 			}
-			return path.join(workspaceFolder.uri.fsPath, ".kilocode", "skills")
+			return path.join(getPreferredRooDirectoryForBase(workspaceFolder.uri.fsPath), "skills")
 		} else {
 			const globalDir = getGlobalRooDirectory()
 			return path.join(globalDir, "skills")

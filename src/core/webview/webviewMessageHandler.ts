@@ -2,7 +2,7 @@ import { safeWriteJson } from "../../utils/safeWriteJson"
 import * as path from "path"
 import * as os from "os"
 import * as fs from "fs/promises"
-import { getRooDirectoriesForCwd } from "../../services/roo-config/index.js"
+import { getPreferredRooDirectoryForBase, getRooDirectoriesForCwd } from "../../services/roo-config/index.js"
 import pWaitFor from "p-wait-for"
 import * as vscode from "vscode"
 // kilocode_change start
@@ -114,7 +114,7 @@ import { SessionManager } from "../../shared/kilocode/cli-sessions/core/SessionM
 import { getEffectiveTelemetrySetting } from "../kilocode/wrapper"
 
 async function switchToPreRelease() {
-	await vscode.commands.executeCommand("workbench.extensions.installExtension", "kilocode.kilo-code", {
+	await vscode.commands.executeCommand("workbench.extensions.installExtension", "spex.spex-code", {
 		installPreReleaseVersion: true,
 	})
 	vscode.window.showInformationMessage(
@@ -1649,7 +1649,7 @@ export const webviewMessageHandler = async (
 			}
 
 			const workspaceFolder = getCurrentCwd()
-			const rooDir = path.join(workspaceFolder, ".kilocode")
+			const rooDir = getPreferredRooDirectoryForBase(workspaceFolder)
 			const mcpPath = path.join(rooDir, "mcp.json")
 
 			try {
@@ -2666,14 +2666,17 @@ export const webviewMessageHandler = async (
 				if (scope === "project") {
 					const workspacePath = getWorkspacePath()
 					if (workspacePath) {
-						rulesFolderPath = path.join(workspacePath, ".kilocode", `rules-${message.slug}`)
+						rulesFolderPath = path.join(
+							getPreferredRooDirectoryForBase(workspacePath),
+							`rules-${message.slug}`,
+						)
 					} else {
-						rulesFolderPath = path.join(".kilocode", `rules-${message.slug}`)
+						rulesFolderPath = path.join(".spexcode", `rules-${message.slug}`)
 					}
 				} else {
 					// Global scope - use OS home directory
 					const homeDir = os.homedir()
-					rulesFolderPath = path.join(homeDir, ".kilocode", `rules-${message.slug}`)
+					rulesFolderPath = path.join(getPreferredRooDirectoryForBase(homeDir), `rules-${message.slug}`)
 				}
 
 				// Check if the rules folder exists
@@ -4177,7 +4180,7 @@ export const webviewMessageHandler = async (
 				// Determine the commands directory based on source
 				let commandsDir: string
 				if (source === "global") {
-					const globalConfigDir = path.join(os.homedir(), ".kilocode")
+					const globalConfigDir = getPreferredRooDirectoryForBase(os.homedir())
 					commandsDir = path.join(globalConfigDir, "commands")
 				} else {
 					if (!vscode.workspace.workspaceFolders?.length) {
@@ -4190,7 +4193,7 @@ export const webviewMessageHandler = async (
 						vscode.window.showErrorMessage(t("common:errors.no_workspace_for_project_command"))
 						break
 					}
-					commandsDir = path.join(workspaceRoot, ".kilocode", "commands")
+					commandsDir = path.join(getPreferredRooDirectoryForBase(workspaceRoot), "commands")
 				}
 
 				// Ensure the commands directory exists

@@ -1,5 +1,6 @@
 // kilocode_change - new file Support JSON-based launch configurations
 import * as vscode from "vscode"
+import { getLegacyKilocodeDirectoryForBase, getPreferredRooDirectoryForBase } from "../services/roo-config"
 
 interface LaunchConfig {
 	prompt: string
@@ -17,10 +18,38 @@ export async function checkAndRunAutoLaunchingTask(context: vscode.ExtensionCont
 	}
 
 	const workspaceFolderUri = vscode.workspace.workspaceFolders[0].uri
-	const configPath = vscode.Uri.joinPath(workspaceFolderUri, ".kilocode", "launchConfig.json")
+	const candidateConfigPaths = [
+		vscode.Uri.joinPath(
+			workspaceFolderUri,
+			getPreferredRooDirectoryForBase("").replace(/^[\\/]/, ""),
+			"launchConfig.json",
+		),
+		vscode.Uri.joinPath(
+			workspaceFolderUri,
+			getLegacyKilocodeDirectoryForBase("").replace(/^[\\/]/, ""),
+			"launchConfig.json",
+		),
+	]
 
 	try {
-		const configContent = await vscode.workspace.fs.readFile(configPath)
+		let configContent: Uint8Array | undefined
+		let configPath: vscode.Uri | undefined
+		for (const candidateConfigPath of candidateConfigPaths) {
+			try {
+				configContent = await vscode.workspace.fs.readFile(candidateConfigPath)
+				configPath = candidateConfigPath
+				break
+			} catch (error) {
+				if (!(error instanceof vscode.FileSystemError && error.code === "FileNotFound")) {
+					throw error
+				}
+			}
+		}
+
+		if (!configContent || !configPath) {
+			return
+		}
+
 		const configText = Buffer.from(configContent).toString("utf8")
 		const config = JSON.parse(configText) as LaunchConfig
 		console.log(`🚀 Auto-launching task from '${configPath}' with config:\n${JSON.stringify(config)}`)

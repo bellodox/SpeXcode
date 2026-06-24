@@ -169,7 +169,7 @@ export class McpOAuthService {
 		const redirectUris = [
 			"http://127.0.0.1/",
 			`http://127.0.0.1:${DEFAULT_AUTH_FLOW_PORT}/`,
-			"vscode://kilocode.kilo-code/oauth/callback",
+			"vscode://spex.spex-code/oauth/callback",
 		]
 		const clientCredentials = await this.getOrRegisterClient(authServerMetadata, redirectUris, options)
 

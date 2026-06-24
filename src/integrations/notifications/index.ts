@@ -22,8 +22,8 @@ async function showMacOSNotification(options: NotificationOptions): Promise<void
 		}
 		args.push("-sound", "Tink")
 
-		// Add Kilo Code logo
-		const extensionUri = vscode.extensions.getExtension(`kilocode.kilo-code`)!.extensionUri
+		// Add SpeXcode logo
+		const extensionUri = vscode.extensions.getExtension(`spex.spex-code`)!.extensionUri
 		const iconPath = vscode.Uri.joinPath(extensionUri, "assets", "icons", "kilo.png").fsPath
 		args.push("-appIcon", iconPath)
 
@@ -90,7 +90,7 @@ async function showLinuxNotification(options: NotificationOptions): Promise<void
 
 export async function showSystemNotification(options: NotificationOptions): Promise<void> {
 	try {
-		const { title = "Kilo Code", message } = options
+		const { title = "SpeXcode", message } = options
 
 		if (!message) {
 			throw new Error("Message is required")

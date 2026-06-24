@@ -17,7 +17,7 @@ import { t } from "../../i18n"
 import { GlobalFileNames } from "../../shared/globalFileNames" // kilocode_change
 import { getWorkspacePath } from "../../utils/path" // kilocode_change
 import { getSettingsDirectoryPath } from "../../utils/storage" // kilocode_change
-import { getGlobalRooDirectory } from "../../services/roo-config" // kilocode_change
+import { getGlobalRooDirectory, getReadableRooDirectoryForBase } from "../../services/roo-config" // kilocode_change
 
 export type ImportOptions = {
 	providerSettingsManager: ProviderSettingsManager
@@ -446,7 +446,7 @@ export function resolveBundleTargetPath(relativePath: string, roots: BundlePathR
 		}
 		return scope === "global"
 			? path.join(roots.globalSettingsPath, GlobalFileNames.mcpSettings)
-			: path.join(scopeRoot, ".kilocode", "mcp.json")
+			: path.join(scopeRoot, ".spexcode", "mcp.json")
 	}
 
 	if (restSegments.length === 0) {
@@ -456,25 +456,25 @@ export function resolveBundleTargetPath(relativePath: string, roots: BundlePathR
 	if (category === "rules") {
 		return scope === "global"
 			? path.join(scopeRoot, "rules", ...restSegments)
-			: path.join(scopeRoot, ".kilocode", "rules", ...restSegments)
+			: path.join(scopeRoot, ".spexcode", "rules", ...restSegments)
 	}
 
 	if (category === "workflows") {
 		return scope === "global"
 			? path.join(scopeRoot, "workflows", ...restSegments)
-			: path.join(scopeRoot, ".kilocode", "workflows", ...restSegments)
+			: path.join(scopeRoot, ".spexcode", "workflows", ...restSegments)
 	}
 
 	if (category === "skills") {
 		return scope === "global"
 			? path.join(scopeRoot, "skills", ...restSegments)
-			: path.join(scopeRoot, ".kilocode", "skills", ...restSegments)
+			: path.join(scopeRoot, ".spexcode", "skills", ...restSegments)
 	}
 
 	if (category === "mode-rules") {
 		return scope === "global"
 			? path.join(scopeRoot, ...restSegments)
-			: path.join(scopeRoot, ".kilocode", ...restSegments)
+			: path.join(scopeRoot, ".spexcode", ...restSegments)
 	}
 
 	throw new Error(`Unsupported bundle file path category: ${relativePath}`)
@@ -662,8 +662,10 @@ async function buildEnvironmentBundle({
 	const sanitizedProviderProfiles = sanitizeProviderProfilesForBundleExport(providerProfiles)
 
 	const workspacePath = getWorkspacePath()
+	const readableWorkspaceConfigPath = workspacePath ? getReadableRooDirectoryForBase(workspacePath) : undefined
 	const globalSettingsPath = await getSettingsDirectoryPath(contextProxy.globalStorageUri.fsPath)
 	const globalConfigPath = getGlobalRooDirectory()
+	const readableGlobalConfigPath = getReadableRooDirectoryForBase(os.homedir())
 	const files: EnvironmentBundleFileEntry[] = []
 
 	files.push(
@@ -672,35 +674,35 @@ async function buildEnvironmentBundle({
 			"global/mcp.json",
 		)),
 		...(workspacePath
-			? await maybeCollectBundleFile(path.join(workspacePath, ".kilocode", "mcp.json"), "project/mcp.json")
+			? await maybeCollectBundleFile(path.join(readableWorkspaceConfigPath!, "mcp.json"), "project/mcp.json")
 			: []),
 	)
 
 	files.push(
-		...(await maybeCollectBundleDirectory(path.join(globalConfigPath, "rules"), "global/rules")),
-		...(await maybeCollectBundleDirectory(path.join(globalConfigPath, "workflows"), "global/workflows")),
-		...(await maybeCollectBundleDirectory(path.join(globalConfigPath, "skills"), "global/skills")),
+		...(await maybeCollectBundleDirectory(path.join(readableGlobalConfigPath, "rules"), "global/rules")),
+		...(await maybeCollectBundleDirectory(path.join(readableGlobalConfigPath, "workflows"), "global/workflows")),
+		...(await maybeCollectBundleDirectory(path.join(readableGlobalConfigPath, "skills"), "global/skills")),
 	)
 
 	if (workspacePath) {
 		files.push(
-			...(await maybeCollectBundleDirectory(path.join(workspacePath, ".kilocode", "rules"), "project/rules")),
+			...(await maybeCollectBundleDirectory(path.join(readableWorkspaceConfigPath!, "rules"), "project/rules")),
 			...(await maybeCollectBundleDirectory(
-				path.join(workspacePath, ".kilocode", "workflows"),
+				path.join(readableWorkspaceConfigPath!, "workflows"),
 				"project/workflows",
 			)),
-			...(await maybeCollectBundleDirectory(path.join(workspacePath, ".kilocode", "skills"), "project/skills")),
+			...(await maybeCollectBundleDirectory(path.join(readableWorkspaceConfigPath!, "skills"), "project/skills")),
 		)
 	}
 
 	for (const scope of ["global", "project"] as const) {
-		const scopeRoot = scope === "global" ? globalConfigPath : workspacePath
+		const scopeRoot = scope === "global" ? readableGlobalConfigPath : readableWorkspaceConfigPath
 		if (!scopeRoot) {
 			continue
 		}
 
 		try {
-			const rulesRoot = scope === "global" ? scopeRoot : path.join(scopeRoot, ".kilocode")
+			const rulesRoot = scopeRoot
 			const entries = await fs.readdir(rulesRoot, { withFileTypes: true })
 			for (const entry of entries) {
 				if (!entry.isDirectory() || !entry.name.startsWith("rules-")) {

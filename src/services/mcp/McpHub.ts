@@ -34,6 +34,11 @@ import { t } from "../../i18n"
 import { ClineProvider } from "../../core/webview/ClineProvider"
 
 import { GlobalFileNames } from "../../shared/globalFileNames"
+import {
+	getLegacyKilocodeDirectoryForBase,
+	getPreferredRooDirectoryForBase,
+	getReadableRooDirectoryForBase,
+} from "../roo-config"
 
 import { fileExistsAtPath } from "../../utils/fs"
 import { arePathsEqual, getWorkspacePath } from "../../utils/path"
@@ -808,7 +813,7 @@ export class McpHub {
 		}
 
 		const workspaceFolder = this.providerRef.deref()?.cwd ?? getWorkspacePath()
-		const projectMcpPattern = new vscode.RelativePattern(workspaceFolder, ".kilocode/mcp.json")
+		const projectMcpPattern = new vscode.RelativePattern(workspaceFolder, "{.spexcode,.kilocode}/mcp.json")
 
 		// Create a file system watcher for the project MCP file pattern
 		this.projectMcpWatcher = vscode.workspace.createFileSystemWatcher(projectMcpPattern)
@@ -1026,6 +1031,7 @@ export class McpHub {
 	// Check alternative MCP configuration paths (for compatibility with other tools)
 	private async checkAlternativeMcpPaths(workspacePath: string): Promise<string | null> {
 		const alternativePaths = [
+			path.join(getLegacyKilocodeDirectoryForBase(workspacePath), "mcp.json"),
 			path.join(workspacePath, ".cursor", "mcp.json"),
 			path.join(workspacePath, ".mcp.json"),
 		]
@@ -1046,24 +1052,14 @@ export class McpHub {
 	// Get project-level MCP configuration path
 	private async getProjectMcpPath(): Promise<string | null> {
 		const workspacePath = this.providerRef.deref()?.cwd ?? getWorkspacePath()
-		const projectMcpDir = path.join(workspacePath, ".kilocode")
-		const projectMcpPath = path.join(projectMcpDir, "mcp.json")
+		const readableProjectConfigDir = getReadableRooDirectoryForBase(workspacePath)
+		const projectMcpPath = path.join(readableProjectConfigDir, "mcp.json")
 
 		try {
 			await fs.access(projectMcpPath)
 			return projectMcpPath
 		} catch {
-			// kilocode_change
 			return this.checkAlternativeMcpPaths(workspacePath)
-
-			// If not found in .kilocode/, fall back to .mcp.json in root directory
-			const rootMcpPath = path.join(workspacePath, ".mcp.json")
-			try {
-				await fs.access(rootMcpPath)
-				return rootMcpPath
-			} catch {
-				return null
-			}
 		}
 	}
 

@@ -28,20 +28,26 @@ describe("importExport bundle helpers", () => {
 		const roots = {
 			workspacePath: "/workspace/project",
 			globalSettingsPath: "/global/settings",
-			globalConfigPath: "/global/.kilocode",
+			globalConfigPath: "/global/.spexcode",
 		}
 
 		expect(resolveBundleTargetPath("global/mcp.json", roots)).toBe(
 			path.join("/global/settings", "mcp_settings.json"),
 		)
 		expect(resolveBundleTargetPath("project/rules/test.md", roots)).toBe(
-			path.join("/workspace/project", ".kilocode", "rules", "test.md"),
+			path.join("/workspace/project", ".spexcode", "rules", "test.md"),
+		)
+		expect(resolveBundleTargetPath("project/workflows/test.md", roots)).toBe(
+			path.join("/workspace/project", ".spexcode", "workflows", "test.md"),
+		)
+		expect(resolveBundleTargetPath("project/skills/example-skill/SKILL.md", roots)).toBe(
+			path.join("/workspace/project", ".spexcode", "skills", "example-skill", "SKILL.md"),
 		)
 		expect(resolveBundleTargetPath("global/skills/example-skill/SKILL.md", roots)).toBe(
-			path.join("/global/.kilocode", "skills", "example-skill", "SKILL.md"),
+			path.join("/global/.spexcode", "skills", "example-skill", "SKILL.md"),
 		)
 		expect(resolveBundleTargetPath("project/mode-rules/rules-code/test.md", roots)).toBe(
-			path.join("/workspace/project", ".kilocode", "rules-code", "test.md"),
+			path.join("/workspace/project", ".spexcode", "rules-code", "test.md"),
 		)
 	})
 
@@ -54,7 +60,7 @@ describe("importExport bundle helpers", () => {
 		const roots = {
 			workspacePath: "/workspace/project",
 			globalSettingsPath: "/global/settings",
-			globalConfigPath: "/global/.kilocode",
+			globalConfigPath: "/global/.spexcode",
 		}
 
 		expect(() => resolveBundleTargetPath("global/unknown/test.md", roots)).toThrow(/unsupported.*category/i)
@@ -66,7 +72,7 @@ describe("importExport bundle helpers", () => {
 			resolveBundleTargetPath("project/workflows/test.md", {
 				workspacePath: undefined,
 				globalSettingsPath: "/global/settings",
-				globalConfigPath: "/global/.kilocode",
+				globalConfigPath: "/global/.spexcode",
 			}),
 		).toThrow(/open workspace/i)
 	})

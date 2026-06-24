@@ -3,6 +3,42 @@ import * as os from "os"
 import fs from "fs/promises"
 import fsSync from "fs" // kilocode_change
 
+export const CURRENT_ROO_DIRECTORY_NAME = ".spexcode"
+export const LEGACY_KILOCODE_DIRECTORY_NAME = ".kilocode"
+export const LEGACY_ROO_DIRECTORY_NAME = ".roo"
+
+export function getPreferredRooDirectoryForBase(basePath: string): string {
+	return path.join(basePath, CURRENT_ROO_DIRECTORY_NAME)
+}
+
+export function getLegacyKilocodeDirectoryForBase(basePath: string): string {
+	return path.join(basePath, LEGACY_KILOCODE_DIRECTORY_NAME)
+}
+
+export function getLegacyRooDirectoryForBase(basePath: string): string {
+	return path.join(basePath, LEGACY_ROO_DIRECTORY_NAME)
+}
+
+export function getReadableRooDirectoryForBase(basePath: string): string {
+	const preferredDirectory = getPreferredRooDirectoryForBase(basePath)
+	const legacyKilocodeDirectory = getLegacyKilocodeDirectoryForBase(basePath)
+	const legacyRooDirectory = getLegacyRooDirectoryForBase(basePath)
+
+	if (fsSync.existsSync(preferredDirectory)) {
+		return preferredDirectory
+	}
+
+	if (fsSync.existsSync(legacyKilocodeDirectory)) {
+		return legacyKilocodeDirectory
+	}
+
+	if (fsSync.existsSync(legacyRooDirectory)) {
+		return legacyRooDirectory
+	}
+
+	return preferredDirectory
+}
+
 /**
  * Gets the global .roo directory path based on the current platform
  *
@@ -26,16 +62,7 @@ import fsSync from "fs" // kilocode_change
  */
 export function getGlobalRooDirectory(): string {
 	const homeDir = os.homedir()
-	const kiloDir = path.join(homeDir, ".kilocode") // kilocode_change
-	const rooDir = path.join(homeDir, ".roo") // kilocode_change
-
-	// kilocode_change start: Prefer .kilocode; fallback to legacy .roo for backwards compatibility.
-	if (fsSync.existsSync(rooDir) && !fsSync.existsSync(kiloDir)) {
-		return rooDir
-	}
-
-	return kiloDir
-	// kilocode_change end
+	return getPreferredRooDirectoryForBase(homeDir)
 }
 
 /**
@@ -68,14 +95,7 @@ export function getGlobalRooDirectory(): string {
  * ```
  */
 export function getProjectRooDirectoryForCwd(cwd: string): string {
-	// kilocode_change start
-	const kiloDir = path.join(cwd, ".kilocode")
-	const rooDir = path.join(cwd, ".roo")
-	if (fsSync.existsSync(rooDir) && !fsSync.existsSync(kiloDir)) {
-		return rooDir
-	}
-	return kiloDir
-	// kilocode_change end
+	return getPreferredRooDirectoryForBase(cwd)
 }
 
 /**
@@ -183,12 +203,14 @@ export async function discoverSubfolderRooDirectories(cwd: string): Promise<stri
 		// available in the webview context
 		const { executeRipgrep } = await import("../search/file-search")
 
-		// Use ripgrep to find any file inside any .kilocode or legacy .roo directory.
+		// Use ripgrep to find any file inside any .spexcode, .kilocode, or legacy .roo directory.
 		// This efficiently discovers all config folders regardless of their content.
 		const args = [
 			"--files",
 			"--hidden",
 			"--follow",
+			"-g",
+			"**/.spexcode/**", // kilocode_change
 			"-g",
 			"**/.kilocode/**", // kilocode_change
 			"-g",
@@ -203,25 +225,32 @@ export async function discoverSubfolderRooDirectories(cwd: string): Promise<stri
 		const results = await executeRipgrep({ args, workspacePath: cwd })
 
 		// Extract unique config directory paths.
-		// Prefer .kilocode when both .kilocode and .roo exist for the same parent folder.
+		// Prefer .spexcode, then .kilocode, then legacy .roo for the same parent folder.
 		const configDirsByParent = new Map<string, string>() // parentDir -> configDir
-		const rootKiloDir = path.join(cwd, ".kilocode") // kilocode_change
-		const rootRooDir = path.join(cwd, ".roo")
+		const rootSpexDir = path.join(cwd, CURRENT_ROO_DIRECTORY_NAME)
+		const rootKiloDir = path.join(cwd, LEGACY_KILOCODE_DIRECTORY_NAME)
+		const rootRooDir = path.join(cwd, LEGACY_ROO_DIRECTORY_NAME)
+		const directoryPriority: Record<"spexcode" | "kilocode" | "roo", number> = {
+			spexcode: 3,
+			kilocode: 2,
+			roo: 1,
+		}
 
 		for (const result of results) {
 			// Match paths like:
-			// - "subfolder/.kilocode/anything" (preferred)
-			// - "subfolder/.roo/anything" (legacy)
+			// - "subfolder/.spexcode/anything" (preferred)
+			// - "subfolder/.kilocode/anything" (legacy)
+			// - "subfolder/.roo/anything" (older legacy)
 			// Handle both forward slashes (Unix) and backslashes (Windows)
-			const match = result.path.match(/^(.+?)[/\\]\.(kilocode|roo)[/\\]/)
+			const match = result.path.match(/^(.+?)[/\\]\.(spexcode|kilocode|roo)[/\\]/)
 			if (!match?.[1] || !match?.[2]) continue
 
 			const parentRel = match[1]
-			const dirName = match[2] as "kilocode" | "roo"
+			const dirName = match[2] as "spexcode" | "kilocode" | "roo"
 			const configDir = path.join(cwd, parentRel, `.${dirName}`)
 
 			// Exclude the root config dirs (already handled by getProjectRooDirectoryForCwd)
-			if (configDir === rootKiloDir || configDir === rootRooDir) {
+			if (configDir === rootSpexDir || configDir === rootKiloDir || configDir === rootRooDir) {
 				continue
 			}
 
@@ -231,8 +260,8 @@ export async function discoverSubfolderRooDirectories(cwd: string): Promise<stri
 				continue
 			}
 
-			// Prefer .kilocode over legacy .roo for the same parent folder
-			if (existing.endsWith(`${path.sep}.roo`) && dirName === "kilocode") {
+			const existingDirName = path.basename(existing).slice(1) as "spexcode" | "kilocode" | "roo"
+			if (directoryPriority[dirName] > directoryPriority[existingDirName]) {
 				configDirsByParent.set(parentRel, configDir)
 			}
 		}
@@ -415,7 +444,7 @@ export async function loadConfiguration(
 	merged: string
 }> {
 	const globalDir = getGlobalRooDirectory()
-	const projectDir = getProjectRooDirectoryForCwd(cwd)
+	const projectDir = getReadableRooDirectoryForBase(cwd)
 
 	const globalFilePath = path.join(globalDir, relativePath)
 	const projectFilePath = path.join(projectDir, relativePath)

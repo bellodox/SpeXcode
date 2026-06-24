@@ -3,6 +3,7 @@ import * as vscode from "vscode"
 import * as path from "path"
 import { promises as fs } from "fs"
 import z from "zod"
+import { getLegacyKilocodeDirectoryForBase, getPreferredRooDirectoryForBase } from "../services/roo-config"
 
 export type KilocodeConfigProject = z.infer<typeof KilocodeConfigProject>
 export const KilocodeConfigProject = z.object({
@@ -90,15 +91,22 @@ export async function getKilocodeConfig(
  * @returns The project configuration or undefined if not found or invalid
  */
 export async function getKilocodeConfigFile(workspaceRoot: string): Promise<KilocodeConfig | null> {
-	const configPath = path.join(workspaceRoot, ".kilocode", "config.json")
-	try {
-		const content = await fs.readFile(configPath, "utf8")
-		const config = KilocodeConfig.parse(JSON.parse(content))
-		return config
-	} catch (error) {
-		// File doesn't exist or can't be read
-		return null
+	const candidateConfigPaths = [
+		path.join(getPreferredRooDirectoryForBase(workspaceRoot), "config.json"),
+		path.join(getLegacyKilocodeDirectoryForBase(workspaceRoot), "config.json"),
+	]
+
+	for (const configPath of candidateConfigPaths) {
+		try {
+			const content = await fs.readFile(configPath, "utf8")
+			const config = KilocodeConfig.parse(JSON.parse(content))
+			return config
+		} catch (error) {
+			continue
+		}
 	}
+
+	return null
 }
 
 /**

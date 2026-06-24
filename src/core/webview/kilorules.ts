@@ -39,8 +39,8 @@ export async function getEnabledRules(
 
 	// Also include mode-specific rules directories (e.g. .kilocode/rules-code/)
 	if (mode) {
-		const globalModeRulesDir = path.join(homedir, ".kilocode", `rules-${mode}`)
-		const localModeRulesDir = path.join(workspacePath, ".kilocode", `rules-${mode}`)
+		const globalModeRulesDir = path.join(homedir, ".spexcode", `rules-${mode}`)
+		const localModeRulesDir = path.join(workspacePath, ".spexcode", `rules-${mode}`)
 
 		const [globalModeRules, localModeRules] = await Promise.all([
 			getEnabledRulesFromDirectory(globalModeRulesDir, globalRulesToggles),
