@@ -10,6 +10,7 @@
 ## VS Code extension for Open-Source Setup for Agentic Engineering
 
 > SpeXcode is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
+> It's a fork of the quite famous Kilo Code extension, which decided to continue develop in current form, after they decided to move to Opencode fork.
 
 - ✨ Generate code from natural language
 - ✅ Checks its own work
