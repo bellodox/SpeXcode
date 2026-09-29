@@ -91,7 +91,7 @@ export class ClaudeCodeHandler implements ApiHandler, SingleCompletionHandler {
 
 	/**
 	 * Gets the reasoning effort level for the current request.
-	 * Returns the effective reasoning level (low/medium/high) or null if disabled.
+	 * Returns the effective reasoning level (low/medium/high/xhigh) or null if disabled.
 	 */
 	private getReasoningEffort(modelInfo: ModelInfo): ClaudeCodeReasoningLevel | null {
 		// Check if reasoning is explicitly disabled
@@ -108,8 +108,8 @@ export class ClaudeCodeHandler implements ApiHandler, SingleCompletionHandler {
 		}
 
 		// Only allow valid levels for Claude Code
-		if (selectedEffort === "low" || selectedEffort === "medium" || selectedEffort === "high") {
-			return selectedEffort
+		if (Object.hasOwn(claudeCodeReasoningConfig, selectedEffort)) {
+			return selectedEffort as ClaudeCodeReasoningLevel
 		}
 
 		return null
