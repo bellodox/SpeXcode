@@ -23,6 +23,22 @@ describe("OpenAI Codex provider models", () => {
 		}
 	})
 
+	test("includes GPT-5.6 Codex models that remain available during rollout", () => {
+		for (const modelId of ["gpt-5.6-sol", "gpt-5.6-terra", "gpt-5.6-luna"] as const) {
+			const modelInfo = openAiCodexModels[modelId]
+
+			expect(modelInfo).toMatchObject({
+				inputPrice: 0,
+				outputPrice: 0,
+				supportsNativeTools: true,
+				defaultToolProtocol: "native",
+				supportsTemperature: false,
+				supportsReasoningEffort: ["low", "medium", "high", "xhigh"],
+			})
+			expect("deprecated" in modelInfo).toBe(false)
+		}
+	})
+
 	test("keeps retiring ChatGPT-authenticated Codex models as deprecated for compatibility", () => {
 		for (const modelId of ["gpt-5.5", "gpt-5.4", "gpt-5.3-codex", "gpt-5.2-codex", "gpt-5.2"] as const) {
 			expect(openAiCodexModels[modelId]).toMatchObject({
@@ -58,6 +74,29 @@ describe("Claude Code provider models", () => {
 				supportsReasoningEffort: ["disable", "low", "medium", "high", "xhigh"],
 			})
 		}
+	})
+
+	test("includes requested Claude 4.6 through 4.8 coverage", () => {
+		expect(claudeCodeModels["claude-opus-4-6"]).toMatchObject({
+			maxTokens: 128000,
+			contextWindow: 1_000_000,
+			supportsReasoningEffort: ["disable", "low", "medium", "high"],
+		})
+		expect(claudeCodeModels["claude-sonnet-4-6"]).toMatchObject({
+			maxTokens: 64000,
+			supportsReasoningEffort: ["disable", "low", "medium", "high"],
+		})
+		expect(claudeCodeModels["claude-opus-4-7"]).toMatchObject({
+			maxTokens: 128000,
+			contextWindow: 1_000_000,
+			supportsReasoningEffort: ["disable", "low", "medium", "high", "xhigh"],
+			reasoningEffort: "xhigh",
+		})
+		expect(claudeCodeModels["claude-opus-4-8"]).toMatchObject({
+			maxTokens: 128000,
+			contextWindow: 1_000_000,
+			supportsReasoningEffort: ["disable", "low", "medium", "high", "xhigh"],
+		})
 	})
 
 	test("normalizes aliases and legacy dated Claude IDs to current Claude Code families", () => {

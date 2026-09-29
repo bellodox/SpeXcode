@@ -96,6 +96,13 @@ export const claudeCodeModels = {
 		contextWindow: 1_000_000,
 		description: "Claude Opus 4.8 - Capable Claude Code model with thinking",
 	},
+	"claude-opus-4-7": {
+		...CLAUDE_CODE_COMMON_MODEL_INFO,
+		maxTokens: 128000,
+		contextWindow: 1_000_000,
+		reasoningEffort: "xhigh",
+		description: "Claude Opus 4.7 - Capable Claude Code model with extended thinking",
+	},
 	"claude-haiku-4-5": {
 		...CLAUDE_CODE_COMMON_MODEL_INFO,
 		maxTokens: 32768,
