@@ -15,10 +15,15 @@ This file is local-only and noncanonical.
 - Current local note: [`.understand-anything/.understandignore`](.understand-anything/.understandignore) was generated in this refresh and [`.understand-anything/intermediate/scan-result.json`](.understand-anything/intermediate/scan-result.json) was refreshed through [`scan-project.mjs`](C:/Users/VSCode/.understand-anything-plugin/skills/understand/scan-project.mjs:1) with `3397` scanned files and `very-large` complexity
 - Current local note: root-cause analysis showed that tool-backed slash execution reads only commands through [`getCommands()`](src/services/command/commands.ts:127), while chat `/slash` workflow expansion is handled separately through [`parseKiloSlashCommands()`](src/core/slash-commands/kilo.ts:26)
 - Current local note: understand-related global workflows were added in [`C:/Users/VSCode/.kilocode/workflows`](C:/Users/VSCode/.kilocode/workflows) so chat slash workflows now exist for Understand Anything even though [`RunSlashCommandTool`](src/core/tools/RunSlashCommandTool.ts:14) still does not enumerate them
-- Current local note: [`CHANGELOG.md`](CHANGELOG.md) remains intentionally unchanged; release-note coverage should go through a changeset or normal release tooling
+- Current local note: [`CHANGELOG.md`](CHANGELOG.md) now includes a concise `5.16.4` patch entry for the shipped SpeXcode VS Code extension package rebuild
 - Current local note: extension manifest identity changed to `spex.spex-code` (`publisher=spex`, `name=spex-code` in [`src/package.json`](src/package.json:1)); preferred config directory is [`.spexcode`](.spexcode) with [`.kilocode`](.kilocode) as compatibility fallback
 - Current local note: compatibility identifiers preserved: command IDs, settings namespace keys, storage keys, [`.kilocodemodes`](.kilocodemodes), and [`.kilocodeignore`](.kilocodeignore)
 - Current local note: validation passed: from [`src`](src/package.json), `pnpm test core/config/importExport.spec.ts` passed with 1 file / 16 tests; from [`src`](src/package.json), `pnpm check-types` passed; from workspace root, `pnpm check-types && pnpm build` passed; build produced [`bin/spex-code-5.16.3.vsix`](bin/spex-code-5.16.3.vsix)
 - Current local note: no servers were started during this implementation task
-- Current local note: [`CHANGELOG.md`](CHANGELOG.md) was not updated by the code subtask; release-note coverage should be handled through a changeset or normal release process if needed
-- Next action: if release packaging is required, run the repository build entrypoint [`pnpm build`](package.json:16) from the workspace root in a command-capable session
+- Current local note: [`CHANGELOG.md`](CHANGELOG.md) was updated after the patch package action with a `5.16.4` patch entry for the shipped VSIX rebuild
+- Current local note: patch package action shipped version `5.16.4`; [`package.json`](package.json:3) and [`src/package.json`](src/package.json:6) were bumped from `5.16.3` to `5.16.4`
+- Current local note: [`pnpm build`](package.json:17) ran successfully from the workspace root and generated [`bin/spex-code-5.16.4.vsix`](bin/spex-code-5.16.4.vsix) with packaging output `1882 files, 40.57 MB`
+- Current local note: no changeset was created because this was a direct release/package version bump only and packaging uses manifest versions directly
+- Current local note: no servers were started for the patch package action
+- Current local note: [`CHANGELOG.md`](CHANGELOG.md) now records the `5.16.4` patch package/rebuild entry
+- Next action: no active release/package follow-up recorded
