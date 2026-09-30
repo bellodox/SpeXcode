@@ -172,6 +172,11 @@ export function handleValidationError(
 
 	// Check for connection errors
 	if (errorMessage) {
+		// HTTP headers can only contain Latin-1 characters. Non-ASCII API key characters trigger ByteString errors.
+		if (errorMessage.includes("Cannot convert argument to a ByteString")) {
+			return { valid: false, error: t("common:errors.api.invalidKeyInvalidChars") }
+		}
+
 		if (
 			errorMessage.includes("ENOTFOUND") ||
 			errorMessage.includes("ECONNREFUSED") ||
