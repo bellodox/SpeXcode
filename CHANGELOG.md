@@ -1,5 +1,12 @@
 # kilo-code
 
+## 5.16.6
+
+### Patch Changes
+
+- Fixed codebase indexing initialization when project text contains non-ASCII characters.
+- Rebuilt and packaged the SpeXcode VS Code extension as `spex-code-5.16.6.vsix`.
+
 ## 5.16.5
 
 ### Patch Changes

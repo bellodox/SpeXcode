@@ -1,6 +1,6 @@
 {
 	"name": "kilo-code",
-	"version": "5.16.5",
+	"version": "5.16.6",
 	"packageManager": "pnpm@10.8.1",
 	"engines": {
 		"node": "20.20.0"
