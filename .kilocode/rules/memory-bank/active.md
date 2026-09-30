@@ -26,4 +26,9 @@ This file is local-only and noncanonical.
 - Current local note: no changeset was created because this was a direct release/package version bump only and packaging uses manifest versions directly
 - Current local note: no servers were started for the patch package action
 - Current local note: [`CHANGELOG.md`](CHANGELOG.md) now records the `5.16.4` patch package/rebuild entry
+- Current local note: patch package action shipped version `5.16.5`; [`package.json`](package.json:3) and [`src/package.json`](src/package.json:6) are aligned at `5.16.5`
+- Current local note: [`CHANGELOG.md`](CHANGELOG.md:3) now records the `5.16.5` patch package/rebuild entry
+- Current local note: [`pnpm build`](package.json:17) ran successfully from the workspace root and generated [`bin/spex-code-5.16.5.vsix`](bin/spex-code-5.16.5.vsix) with packaging output `1882 files, 40.57 MB`
+- Current local note: [`pnpm check-types`](package.json:14) passed from the workspace root with `12 successful` tasks
+- Current local note: no servers were started for the `5.16.5` patch package action
 - Next action: no active release/package follow-up recorded

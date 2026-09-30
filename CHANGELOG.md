@@ -1,5 +1,11 @@
 # kilo-code
 
+## 5.16.5
+
+### Patch Changes
+
+- Rebuilt and packaged the SpeXcode VS Code extension as `spex-code-5.16.5.vsix`.
+
 ## 5.16.4
 
 ### Patch Changes
