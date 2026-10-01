@@ -39,6 +39,20 @@ const OPENAI_CODEX_DEPRECATED_BANNER =
  * Costs are 0 as they are covered by the subscription.
  */
 export const openAiCodexModels = {
+	// kilocode_change start
+	"gpt-6.1-sol": {
+		maxTokens: 128000,
+		contextWindow: 1000000,
+		...OPENAI_CODEX_NATIVE_TOOLS,
+		supportsImages: true,
+		supportsPromptCache: true,
+		supportsReasoningEffort: ["low", "medium", "high", "xhigh"],
+		reasoningEffort: "medium",
+		...OPENAI_CODEX_SUBSCRIPTION_PRICING,
+		supportsTemperature: false,
+		description: "GPT-6.1 Sol: OpenAI's latest Codex model for complex coding and agentic workflows",
+	},
+	// kilocode_change end
 	"gpt-6-astra": {
 		maxTokens: 128000,
 		contextWindow: 1000000,

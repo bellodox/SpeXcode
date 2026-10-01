@@ -13,7 +13,7 @@ describe("OpenAI Codex provider models", () => {
 	})
 
 	test("includes current GPT-6 Codex models with subscription pricing", () => {
-		for (const modelId of ["gpt-6-astra", "gpt-6-sol", "gpt-6-luna"] as const) {
+		for (const modelId of ["gpt-6.1-sol", "gpt-6-astra", "gpt-6-sol", "gpt-6-luna"] as const) {
 			expect(openAiCodexModels[modelId]).toMatchObject({
 				inputPrice: 0,
 				outputPrice: 0,
