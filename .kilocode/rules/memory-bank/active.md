@@ -38,4 +38,5 @@ This file is local-only and noncanonical.
 - Current local note: no servers were started for the `5.16.7` patch package action
 - Current local note: `.kilocode` creation regression around built-in [`init`](src/services/command/built-in-commands.ts:12) was fixed so generated mode-specific AGENTS paths now point at [`.spexcode`](.spexcode), and related runtime writes use [`CURRENT_ROO_DIRECTORY_NAME`](src/services/roo-config/index.ts:6) while preserving legacy read fallback where needed
 - Current local note: validation for the `.spexcode` directory fix passed from [`src`](src/package.json:1): `pnpm test services/command/built-in-commands.spec.ts` and `pnpm check-types`; no servers were started
+- Current local note: patch version `5.16.8` was shipped for the `.spexcode` config-directory regression fix; [`package.json`](package.json:3) and [`src/package.json`](src/package.json:6) are aligned at `5.16.8`, [`CHANGELOG.md`](CHANGELOG.md:3) records the release entry, and [`pnpm build`](package.json:17) produced [`bin/spex-code-5.16.8.vsix`](bin/spex-code-5.16.8.vsix)
 - Next action: no active release/package follow-up recorded

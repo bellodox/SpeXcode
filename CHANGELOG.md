@@ -1,5 +1,11 @@
 # kilo-code
 
+## 5.16.8
+
+### Patch Changes
+
+- Fixed SpeXcode config-directory initialization so project rules and related generated files use `.spexcode` instead of recreating `.kilocode`.
+
 ## 5.16.7
 
 ### Patch Changes
