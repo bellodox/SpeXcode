@@ -1,5 +1,12 @@
 # kilo-code
 
+## 5.16.7
+
+### Patch Changes
+
+- Added GPT 6.1 Sol to the OpenAI - ChatGPT Plus/Pro provider.
+- Rebuilt and packaged the SpeXcode VS Code extension as `spex-code-5.16.7.vsix`.
+
 ## 5.16.6
 
 ### Patch Changes

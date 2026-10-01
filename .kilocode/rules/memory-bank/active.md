@@ -31,4 +31,9 @@ This file is local-only and noncanonical.
 - Current local note: [`pnpm build`](package.json:17) ran successfully from the workspace root and generated [`bin/spex-code-5.16.5.vsix`](bin/spex-code-5.16.5.vsix) with packaging output `1882 files, 40.57 MB`
 - Current local note: [`pnpm check-types`](package.json:14) passed from the workspace root with `12 successful` tasks
 - Current local note: no servers were started for the `5.16.5` patch package action
+- Current local note: patch version `5.16.7` was shipped after adding GPT 6.1 Sol to the OpenAI - ChatGPT Plus/Pro provider in [`packages/types/src/providers/openai-codex.ts`](packages/types/src/providers/openai-codex.ts:1)
+- Current local note: [`package.json`](package.json:3) and [`src/package.json`](src/package.json:6) are aligned at `5.16.7`; [`CHANGELOG.md`](CHANGELOG.md:3) records the release entry
+- Current local note: [`pnpm build`](package.json:17) ran successfully from the workspace root and generated [`bin/spex-code-5.16.7.vsix`](bin/spex-code-5.16.7.vsix) with packaging output `1882 files, 40.57 MB`
+- Current local note: prior targeted validation for the provider addition passed from [`packages/types/package.json`](packages/types/package.json:1): `pnpm test src/providers/provider-models.spec.ts` and `pnpm check-types`
+- Current local note: no servers were started for the `5.16.7` patch package action
 - Next action: no active release/package follow-up recorded
