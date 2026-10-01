@@ -10,7 +10,7 @@ interface LaunchConfig {
 
 /**
  * Checks for launch configuration and runs the task immediately if found.
- * Reads .kilocode/launchConfig.json from the workspace root.
+ * Reads .spexcode/launchConfig.json from the workspace root, falling back to legacy .kilocode/launchConfig.json.
  */
 export async function checkAndRunAutoLaunchingTask(context: vscode.ExtensionContext): Promise<void> {
 	if (!vscode.workspace.workspaceFolders || vscode.workspace.workspaceFolders.length === 0) {

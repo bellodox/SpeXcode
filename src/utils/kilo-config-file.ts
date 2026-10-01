@@ -84,8 +84,8 @@ export async function getKilocodeConfig(
 }
 
 /**
- * Reads the project configuration from .kilocode/config.json
- * Note: .kilocode/config.jsonc is not supported to avoid bundling issues
+ * Reads the project configuration from .spexcode/config.json, falling back to legacy .kilocode/config.json.
+ * Note: .spexcode/config.jsonc is not supported to avoid bundling issues.
  *
  * @param workspaceRoot The root path of the workspace
  * @returns The project configuration or undefined if not found or invalid
@@ -112,9 +112,10 @@ export async function getKilocodeConfigFile(workspaceRoot: string): Promise<Kilo
 /**
  * Gets the project ID from configuration file or git repository
  * Priority:
- * 1. .kilocode/config.json (project.id) - normalized
- * 2. Git repository URL (origin remote) - normalized to repo name
- * 3. undefined if neither exists
+ * 1. .spexcode/config.json (project.id) - normalized
+ * 2. Legacy .kilocode/config.json (project.id) - normalized
+ * 3. Git repository URL (origin remote) - normalized to repo name
+ * 4. undefined if neither exists
  *
  * @param workspaceRoot The root path of the workspace
  * @param gitRepositoryUrl Optional git repository URL to use as fallback
@@ -134,9 +135,10 @@ export async function getProjectId(workspaceRoot: string, gitRepositoryUrl?: str
 /**
  * Gets the project ID for the current VSCode workspace
  * Priority:
- * 1. .kilocode/config.json (project.id) - normalized
- * 2. Git repository URL (origin remote) - normalized to repo name
- * 3. undefined if neither exists
+ * 1. .spexcode/config.json (project.id) - normalized
+ * 2. Legacy .kilocode/config.json (project.id) - normalized
+ * 3. Git repository URL (origin remote) - normalized to repo name
+ * 4. undefined if neither exists
  * @returns The normalized project ID or undefined
  */
 export async function getWorkspaceProjectId(gitRepositoryUrl?: string): Promise<string | undefined> {

@@ -30,6 +30,7 @@ import {
 	getAllRooDirectoriesForCwd,
 	getAgentsDirectoriesForCwd,
 	getGlobalRooDirectory,
+	CURRENT_ROO_DIRECTORY_NAME,
 } from "../../../services/roo-config"
 
 /**
@@ -259,9 +260,9 @@ export async function loadRuleFiles(cwd: string, enableSubfolderRules: boolean =
 		const content = await safeReadFile(path.join(cwd, file))
 		if (content) {
 			if (file !== ".kilocoderules" && vscodeAPI && !hasShownNonKilocodeRulesMessage) {
-				// kilocode_change: show message to move to .kilocode/rules/
+				// kilocode_change: show message to .spexcode/rules/
 				vscodeAPI.window.showWarningMessage(
-					`Loading non-Kilocode rules from ${file}, consider moving to .kilocode/rules/`,
+					`Loading non-Kilocode rules from ${file}, consider moving to ${CURRENT_ROO_DIRECTORY_NAME}/rules/`,
 				)
 				hasShownNonKilocodeRulesMessage = true
 			} // kilocode_change end
@@ -460,7 +461,7 @@ export async function addCustomInstructions(
 
 	// Add mode-specific rules first if they exist
 	if (modeRuleContent && modeRuleContent.trim()) {
-		if (usedRuleFile.includes(path.join(".kilocode", `rules-${mode}`))) {
+		if (usedRuleFile.includes(path.join(CURRENT_ROO_DIRECTORY_NAME, `rules-${mode}`))) {
 			rules.push(modeRuleContent.trim())
 		} else {
 			rules.push(`# Rules from ${usedRuleFile}:\n${modeRuleContent}`)

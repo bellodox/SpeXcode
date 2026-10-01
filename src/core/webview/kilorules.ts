@@ -37,7 +37,7 @@ export async function getEnabledRules(
 		getEnabledRulesFromDirectory(localRulesBase, localRulesToggles),
 	])
 
-	// Also include mode-specific rules directories (e.g. .kilocode/rules-code/)
+	// Also include mode-specific rules directories (e.g. .spexcode/rules-code/)
 	if (mode) {
 		const globalModeRulesDir = path.join(homedir, ".spexcode", `rules-${mode}`)
 		const localModeRulesDir = path.join(workspacePath, ".spexcode", `rules-${mode}`)

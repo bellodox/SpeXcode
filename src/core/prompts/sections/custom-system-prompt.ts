@@ -2,6 +2,7 @@ import fs from "fs/promises"
 import path from "path"
 import { Mode } from "../../../shared/modes"
 import { fileExistsAtPath } from "../../../utils/fs"
+import { getPreferredRooDirectoryForBase } from "../../../services/roo-config"
 
 export type PromptVariables = {
 	workspace?: string
@@ -47,11 +48,11 @@ async function safeReadFile(filePath: string): Promise<string> {
  */
 export function getSystemPromptFilePath(cwd: string, mode: Mode): string {
 	// kilocode_change
-	return path.join(cwd, ".kilocode", `system-prompt-${mode}`)
+	return path.join(getPreferredRooDirectoryForBase(cwd), `system-prompt-${mode}`)
 }
 
 /**
- * Loads custom system prompt from a file at .kilocode/system-prompt-[mode slug]
+ * Loads custom system prompt from a file at .spexcode/system-prompt-[mode slug]
  * If the file doesn't exist, returns an empty string
  */
 export async function loadSystemPromptFile(cwd: string, mode: Mode, variables: PromptVariables): Promise<string> {
@@ -65,11 +66,11 @@ export async function loadSystemPromptFile(cwd: string, mode: Mode, variables: P
 }
 
 /**
- * Ensures the .kilocode directory exists, creating it if necessary
+ * Ensures the .spexcode directory exists, creating it if necessary
  */
 export async function ensureRooDirectory(cwd: string): Promise<void> {
 	// kilocode_change
-	const rooDir = path.join(cwd, ".kilocode")
+	const rooDir = getPreferredRooDirectoryForBase(cwd)
 
 	// Check if directory already exists
 	if (await fileExistsAtPath(rooDir)) {

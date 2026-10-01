@@ -412,8 +412,8 @@ export class SimpleInstaller {
 	 * Install a skill from the marketplace by downloading and extracting its tarball.
 	 *
 	 * Skills are installed to:
-	 * - Global: ~/.kilocode/skills/{skill-id}/
-	 * - Project: .kilocode/skills/{skill-id}/
+	 * - Global: ~/.spexcode/skills/{skill-id}/
+	 * - Project: .spexcode/skills/{skill-id}/
 	 *
 	 * The tarball must contain a SKILL.md at the root level (after stripping the top-level directory).
 	 */

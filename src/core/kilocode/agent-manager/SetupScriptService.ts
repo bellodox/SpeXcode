@@ -1,16 +1,17 @@
 /**
  * SetupScriptService - Manages worktree setup scripts
  *
- * Handles reading, creating, and checking for setup scripts stored in .kilocode/setup-script.
+ * Handles reading, creating, and checking for setup scripts stored in .spexcode/setup-script.
  * Setup scripts run before an agent starts in a worktree (new sessions only).
  */
 
 import * as vscode from "vscode"
 import * as fs from "node:fs"
 import * as path from "node:path"
+import { CURRENT_ROO_DIRECTORY_NAME } from "../../../services/roo-config"
 
 const SETUP_SCRIPT_FILENAME = "setup-script"
-const KILOCODE_DIR = ".kilocode"
+const SPEXCODE_DIR = CURRENT_ROO_DIRECTORY_NAME
 
 /**
  * Default template for the setup script with helpful comments
@@ -62,7 +63,7 @@ export class SetupScriptService {
 
 	constructor(projectRoot: string) {
 		this.projectRoot = projectRoot
-		this.scriptPath = path.join(projectRoot, KILOCODE_DIR, SETUP_SCRIPT_FILENAME)
+		this.scriptPath = path.join(projectRoot, SPEXCODE_DIR, SETUP_SCRIPT_FILENAME)
 	}
 
 	/**
@@ -99,10 +100,10 @@ export class SetupScriptService {
 	 * Create a default setup script with helpful comments and open it in VS Code
 	 */
 	async createDefaultScript(): Promise<void> {
-		// Ensure .kilocode directory exists
-		const kilocodeDir = path.join(this.projectRoot, KILOCODE_DIR)
-		if (!fs.existsSync(kilocodeDir)) {
-			await fs.promises.mkdir(kilocodeDir, { recursive: true })
+		// Ensure .spexcode directory exists
+		const spexcodeDir = path.join(this.projectRoot, SPEXCODE_DIR)
+		if (!fs.existsSync(spexcodeDir)) {
+			await fs.promises.mkdir(spexcodeDir, { recursive: true })
 		}
 
 		// Write the default template

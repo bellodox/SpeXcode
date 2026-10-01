@@ -83,6 +83,7 @@ import { BrowserSession } from "../../services/browser/BrowserSession"
 import { McpHub } from "../../services/mcp/McpHub"
 import { McpServerManager } from "../../services/mcp/McpServerManager"
 import { RepoPerTaskCheckpointService } from "../../services/checkpoints"
+import { CURRENT_ROO_DIRECTORY_NAME } from "../../services/roo-config"
 
 // integrations
 import { DiffViewProvider } from "../../integrations/editor/DiffViewProvider"
@@ -731,7 +732,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 	private getCliGlobalStoragePath(): string {
 		// Try to use home directory based path for CLI mode
 		const homeDir = process.env.HOME || process.env.USERPROFILE || "/tmp"
-		const cliStoragePath = path.join(homeDir, ".kilocode", "cli", "global")
+		const cliStoragePath = path.join(homeDir, CURRENT_ROO_DIRECTORY_NAME, "cli", "global")
 
 		// Ensure directory exists
 		try {
@@ -2783,7 +2784,7 @@ export class Task extends EventEmitter<TaskEvents> implements TaskLike {
 			if (needsRulesFileCheck) {
 				await this.say(
 					"error",
-					"Issue with processing the /newrule command. Double check that, if '.kilocode/rules' already exists, it's a directory and not a file. Otherwise there was an issue referencing this file/directory",
+					`Issue with processing the /newrule command. Double check that, if '${CURRENT_ROO_DIRECTORY_NAME}/rules' already exists, it's a directory and not a file. Otherwise there was an issue referencing this file/directory`,
 				)
 			}
 			// kilocode_change end

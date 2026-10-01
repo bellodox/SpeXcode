@@ -1,5 +1,6 @@
 import path from "path"
 import ignore, { Ignore } from "ignore"
+import { CURRENT_ROO_DIRECTORY_NAME, LEGACY_KILOCODE_DIRECTORY_NAME } from "../../services/roo-config"
 
 export const SHIELD_SYMBOL = "\u{1F6E1}"
 
@@ -16,7 +17,8 @@ export class RooProtectedController {
 		".kilocodeignore",
 		".kilocodemodes",
 		".kilocoderules",
-		".kilocode/**",
+		`${CURRENT_ROO_DIRECTORY_NAME}/**`,
+		`${LEGACY_KILOCODE_DIRECTORY_NAME}/**`,
 		".kilocodeprotected",
 		".rooignore",
 		".roomodes",
@@ -91,7 +93,7 @@ export class RooProtectedController {
 	 * Get display message for protected file operations
 	 */
 	getProtectionMessage(): string {
-		return "This is a Kilo Code configuration file and requires approval for modifications"
+		return "This is a SpeXcode configuration file and requires approval for modifications"
 	}
 
 	/**
@@ -100,7 +102,7 @@ export class RooProtectedController {
 	 */
 	getInstructions(): string {
 		const patterns = RooProtectedController.PROTECTED_PATTERNS.join(", ")
-		return `# Protected Files\n\n(The following Kilo Code configuration file patterns are write-protected and always require approval for modifications, regardless of autoapproval settings. When using list_files, you'll notice a ${SHIELD_SYMBOL} next to files that are write-protected.)\n\nProtected patterns: ${patterns}`
+		return `# Protected Files\n\n(The following SpeXcode configuration file patterns are write-protected and always require approval for modifications, regardless of autoapproval settings. When using list_files, you'll notice a ${SHIELD_SYMBOL} next to files that are write-protected.)\n\nProtected patterns: ${patterns}`
 	}
 
 	/**

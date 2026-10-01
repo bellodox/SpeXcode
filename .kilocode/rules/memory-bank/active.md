@@ -36,4 +36,6 @@ This file is local-only and noncanonical.
 - Current local note: [`pnpm build`](package.json:17) ran successfully from the workspace root and generated [`bin/spex-code-5.16.7.vsix`](bin/spex-code-5.16.7.vsix) with packaging output `1882 files, 40.57 MB`
 - Current local note: prior targeted validation for the provider addition passed from [`packages/types/package.json`](packages/types/package.json:1): `pnpm test src/providers/provider-models.spec.ts` and `pnpm check-types`
 - Current local note: no servers were started for the `5.16.7` patch package action
+- Current local note: `.kilocode` creation regression around built-in [`init`](src/services/command/built-in-commands.ts:12) was fixed so generated mode-specific AGENTS paths now point at [`.spexcode`](.spexcode), and related runtime writes use [`CURRENT_ROO_DIRECTORY_NAME`](src/services/roo-config/index.ts:6) while preserving legacy read fallback where needed
+- Current local note: validation for the `.spexcode` directory fix passed from [`src`](src/package.json:1): `pnpm test services/command/built-in-commands.spec.ts` and `pnpm check-types`; no servers were started
 - Next action: no active release/package follow-up recorded

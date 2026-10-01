@@ -2,6 +2,7 @@ import type { ProviderSettings } from "@roo-code/types"
 import fs from "node:fs"
 import os from "node:os"
 import path from "node:path"
+import { CURRENT_ROO_DIRECTORY_NAME, LEGACY_KILOCODE_DIRECTORY_NAME } from "../../../services/roo-config"
 
 type EnvOverrides = Record<string, string>
 
@@ -22,7 +23,14 @@ const getHomeDirFromEnv = (baseEnv: NodeJS.ProcessEnv): string | undefined =>
 
 const getCliConfigPath = (baseEnv: NodeJS.ProcessEnv): string => {
 	const homeDir = getHomeDirFromEnv(baseEnv) || os.homedir()
-	return path.join(homeDir, ".kilocode", "cli", "config.json")
+	const currentConfigPath = path.join(homeDir, CURRENT_ROO_DIRECTORY_NAME, "cli", "config.json")
+	const legacyConfigPath = path.join(homeDir, LEGACY_KILOCODE_DIRECTORY_NAME, "cli", "config.json")
+
+	if (!fs.existsSync(currentConfigPath) && fs.existsSync(legacyConfigPath)) {
+		return legacyConfigPath
+	}
+
+	return currentConfigPath
 }
 
 const readCliConfig = (filePath: string): CliConfigShape | undefined => {
@@ -127,7 +135,7 @@ export const buildProviderEnvOverrides = (
 		// another provider in the CLI, we override HOME so the CLI doesn't see their existing config.
 		if (hasCliConfigFile) {
 			const tempDir = getTempDirFromEnv(baseEnv)
-			const isolatedHome = path.join(tempDir, "kilocode-agent-manager-home")
+			const isolatedHome = path.join(tempDir, "spexcode-agent-manager-home")
 			// Cross-platform: Node's os.homedir() uses USERPROFILE on Windows.
 			overrides.HOME = isolatedHome
 			overrides.USERPROFILE = isolatedHome

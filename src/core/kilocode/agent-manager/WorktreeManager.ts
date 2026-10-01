@@ -2,20 +2,21 @@
  * WorktreeManager - Manages git worktrees for agent sessions
  *
  * Handles creation, discovery, commit, and cleanup of worktrees
- * stored in {projectRoot}/.kilocode/worktrees/
+ * stored in {projectRoot}/.spexcode/worktrees/
  */
 
 import * as vscode from "vscode"
 import * as path from "path"
 import * as fs from "fs"
 import simpleGit, { SimpleGit } from "simple-git"
+import { CURRENT_ROO_DIRECTORY_NAME } from "../../../services/roo-config"
 
 export interface WorktreeInfo {
 	branch: string
 	path: string
 	parentBranch: string
 	createdAt: number
-	sessionId?: string // Session ID from .kilocode/session-id file, if present
+	sessionId?: string // Session ID from .spexcode/session-id file, if present
 }
 
 export interface CreateWorktreeResult {
@@ -57,7 +58,7 @@ export function generateBranchName(prompt: string): string {
 	return `${sanitized || "kilo"}-${timestamp}`
 }
 
-const KILOCODE_DIR = ".kilocode"
+const SPEXCODE_DIR = CURRENT_ROO_DIRECTORY_NAME
 const SESSION_ID_FILE = "session-id"
 
 export class WorktreeManager {
@@ -68,7 +69,7 @@ export class WorktreeManager {
 
 	constructor(projectRoot: string, outputChannel: vscode.OutputChannel) {
 		this.projectRoot = projectRoot
-		this.worktreesDir = path.join(projectRoot, KILOCODE_DIR, "worktrees")
+		this.worktreesDir = path.join(projectRoot, SPEXCODE_DIR, "worktrees")
 		this.git = simpleGit(projectRoot)
 		this.outputChannel = outputChannel
 	}
@@ -224,7 +225,7 @@ export class WorktreeManager {
 	}
 
 	/**
-	 * Discover existing worktrees in .kilocode/worktrees/
+	 * Discover existing worktrees in .spexcode/worktrees/
 	 */
 	async discoverWorktrees(): Promise<WorktreeInfo[]> {
 		if (!fs.existsSync(this.worktreesDir)) {
@@ -282,32 +283,32 @@ export class WorktreeManager {
 	}
 
 	/**
-	 * Write a session ID to the worktree's .kilocode/session-id file.
+	 * Write a session ID to the worktree's .spexcode/session-id file.
 	 * This creates a mapping between the worktree and its associated session,
 	 * enabling session recovery after extension restarts.
 	 */
 	async writeSessionId(worktreePath: string, sessionId: string): Promise<void> {
-		const kilocodeDir = path.join(worktreePath, KILOCODE_DIR)
-		const sessionIdPath = path.join(kilocodeDir, SESSION_ID_FILE)
+		const spexcodeDir = path.join(worktreePath, SPEXCODE_DIR)
+		const sessionIdPath = path.join(spexcodeDir, SESSION_ID_FILE)
 
-		// Ensure .kilocode directory exists in the worktree
-		if (!fs.existsSync(kilocodeDir)) {
-			await fs.promises.mkdir(kilocodeDir, { recursive: true })
+		// Ensure .spexcode directory exists in the worktree
+		if (!fs.existsSync(spexcodeDir)) {
+			await fs.promises.mkdir(spexcodeDir, { recursive: true })
 		}
 
 		await fs.promises.writeFile(sessionIdPath, sessionId, "utf-8")
 		this.log(`Wrote session ID ${sessionId} to ${sessionIdPath}`)
 
-		// Ensure .kilocode/ is excluded from git in the worktree
+		// Ensure .spexcode/ is excluded from git in the worktree
 		await this.ensureWorktreeGitExclude(worktreePath)
 	}
 
 	/**
-	 * Read the session ID from a worktree's .kilocode/session-id file.
+	 * Read the session ID from a worktree's .spexcode/session-id file.
 	 * Returns undefined if the file doesn't exist or can't be read.
 	 */
 	async readSessionId(worktreePath: string): Promise<string | undefined> {
-		const sessionIdPath = path.join(worktreePath, KILOCODE_DIR, SESSION_ID_FILE)
+		const sessionIdPath = path.join(worktreePath, SPEXCODE_DIR, SESSION_ID_FILE)
 
 		try {
 			const sessionId = await fs.promises.readFile(sessionIdPath, "utf-8")
@@ -322,7 +323,7 @@ export class WorktreeManager {
 	 * Called when a session is explicitly closed/removed.
 	 */
 	async removeSessionId(worktreePath: string): Promise<void> {
-		const sessionIdPath = path.join(worktreePath, KILOCODE_DIR, SESSION_ID_FILE)
+		const sessionIdPath = path.join(worktreePath, SPEXCODE_DIR, SESSION_ID_FILE)
 
 		try {
 			await fs.promises.unlink(sessionIdPath)
@@ -340,14 +341,14 @@ export class WorktreeManager {
 	}
 
 	/**
-	 * Ensure .kilocode/ directory is excluded from git within a worktree.
+	 * Ensure .spexcode/ directory is excluded from git within a worktree.
 	 * This prevents the session-id file from being committed.
 	 *
 	 * Git worktrees share the main repository's .git/info/exclude file,
 	 * so we need to add the exclude entry there, not in the worktree's git dir.
 	 */
 	private async ensureWorktreeGitExclude(worktreePath: string): Promise<void> {
-		const entry = `${KILOCODE_DIR}/`
+		const entry = `${SPEXCODE_DIR}/`
 
 		// In a worktree, .git is a file pointing to the main repo's .git/worktrees/<name>
 		const gitFile = path.join(worktreePath, ".git")
@@ -380,7 +381,7 @@ export class WorktreeManager {
 			}
 
 			const addition = content.endsWith("\n") || content === "" ? "" : "\n"
-			const excludeEntry = `${addition}\n# Kilo Code session metadata\n${entry}\n`
+			const excludeEntry = `${addition}\n# SpeXcode session metadata\n${entry}\n`
 
 			await fs.promises.appendFile(excludePath, excludeEntry)
 			this.log(`Added ${entry} to main repo git exclude: ${excludePath}`)
@@ -390,7 +391,7 @@ export class WorktreeManager {
 	}
 
 	/**
-	 * Ensure .kilocode/worktrees/ directory exists
+	 * Ensure .spexcode/worktrees/ directory exists
 	 */
 	private async ensureWorktreesDir(): Promise<void> {
 		if (!fs.existsSync(this.worktreesDir)) {
@@ -400,11 +401,11 @@ export class WorktreeManager {
 	}
 
 	/**
-	 * Ensure .kilocode/worktrees/ is excluded from git using .git/info/exclude.
+	 * Ensure .spexcode/worktrees/ is excluded from git using .git/info/exclude.
 	 * This avoids modifying the user's .gitignore file which would require a commit.
 	 */
 	async ensureGitExclude(): Promise<void> {
-		const entry = ".kilocode/worktrees/"
+		const entry = `${SPEXCODE_DIR}/worktrees/`
 
 		const gitDir = await this.resolveGitDir()
 		const excludePath = path.join(gitDir, "info", "exclude")
@@ -422,10 +423,10 @@ export class WorktreeManager {
 		}
 
 		const addition = content.endsWith("\n") || content === "" ? "" : "\n"
-		const excludeEntry = `${addition}\n# Kilo Code agent worktrees\n${entry}\n`
+		const excludeEntry = `${addition}\n# SpeXcode agent worktrees\n${entry}\n`
 
 		await fs.promises.appendFile(excludePath, excludeEntry)
-		this.log("Added .kilocode/worktrees/ to .git/info/exclude")
+		this.log(`Added ${entry} to .git/info/exclude`)
 	}
 
 	/**
